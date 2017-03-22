@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+.container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+.month {
+	height: 200px;
+	width:49vw;
+	background-color: #1abc9c;
+	text-align: center;
+	line-height: 200px;
+	color: white;
+	font-size: 100px;
+}
+.rows {
+	list-style: none;
+	margin: 0;
+}
+.days {
+	margin: 0;
+}
+.days li {
+	text-align: center;
+	line-height: 50px;
+	background-color: #ddd;
+	height: 50px;
+	width: 7vw;
+	display: inline-block;
+}
+.rows li {
+	margin: 0;
+	text-align: center;
+	line-height: 50px;
+	background-color: #eee;
+	height: 50px;
+	width: 7vw;
+	display: inline-block;
+}
+.rows li:hover {
+	background-color: #1abc9c;
+	color: white;
+}
+.right {
+	cursor: pointer;
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+	line-height: 200px;
+	height: 200px;
+	width: 50px;
+	float: right;
+	opacity: 0.5;
+}
+.left {
+	cursor: pointer;
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+	line-height: 200px;
+	height: 200px;
+	width: 50px;
+	float: left;
+	opacity: 0.5;
+}
+.right:hover {
+	opacity: 1;
+}
+.left:hover {
+	opacity: 1;
+}
