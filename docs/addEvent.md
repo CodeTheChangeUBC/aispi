@@ -15,8 +15,8 @@ Adds an event to the event database. Also verifies that a person has created the
   * **Optional**
     * `description=[String]`
 * **Success Response**
-  * **Code:** 200
+  * **Code:** 200 <br>
   **Content:** `{EVENT}`
 * **Error Response**
-  * **Code:** 200
+  * **Code:** 200 <br>
   **Content:** `{error: "Invalid Email"}`

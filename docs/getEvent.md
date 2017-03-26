@@ -10,8 +10,8 @@ Get all the events past the current date (today). Can be limited to events befor
   * **Optional**
       * `end=[Integer(UNIX Timestamp)]`
 * **Success Response**
-  * **Code:** 200
+  * **Code:** 200 <br>
   **Content:** `{"events":[{EVENT, ...}]}`
 * **Error Response**
-  * **Code:** 200
+  * **Code:** 200 <br>
   **Content:** `{"events":[]}`
