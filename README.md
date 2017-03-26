@@ -1,7 +1,7 @@
 # aispi
 Project for Animals in Science Policy Institute
 
-
+View API Documentation [HERE](docs/api.md)
 ## Technical Specifications:
 ### Server
   - No need for databases, instead we're going to use a flat file as a csv
