@@ -1,0 +1,79 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 90vw;
+}
+
+.calendar {
+    width: 70%;
+    float: left;
+}
+
+.form {
+    width: 30%;
+    float: right;
+}
+
+body{
+ font-family: Ubuntu;
+}
+
+img {
+    height: 8vw;
+    width: 16.8vw;
+    margin-bottom: 20px;
+}
+.dates{
+    width: 100%;
+}
+
+.date {
+    display: inline-block;
+    height: 5vw;
+    width: 13%;
+    background-color: 	#052D6F;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    font-size: 1vw;
+}
+
+.days {
+    width: 100%;
+    font-size: 0;
+}
+
+.day {
+    height: 5vw;
+    width: 13%;
+    border: 1px solid #000;
+    display: inline-block;
+    font-size: 1vw;
+    padding-left: 1vw;
+    padding-top: 0.5vw;
+    box-sizing: border-box;
+}
+
+.form{
+    font-size: 1vw;
+}
+
+
+input {
+    width: 100%;
+    padding: 0.5vw 1vw;
+    margin: 0.5vw 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #E6E6E6;
+    
+}
+
+h1 {
+    font-size: 1.1vw;
+    line-height: 1%;
+}
