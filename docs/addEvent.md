@@ -3,7 +3,7 @@
 Adds an event to the event database. Also verifies that a person has created the event and that the event can fit.
 
 * **URL**
-`/event/edit`
+`/event/add`
 * **Method:**
 `POST`
 * **URL Params**

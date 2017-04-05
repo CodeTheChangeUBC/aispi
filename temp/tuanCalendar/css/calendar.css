@@ -73,7 +73,7 @@ img{
 	display: inline-block;
 	height: 60px;
 	width: 14.28%;
-	background-color: #052D6F;
+	background-color: #FFF;
 	color: #fff;
 	text-align: center;
 	line-height: 60px;
@@ -88,12 +88,12 @@ img{
 .day {
 	height: 80px;
 	width: 14.28%;
-	border: 1px solid #000;
+	border: 1px solid #999;
 	display: inline-block;
 	font-size: 1vw;
-	box-sizing: border-box;
-	padding-left: 5px;
+	padding: 10px;
 	font-weight: bold;
+	line-height: 1;
 }
 input {
 	width: 100%;
