@@ -1,6 +1,6 @@
 <?php
-	/*if ($_POST["type"] === NULL)
-		echo "Please select a ____ type.";*/
+	if (!isset($_POST["type"]))
+		echo "Please select a ____ type.";
 	
 	if (strlen($_POST["school"]) < 3)
 		echo "Schools must be at least 3 characters. ";

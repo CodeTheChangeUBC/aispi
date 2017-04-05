@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/calendar.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="calendar">
+				<img src="images/logo.png" alt="">
+				<div class="months">
+					<div class="year" id="year"></div>
+					<div class="left" id="left" v-on:click="goBackward()">&#10094;</div>
+					<div class="right" id="right" v-on:click="goForward()">&#10095;</div>
+					<div class="month" id="months" >{{months[currentMonth]}}</div>
+				</div>
+				<div class="dates">
+					<div class="date" v-for="day in days">{{day}}</div>
+				</div>
+				<div class="days">
+						<div class="day">
+							<div style="margin: 5px;">1</div>
+							<div class="day-label">This is an event</div>
+						</div>
+						<div class="day">
+							<div style="margin: 5px;">1</div>
+						</div>
+						<div class="day">
+							<div style="margin: 5px;">1</div>
+							<div class="day-label">This is an event</div>
+						</div>
+
+						<div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div><div class="day">&nbsp;</div><div class="day">&nbsp;</div><div class="day">&nbsp;</div><div class="day">&nbsp;</div>
+				</div>
+			</div>
+			<div class="form">
+				<h3>Name</h3>
+				<input type="text">
+				<h3>Phone</h3>
+				<input type="text">
+				<h3>Email</h3>
+				<input type="text">
+				<h3>School name</h3>
+				<input type="text">
+				<h3>School address</h3>
+				<p>Street address</p>	
+				<input type="text">
+				<p>City</p>
+				<input type="text">
+				<div class="address">
+					<div class="pv">
+						<p>Province</p>
+						<input type="text">
+					</div>
+					<div class="pc">
+						<p>Postal code</p>
+						<input type="text">
+					</div>
+				</div>
+				<div class="event-type">
+					<h3>Event Type</h3>
+					<div class="event-choices" id="arrowDown">
+						<p>Select One</p>
+						<p class="arrow-down">&#9660;</p>
+					</div>
+					<div class="drop-down" id="drop-down">
+						<div class="list">Event 1</div>
+						<div class="list">Event 2</div>
+						<div class="list">Event 3</div>
+					</div>
+				</div>
+				<h3>Event Description</h3>
+				<textarea name="" id="" cols="" rows="8"></textarea>
+				<button>Submit</button>
+			</div>
+		</div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js" type="text/javascript"></script>
+		<script src="js/calendar.js"></script>
+	</body>
+</html>
