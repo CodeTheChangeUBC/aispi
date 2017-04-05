@@ -1,0 +1,19 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+}
+main {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+  .week {
+    background: blue;
+    color: #fff;
+  }
+    .day {
+      width: calc(100% / 7);
+      box-sizing: border-box;
+      border: 1px solid #666;
+      float: left;
+    }
