@@ -17,7 +17,7 @@ View API Documentation [HERE](docs/api.md)
   <Directory "C:/aispi">
   ```
 5. Save the config file and Start the Apache Server. 
-6. Open localhost:80/index.php in your browser
+6. Open localhost in your browser
 
 ## Technical Specifications:
 ### Server
@@ -31,7 +31,7 @@ View API Documentation [HERE](docs/api.md)
 
 ### Client
   - Have a Monthly View, that could go into a weekly view.
-  - Have an adjacent form for entering and submitting events.
+  - Have an adjacent form for entering and submittwing events.
   - Keep the colour scheme the same as the original website
   - Integrate Re-Captcha with the front end
   - Parsing csv data to fill in the calendar

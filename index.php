@@ -35,8 +35,7 @@ session_start();
 define('c',   'app/controllers/');
 define('v',   'app/views/');
 
-error_reporting();
+//error_reporting();
 
 // Here we go!
-
-require 'sys/uri_parser.php'; 
+require './sys/uri_parser.php'; 

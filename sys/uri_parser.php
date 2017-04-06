@@ -3,13 +3,13 @@
 require 'routes.php';
 
 $URI = explode('/',preg_replace('/\?\s*([^\n\r]*)/','',$_SERVER['REQUEST_URI']));
+
 if($URI[1]=='favicon.ico'){
     header('Location: /resources/images/favicon.png');
 }
-
 do{
-    if(count($URI)<2||$URI[1]===''){
-        require c.$route['default_controller'].'.php';
+    if(count($URI)<2||$URI[1] == ''){
+        include c.$route['default_controller'].'.php';
         $route['default_controller']::index();
         break;
     }else if(array_key_exists($URI[1],$route)){
