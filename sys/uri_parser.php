@@ -7,18 +7,17 @@ $URI = explode('/',preg_replace('/\?\s*([^\n\r]*)/','',$_SERVER['REQUEST_URI']))
 if($URI[1]=='favicon.ico'){
     header('Location: /resources/images/favicon.png');
 }
-do{
     if(count($URI)<2||$URI[1] == ''){
         include c.$route['default_controller'].'.php';
         $route['default_controller']::index();
-        break;
+        exit;
     }else if(array_key_exists($URI[1],$route)){
        
         $ROUTEPIECES = explode('/',$route[$URI[1]]);
         if(count($ROUTEPIECES)>1){
             require c.$ROUTEPIECES[0].'.php';
             $ROUTEPIECES[0]::$ROUTEPIECES[1]();    
-            break;
+            exit;
         }
         if(count($URI)<3){
             $URI[2]='index';
@@ -35,8 +34,6 @@ do{
     }else{
         error_handler();
     }
-    
-}while(false);
 
 function error_handler(){
     global $route;

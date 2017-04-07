@@ -32,10 +32,10 @@
 session_start();
 
 // Location of the controllers.
-define('c',   'app/controllers/');
-define('v',   'app/views/');
+define('c',   '/app/controllers/');
+define('v',   '/app/views/');
 
 //error_reporting();
 
 // Here we go!
-require './sys/uri_parser.php'; 
+require './sys/uri_parser.php';
