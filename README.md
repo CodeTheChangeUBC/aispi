@@ -2,6 +2,23 @@
 Project for Animals in Science Policy Institute
 
 View API Documentation [HERE](docs/api.md)
+
+
+## How to start this...
+
+1. Go Download [XAMPP](https://www.apachefriends.org/index.html)
+2. Edit the Apache config.
+  - Click on the `Config` button
+  - Click on `Apache(httpd.conf)`
+3. Find the section were the line begins with `DocumentRoot`
+4. Edit the that line and the line below it to point to this git directory, it should look something like this in the end:
+  ```
+  DocumentRoot "C:/aispi"
+  <Directory "C:/aispi">
+  ```
+5. Save the config file and Start the Apache Server. 
+6. Open localhost in your browser
+
 ## Technical Specifications:
 ### Server
   - No need for databases, instead we're going to use a flat file as a csv
@@ -14,7 +31,7 @@ View API Documentation [HERE](docs/api.md)
 
 ### Client
   - Have a Monthly View, that could go into a weekly view.
-  - Have an adjacent form for entering and submitting events.
+  - Have an adjacent form for entering and submittwing events.
   - Keep the colour scheme the same as the original website
   - Integrate Re-Captcha with the front end
   - Parsing csv data to fill in the calendar
