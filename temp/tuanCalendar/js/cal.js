@@ -9,14 +9,11 @@ var Calendar = new Vue({
 		dates: '.'.repeat(30).split('').map((a,i) => (i+1)),
 		days: DAYS,
 		currentMonth: 3,
-		months: MONTHS,
-		years : {
-			currentYear:2017,
-		},	
+		months: MONTHS
 	},
 	methods: {
 		goForward: null,
-		goBackward: null,
+		goBackward: null
 	}
 })
 
@@ -24,17 +21,8 @@ var Calendar = new Vue({
 
 Calendar.goForward = function () {
 	this.currentMonth = (this.currentMonth + 1) % 12
-	if(this.currentMonth===0){
-		this.years.currentYear+=1
-	}
 }
 
 Calendar.goBackward = function () {
-	this.currentMonth = (this.currentMonth - 1) % 12 
-	if(this.currentMonth<0){
-		this.currentMonth=this.currentMonth+12
-	}
-	if(this.currentMonth===11){
-		this.years.currentYear-=1
-	}
-}		
+	this.currentMonth = (this.currentMonth - 1) % 12
+}
