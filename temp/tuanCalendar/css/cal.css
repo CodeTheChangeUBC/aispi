@@ -2,18 +2,97 @@ body {
   font-family: 'Nunito', sans-serif;
   color: #333;
 }
+a {
+  text-decoration: none;
+}
 main {
   width: 90%;
-  max-width: 1280px;
+  max-width: 900px;
   margin: 0 auto;
 }
+.calendar {
+  background-color: #d5ebf6;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.calendar:after {
+  content: '';
+  display: table;
+  clear: both;
+}
   .week {
-    background: blue;
-    color: #fff;
+    text-align: center;
+    font-weight: bold;
   }
     .day {
       width: calc(100% / 7);
       box-sizing: border-box;
-      border: 1px solid #666;
       float: left;
     }
+    .day-of-week { /* sunday, monday, etc. */
+      border: 2px solid #d5ebf6;
+      padding: 10px 10px 5px;
+    }
+    .day-of-month { /* days 1-31 */
+      background: #fff;
+      border: 2px solid #d5ebf6;
+      height: 120px;
+      overflow: hidden;
+      padding: 5px 10px;
+    }
+    .timeslots {
+      font-size: .9em;
+    }
+      .timeslot {
+        background: #004b96;
+        padding: 2px 5px;
+        color: #fff;
+        margin-bottom: 2px;
+        border-radius: 3px;
+        display: block;
+      }
+        .timeslot:hover {
+          background: #186bbf;
+        }
+        .timeslot:active {
+          background: #0d3863;
+        }
+
+form {
+  width: 400px;
+  box-sizing: border-box;
+  background: #d5ebf6;
+  padding: 20px;
+  margin: 20px 0;
+}
+  .form-title {
+    font-size: 1.45em;
+    margin: 0;
+  }
+  fieldset {
+    border: none;
+    background: #fff;
+    margin: 5px 0;
+  }
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Nunito', Arial, sans-serif;
+  }
+  button {
+    background: #004b96;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Nunito', Arial, sans-serif;
+    transition: .15s;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #186bbf;
+  }
+  button:active {
+    background: #0d3863;
+  }
