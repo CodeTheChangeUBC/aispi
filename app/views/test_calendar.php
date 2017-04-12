@@ -96,14 +96,10 @@
   <body>
     <form id="submitForm">
       <div class="form__header">School Deets</div>
-      <input type="text" class="form__input" placeholder="School" />
-      <br>
-      <textarea type="text" class="form__input form__input--area" placeholder="Address"></textarea>
-      <br>
-      <input type="text" class="form__input" placeholder="Email" />
-      <br>
-      <textarea type="text" class="form__input form__input--area" placeholder="Additional Details"></textarea>
-      <br>
+      <input class="form__input" placeholder="School" />
+      <textarea class="form__input form__input--area" placeholder="Street Address"></textarea>
+      <input class="form__input" placeholder="Email" />
+      <textarea class="form__input form__input--area" placeholder="Additional Details"></textarea>
       <div class="form__radioWrap">
         <div class="form__radio">
           <div class="form__radioBtn form__radioBtn--active">
