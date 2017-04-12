@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/cal.css">
+  </head>
+  <body>
+
+
+<main class="form-wrapper">
+
+<img src="images/logo.png" class="logo" alt="Animals in Science Policy Institute Logo">
+
+
+<form>
+<h1 class="form-title">Book Appointment</h1>
+<fieldset>
+  <p>
+    <label for="name">
+      <span>Name: </span>
+    </label>
+    <br>
+    <input type="text" id="name" name="username">
+  </p>
+  <p>
+    <label for="mail">
+      <span>E-mail: </span>
+    </label>
+    <br>
+    <input type="email" id="mail" name="usermail">
+  </p>
+  <p>
+    <label for="phone">
+      <span>Phone: </span>
+    </label>
+    <br>
+    <input type="tel" id="phone" name="userphone">
+  </p>
+</fieldset>
+<fieldset>
+  <p>
+    <label for="school-name">
+      <span>School Name: </span>
+    </label>
+    <br>
+    <input type="text" id="school-name" name="schoolname">
+  </p>
+  <p>
+    <label for="school-street">
+      <span>Street Address: </span>
+    </label>
+    <br>
+    <input type="text" id="school-street" name="schoolstreet">
+  </p>
+  <p>
+    <label for="school-city">
+      <span>City: </span>
+    </label>
+    <br>
+    <input type="text" id="school-city" name="schoolcity">
+  </p>
+  <p>
+    <label for="school-province">
+      <span>Province: </span>
+    </label>
+    <br>
+    <input type="text" id="school-province" name="schoolprovince">
+  </p>
+  <p>
+    <label for="school-postal">
+      <span>Postal Code: </span>
+    </label>
+    <input type="text" id="school-postal" name="schoolpostal">
+  </p>
+</fieldset>
+<fieldset>
+  <p>
+    <label for="event-type">
+      <span>Event Type: </span>
+    </label>
+    <input type="text" id="event-type" name="eventtype">
+  </p>
+  <p>
+    <label for="event-description">
+      <span>Event Description: </span>
+    </label>
+    <br>
+    <textarea id="event-description" name="eventdescription" rows="5"></textarea>
+  </p>
+</fieldset>
+<p><button type="submit">Book Appointment</button></p>
+</form>
+
+</main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js" type="text/javascript"></script>
+    <script src="js/cal.js"></script>
+</body>
+</html>

@@ -1,25 +1,53 @@
 body {
   font-family: 'Nunito', sans-serif;
   color: #333;
+  font-size: 16px;
+  background: #f3f3f3;
 }
 a {
   text-decoration: none;
+  color: #004b96;
+  transition: .2s;
+}
+a:hover {
+  color: #0d3863;
 }
 main {
   width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 25px auto;
+}
+.calendar-wrapper {
+  max-width: 1200px;
+}
+.form-wrapper {
+  max-width: 600px;
 }
 .calendar {
   background-color: #d5ebf6;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 50px;
 }
 .calendar:after {
   content: '';
   display: table;
   clear: both;
 }
+.month {
+  margin: 0 0 30px;
+  text-align: center;
+}
+.month-name {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2em;
+  display: inline-block;
+  margin: 0 40px;
+}
+.month-navigation {
+  font-size: 2em;
+  padding: 0 .25em;
+  transition: .25s;
+} 
   .week {
     text-align: center;
     font-weight: bold;
@@ -31,17 +59,19 @@ main {
     }
     .day-of-week { /* sunday, monday, etc. */
       border: 2px solid #d5ebf6;
-      padding: 10px 10px 5px;
+      padding: 10px 15px 5px;
     }
     .day-of-month { /* days 1-31 */
       background: #fff;
       border: 2px solid #d5ebf6;
-      height: 120px;
+      height: 130px;
       overflow: hidden;
-      padding: 5px 10px;
+      padding: 10px 15px;
     }
     .timeslots {
       font-size: .9em;
+      letter-spacing: .5px;
+      margin-top: 5px;
     }
       .timeslot {
         background: #004b96;
@@ -53,32 +83,42 @@ main {
       }
         .timeslot:hover {
           background: #186bbf;
+          color: #fff;
         }
         .timeslot:active {
           background: #0d3863;
         }
 
 form {
-  width: 400px;
   box-sizing: border-box;
-  background: #d5ebf6;
-  padding: 20px;
-  margin: 20px 0;
+  background: #001a37;
+  color: #fff;
+  padding: 50px;
+  margin: 25px 0;
 }
   .form-title {
     font-size: 1.45em;
     margin: 0;
+    letter-spacing: 1px;
   }
   fieldset {
     border: none;
-    background: #fff;
-    margin: 5px 0;
+    margin: 10px 0;
+    padding: 0 0 20px;
+  }
+  fieldset:not(:last-of-type) {
+    border-bottom: 2px solid #004b96;
   }
   input,
   textarea {
     width: 100%;
     box-sizing: border-box;
     font-family: 'Nunito', Arial, sans-serif;
+    padding: 10px;
+    margin: 3px 0 0;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
   }
   button {
     background: #004b96;
@@ -89,6 +129,10 @@ form {
     font-family: 'Nunito', Arial, sans-serif;
     transition: .15s;
     cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin: 0 auto;
+    display: block;
   }
   button:hover {
     background: #186bbf;

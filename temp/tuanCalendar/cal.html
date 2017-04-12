@@ -10,12 +10,17 @@
   <body>
 
 
-<main>
+<main class="calendar-wrapper">
 
 
 
-<img src="images/logo.png" class="logo">
+<img src="images/logo.png" class="logo" alt="Animals in Science Policy Institute Logo">
 <div class="calendar">
+  <div class="month">
+    <a href="#" class="month-navigation month-previous">&laquo;</a>
+    <h1 class="month-name">April</h1>
+    <a href="#" class="month-navigation month-next">&raquo;</a>
+  </div>
   <div class="week">
     <div class="day day-of-week" v-for="day in days">{{day}}</div>
   </div>
@@ -23,92 +28,14 @@
     <div class="day day-of-month" v-for="day in dates">
       <div class="date">{{day}}</div>
       <div class="timeslots">
-        <a href="#" class="timeslot">9:00AM</a>
-        <a href="#" class="timeslot">12:00PM</a>
-        <a href="#" class="timeslot">2:00PM</a>
+        <a href="#" class="timeslot">9:00am</a>
+        <a href="#" class="timeslot">12:00pm</a>
+        <a href="#" class="timeslot">2:00pm</a>
       </div>
     </div>
   </div>
 </div>
 
-<form>
-<h1 class="form-title">Book Appointment</h1>
-<fieldset>
-  <p>
-    <label for="name">
-      <span>Name: </span>
-    </label>
-    <br>
-    <input type="text" id="name" name="username">
-  </p>
-  <p>
-    <label for="mail">
-      <span>E-mail: </span>
-    </label>
-    <br>
-    <input type="email" id="mail" name="usermail">
-  </p>
-  <p>
-    <label for="phone">
-      <span>Phone: </span>
-    </label>
-    <br>
-    <input type="tel" id="phone" name="userphone">
-  </p>
-</fieldset>
-<fieldset>
-  <p>
-    <label for="school-name">
-      <span>School Name: </span>
-    </label>
-    <br>
-    <input type="text" id="school-name" name="schoolname">
-  </p>
-  <p>
-    <label for="school-street">
-      <span>Street Address: </span>
-    </label>
-    <br>
-    <input type="text" id="school-street" name="schoolstreet">
-  </p>
-  <p>
-    <label for="school-city">
-      <span>City: </span>
-    </label>
-    <br>
-    <input type="text" id="school-city" name="schoolcity">
-  </p>
-  <p>
-    <label for="school-province">
-      <span>Province: </span>
-    </label>
-    <br>
-    <input type="text" id="school-province" name="schoolprovince">
-  </p>
-  <p>
-    <label for="school-postal">
-      <span>Postal Code: </span>
-    </label>
-    <input type="text" id="school-postal" name="schoolpostal">
-  </p>
-</fieldset>
-<fieldset>
-  <p>
-    <label for="event-type">
-      <span>Event Type: </span>
-    </label>
-    <input type="text" id="event-type" name="eventtype">
-  </p>
-  <p>
-    <label for="event-description">
-      <span>Event Description: </span>
-    </label>
-    <br>
-    <textarea id="event-description" name="eventdescription" rows="5"></textarea>
-  </p>
-</fieldset>
-<p><button type="submit">Book Appointment</button></p>
-</form>
 
 </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js" type="text/javascript"></script>
