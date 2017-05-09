@@ -28,7 +28,7 @@ Calendar.goForward = function () {
 Calendar.goBackward = function () {
 	this.currentMonth = (this.currentMonth - 1) % 12 
 	if(this.currentMonth<0){
-		this.currentMonth=this.currentMonth+12
+		this.currentMonth=this.currentMonth+12	
 	}
 	if(this.currentMonth===11){
 		this.years.currentYear-=1
