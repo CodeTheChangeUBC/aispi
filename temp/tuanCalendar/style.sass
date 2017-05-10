@@ -1,0 +1,83 @@
+body
+   background-color: #F3F3F3 
+   display: flex
+   position: absolute
+   top: 50%
+   left: 50%
+   transform: translateX(-50%) translateY(-50%)
+   .container
+      font-family: 'Open Sans', sans-serif
+      position: relative
+      
+      display: block
+      height: 500px
+      width: 50vw
+      @media screen and (min-width: 1000px)
+         .container
+            width: 100vw 
+      img
+         position: relative
+         width: 50%
+         left: 5%
+         margin: 0px 0px 30px 0
+      #monthYear
+         position: absolute
+         width: 50%
+         right: 0
+         top: 15%
+         color: #004A96
+         font-size: 40px
+         font-weight: bold
+         text-align: center
+      .arrowRight, .arrowLeft
+         position: absolute
+         top: 13.5%
+         font-size: 40px
+         color: #004A96
+      .arrowLeft
+         left: 55%
+      .arrowRight
+         right: 5%
+      #days
+         font-weight: bold 
+         font-size: 1.5em
+         color: #515558
+         display: inline-block
+         width: 100%
+         .day, 
+            display: inline-block
+            text-align: center
+            width: calc(100%/7)
+            height: 50px
+      #dates
+         display: inline-block
+         width: 100%
+         color: #5A5D62
+         .date
+            display: inline-block
+            text-align: center
+            width: calc(100%/7)
+            height: 50px
+            line-height: 50px
+            &:hover
+               background-color: #5A5D62 
+               color: #fff
+               cursor: pointer
+         .space
+            display: inline-block
+            text-align: center
+            width: calc(100%/7)
+            height: 50px
+            line-height: 50px
+   .timeLine   
+      height: 500px
+      width: 200px
+      background-color: #5A5D62
+      display: none
+      margin-left: 5px
+   
+      
+      
+      
+        
+
