@@ -41,3 +41,5 @@ View API Documentation [HERE](docs/api.md)
       * Address
       * Email
       * Description (Additional Info)
+      * Start Time as Unix Timestamp
+      * End Time
