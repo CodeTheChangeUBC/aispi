@@ -8,12 +8,29 @@ class Event {
     verifyLegit();
   }
   function remove () {
-
+    
   }
   function get () {
 
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
