@@ -42,4 +42,4 @@ View API Documentation [HERE](docs/api.md)
       * Email
       * Description (Additional Info)
       * Start Time as Unix Timestamp
-      * End Time
+      * End Time as Unix Timestamp
