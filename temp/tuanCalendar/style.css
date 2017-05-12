@@ -7,47 +7,28 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    height: 100%;
+    width: 70vw;
     display: flex; }
     html .container .calendar, body .container .calendar {
-      position: relative;
-      width: 70vw;
-      height: 100%; }
-      html .container .calendar img, body .container .calendar img {
-        position: absolute;
-        top: 0;
-        left: 0; }
-      html .container .calendar .months, body .container .calendar .months {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 60%;
-        height: 20%;
-        color: #004A96; }
-        html .container .calendar .months .year, body .container .calendar .months .year {
-          position: absolute;
-          top: 20%;
-          left: 50%;
-          transform: translateX(-50%) translateY(-50%); }
-        html .container .calendar .months .month, body .container .calendar .months .month {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translateX(-50%) translateY(-50%);
-          font-size: 40px; }
-        html .container .calendar .months .left, html .container .calendar .months .right, body .container .calendar .months .left, body .container .calendar .months .right {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 40px; }
-        html .container .calendar .months .left, body .container .calendar .months .left {
-          left: 10%; }
-        html .container .calendar .months .right, body .container .calendar .months .right {
-          right: 10%; }
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1; }
+      html .container .calendar .header, body .container .calendar .header {
+        display: flex;
+        margin-left: 5%; }
+        html .container .calendar .header .months, body .container .calendar .header .months {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          flex-grow: 1;
+          color: #004A96; }
+          html .container .calendar .header .months .year, body .container .calendar .header .months .year {
+            height: 30px;
+            line-height: 30px; }
+          html .container .calendar .header .months .month, body .container .calendar .header .months .month {
+            flex-grow: 1;
+            font-size: 40px; }
       html .container .calendar .dates, body .container .calendar .dates {
-        position: absolute;
-        top: 25%;
-        width: 100%;
         color: #515558;
         font-weight: bold;
         font-size: 1.5em; }
@@ -58,9 +39,6 @@ html, body {
           height: 50px;
           line-height: 50px; }
       html .container .calendar .days, body .container .calendar .days {
-        position: absolute;
-        top: calc(30% + 50px);
-        width: 100%;
         color: #5A5D62; }
         html .container .calendar .days .day, body .container .calendar .days .day {
           display: inline-block;
@@ -79,9 +57,11 @@ html, body {
       background-color: #3E454D;
       display: none;
       padding: 20px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      transition: 2s; }
       html .container .timeLine .time, body .container .timeLine .time {
         width: 100%;
-        height: calc(100%/24); }
+        height: calc(100%/10);
+        line-height: 63.2px; }
 
 /*# sourceMappingURL=style.css.map */
