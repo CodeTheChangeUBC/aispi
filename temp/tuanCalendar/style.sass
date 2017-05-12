@@ -1,14 +1,18 @@
-body
+html, body
+   height: 100%
+   margin: 0
    font-family: 'Open Sans', sans-serif
    .container
       position: absolute
       top: 50%
       left: 50%
       transform: translateX(-50%) translateY(-50%)
+      height: 100%
+      display: flex
       .calendar
          position: relative
          width: 70vw
-         height: 100vh
+         height: 100%
          img
             position: absolute
             top: 0
@@ -69,8 +73,8 @@ body
                   background-color: #5A5D62
                   color: #fff
                   cursor: pointer
-            .space
-               display: inline-block
-               width: calc(100%/7)
-               height: 50px
+      .timeLine
+         width: 30%
+         background-color: #5A5D62 
+         display: none           
                

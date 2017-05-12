@@ -1,77 +1,81 @@
-body {
+html, body {
+  height: 100%;
+  margin: 0;
   font-family: "Open Sans", sans-serif; }
-  body .container {
+  html .container, body .container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%); }
-    body .container .calendar {
+    transform: translateX(-50%) translateY(-50%);
+    height: 100%;
+    display: flex; }
+    html .container .calendar, body .container .calendar {
       position: relative;
       width: 70vw;
-      height: 100vh; }
-      body .container .calendar img {
+      height: 100%; }
+      html .container .calendar img, body .container .calendar img {
         position: absolute;
         top: 0;
         left: 0; }
-      body .container .calendar .months {
+      html .container .calendar .months, body .container .calendar .months {
         position: absolute;
         top: 0;
         right: 0;
         width: 60%;
         height: 20%;
         color: #004A96; }
-        body .container .calendar .months .year {
+        html .container .calendar .months .year, body .container .calendar .months .year {
           position: absolute;
           top: 20%;
           left: 50%;
           transform: translateX(-50%) translateY(-50%); }
-        body .container .calendar .months .month {
+        html .container .calendar .months .month, body .container .calendar .months .month {
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translateX(-50%) translateY(-50%);
           font-size: 40px; }
-        body .container .calendar .months .left, body .container .calendar .months .right {
+        html .container .calendar .months .left, html .container .calendar .months .right, body .container .calendar .months .left, body .container .calendar .months .right {
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
           font-size: 40px; }
-        body .container .calendar .months .left {
+        html .container .calendar .months .left, body .container .calendar .months .left {
           left: 10%; }
-        body .container .calendar .months .right {
+        html .container .calendar .months .right, body .container .calendar .months .right {
           right: 10%; }
-      body .container .calendar .dates {
+      html .container .calendar .dates, body .container .calendar .dates {
         position: absolute;
         top: 25%;
         width: 100%;
         color: #515558;
         font-weight: bold;
         font-size: 1.5em; }
-        body .container .calendar .dates .date {
+        html .container .calendar .dates .date, body .container .calendar .dates .date {
           display: inline-block;
           width: calc(100%/7);
           text-align: center;
           height: 50px;
           line-height: 50px; }
-      body .container .calendar .days {
+      html .container .calendar .days, body .container .calendar .days {
         position: absolute;
         top: calc(30% + 50px);
         width: 100%;
         color: #5A5D62; }
-        body .container .calendar .days .day {
+        html .container .calendar .days .day, body .container .calendar .days .day {
           display: inline-block;
           width: calc(100%/7);
           height: 50px;
           line-height: 50px;
           text-align: center;
           vertical-align: bottom; }
-          body .container .calendar .days .day:hover {
+          html .container .calendar .days .day:hover, body .container .calendar .days .day:hover {
             background-color: #5A5D62;
             color: #fff;
             cursor: pointer; }
-        body .container .calendar .days .space {
-          display: inline-block;
-          width: calc(100%/7);
-          height: 50px; }
+    html .container .timeLine, body .container .timeLine {
+      width: 30%;
+      background-color: #5A5D62;
+      display: none; }
 
 /*# sourceMappingURL=style.css.map */

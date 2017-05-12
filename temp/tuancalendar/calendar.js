@@ -8,7 +8,6 @@ var currentMonth=d.toString().substr(4,4)
 var lastDate= new Date(currentYear, d.getMonth()+1, 0).getDate()
 var firstDay=new Date(currentYear,d.getMonth(),1).toString().substr(0,3)
 var firstDayNumber=DATES.indexOf(firstDay)
-console.log(firstDayNumber)
 //add spaces
 for (c=0; c<=6; c++){
 	if(c==firstDayNumber){
@@ -29,10 +28,18 @@ var Calendar = new Vue({
 		days: DAYS,
 		year: currentYear
 	},
-	/*methods: {
-		goForward: null,
-		goBackward: null
-	}*/
+	methods: {
+		toggleTimeLine: function(){
+			var eles = document.getElementsByClassName('timeLine')
+			for (var i=0; i<eles.length; i++){
+				if (eles[i].style.display === "none"){
+					eles[i].style.display = "block"	
+				} else {
+					eles[i].style.display="none"
+				}
+			}
+		}
+	}
 })
 /*Calendar.goForward = function () {
 	this.currentMonth = (this.currentMonth + 1) % 12
