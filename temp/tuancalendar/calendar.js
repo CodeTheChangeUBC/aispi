@@ -14,13 +14,7 @@ for (c=0; c<=6; c++){
 	if(c==firstDayNumber){
 		break;
 	}
-	DAYS.push(" ")
-	/*var spaces = new Vue({
-		el:'.day',
-		data: {
-			on: true
-		}
-	})*/
+	DAYS.push('')
 }
 //add dates
 for (i=1;i<=lastDate;i++){
@@ -35,14 +29,14 @@ var Calendar = new Vue({
 		days: DAYS,
 		year: currentYear
 	},
-	methods: {
+	/*methods: {
 		goForward: null,
 		goBackward: null
-	}
+	}*/
 })
-Calendar.goForward = function () {
+/*Calendar.goForward = function () {
 	this.currentMonth = (this.currentMonth + 1) % 12
 }
 Calendar.goBackward = function () {
 	this.currentMonth = (this.currentMonth - 1) % 12
-}
+}*/

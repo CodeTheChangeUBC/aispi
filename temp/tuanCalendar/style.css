@@ -63,7 +63,8 @@ body {
           width: calc(100%/7);
           height: 50px;
           line-height: 50px;
-          text-align: center; }
+          text-align: center;
+          vertical-align: bottom; }
           body .container .calendar .days .day:hover {
             background-color: #5A5D62;
             color: #fff;
