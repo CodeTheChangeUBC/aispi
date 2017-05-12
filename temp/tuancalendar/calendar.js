@@ -32,7 +32,7 @@ var Calendar = new Vue({
 		month: currentMonth,
 		days: DAYS,
 		year: currentYear,
-		times: timeLine
+		times: timeLine,
 	},
 	methods: {
 		toggleTimeLine: function(){
