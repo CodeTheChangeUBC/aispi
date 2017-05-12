@@ -24,7 +24,9 @@
 					<div class="day" v-for="day in days" v-on:click="toggleTimeLine">{{day}}</div>
 				</div>
 			</div>
-			<div class="timeLine"></div>
+			<div class="timeLine">
+				<div class="time" v-for='time in times'>{{time}}</div>
+			</div>
 		</div>
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js" type="text/javascript"></script>

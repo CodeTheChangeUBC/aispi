@@ -1,6 +1,7 @@
 
 var DATES = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
 var DAYS = []
+var timeLine = []
 var d = new Date()
 var currentDate=d.getDate()
 var currentYear=d.getFullYear()
@@ -19,6 +20,10 @@ for (c=0; c<=6; c++){
 for (i=1;i<=lastDate;i++){
 	DAYS.push(i)
 }
+//add timeline
+for (t=1; t<25; t++){
+	timeLine.push(t+':00')
+}
 
 var Calendar = new Vue({
 	el: '.container',
@@ -26,7 +31,8 @@ var Calendar = new Vue({
 		dates: DATES,
 		month: currentMonth,
 		days: DAYS,
-		year: currentYear
+		year: currentYear,
+		times: timeLine
 	},
 	methods: {
 		toggleTimeLine: function(){
