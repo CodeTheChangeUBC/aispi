@@ -17,7 +17,7 @@ View API Documentation [HERE](docs/api.md)
   <Directory "C:/aispi">
   ```
 5. Save the config file and Start the Apache Server. 
-6. Open localhost in your browser
+6. Open localhost/debug.php in your browser. You're done.
 
 ## Technical Specifications:
 ### Server
