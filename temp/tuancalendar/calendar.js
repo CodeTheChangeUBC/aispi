@@ -21,7 +21,7 @@ for (i=1;i<=lastDate;i++){
 	DAYS.push(i)
 }
 //add timeline
-for (t=8; t<=17; t++){
+for (t=8; t<=19; t++){
 	timeLine.push(t+':00')
 }
 
