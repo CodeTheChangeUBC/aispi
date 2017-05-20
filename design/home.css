@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+
+body{
+  background-color: #EEE;
+}
+  #header{
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+    #header__label{
+      font-family: Nunito;
+      float: right;
+      margin-top: 30px;
+      margin-right: 20px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #000;
+      font-size: 12px;
+    }
+  #calendar__wrap{
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+  }
+    #month__label{
+      font-family: Nunito;
+      font-size: 30px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      color: #999;
+    }
+
+    /** This styling is for the actual box calendar and items. */
+    #calendar{
+      background-color: #FFF;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0px 1px 1px #BBB;
+      border-radius: 3px;
+      margin: 0 auto;
+      display: inline-block;
+    }
+      .calendar__day{
+        height: 90px;
+        width: calc(100% / 7);
+        border-right: 1px solid #EEE;
+        border-bottom: 1px solid #EEE;
+        box-sizing: border-box;
+        float: left;
+        text-align: left;
+        font-family: Montserrat;
+        font-size: 12px;
+        cursor: pointer;
+      }
+        .calendar__day--old{
+          background-color: #f0f0f0;
+          color: #999;
+        }
+        .day__number{
+          margin: 7.5px;
+          margin-bottom: 3px;
+        }
+        .event__label{
+          padding: 1px 4px;
+          margin: 0 2px;
+          margin-top: 3px;
+          font-family: Montserrat;
+          font-size: 10px;
+          text-transform: uppercase;
+          font-weight: 300;
+          background-color: #000;
+          color: #FFF;
+          border-radius: 3px;
+        }
+
+    /** This styling is for that day planner thing that pops up */
+    #planner{
+      width: 300px;
+      height: 450px;
+      margin: auto;
+      display: inline-block;
+      background-color: #6C7A89;
+      box-shadow: 0px 1px 1px #BBB;
+      border-radius: 10px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      display: inline-block;
+    }
+
+
+
+
+
+
+
+

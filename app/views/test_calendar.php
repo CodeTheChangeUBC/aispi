@@ -6,10 +6,10 @@
   <body>
     <form id="submitForm">
       <div class="form__header">School Deets</div>
-      <input class="form__input" placeholder="School" />
-      <textarea class="form__input form__input--area" placeholder="Street Address"></textarea>
-      <input class="form__input" placeholder="Email" />
-      <textarea class="form__input form__input--area" placeholder="Additional Details"></textarea>
+      <input class="form__input" placeholder="School Name" />
+      <textarea class="form__input form__input--area" placeholder="School Street Address"></textarea>
+      <input class="form__input" placeholder="Your Email" />
+      <textarea class="form__input form__input--area" placeholder="Additional Details (Where to enter the school, visitor requirements, room numbers, etc.)"></textarea>
       <div class="form__radioWrap">
         <div class="form__radio">
           <div class="form__radioBtn form__radioBtn--active">
@@ -25,13 +25,5 @@
       <input type="submit" class="form__submit" value="SUBMIT"/>
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
-    <script type="text/javascript">
-      var SubmissionForm = new Vue({
-        el: '#submitForm',
-        data: {
-
-        }
-      })
-    </script>
   </body>
 </html>

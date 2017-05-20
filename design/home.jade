@@ -1,0 +1,16 @@
+html
+  head
+    link(rel="stylesheet" href="./home.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js")
+  body
+    #header
+      img(src="./logo.png" height="100px")
+      #header__label EVENT PLANNER
+    #calendar__wrap
+      #month__label &#x25c0; {{month}} {{year}} &#x25b6;
+      #calendar
+        .calendar__day(v-for="day in days" v-bind:class="{'calendar__day--old': !day.current}")
+          .day__number {{day.number}}
+            .event__label
+      #planner
+    script(src="./home.js")
