@@ -5,12 +5,13 @@ html
   body
     #header
       img(src="./logo.png" height="100px")
-      #header__label EVENT PLANNER
+      #header__label EVENT PLANNER (Beta)
     #calendar__wrap
       #month__label &#x25c0; {{month}} {{year}} &#x25b6;
       #calendar
         .calendar__day(v-for="day in days" v-bind:class="{'calendar__day--old': !day.current}")
           .day__number {{day.number}}
-            .event__label
+            .event__label(v-for="(event, key) in eventMap")
       #planner
+        .time__line(v-for="time in times") {{time}}
     script(src="./home.js")
