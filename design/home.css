@@ -1,116 +1,94 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:300');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
 
 
 body{
   background-color: #EEE;
+  text-align: center;
 }
   #header{
-    width: 90%;
-    max-width: 800px;
-    margin: auto;
-    margin-bottom: 30px;
+    width: 100%;
+    float: left;
   }
-    #header__label{
-      font-family: Nunito;
-      float: right;
-      margin-top: 30px;
-      margin-right: 20px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      color: #000;
-      font-size: 12px;
-    }
-  #calendar__wrap{
-    width: 96%;
-    max-width: 1000px;
-    text-align: center;
-    margin: auto;
-  }
-    #month__label{
-      font-family: Nunito;
-      font-size: 30px;
-      margin-top: 50px;
-      margin-bottom: 30px;
-      color: #999;
-    }
-
-    /** This styling is for the actual box calendar and items. */
-    #calendar{
-      background-color: #FFF;
-      width: 90%;
-      max-width: 700px;
-      min-height: 500px;
-      box-shadow: 0px 1px 1px #BBB;
-      border-radius: 3px;
-      margin: 0 auto;
+    #header__image{
       float: left;
     }
-      .calendar__day{
-        height: 90px;
-        width: calc(100% / 7);
-        border-right: 1px solid #EEE;
-        border-bottom: 1px solid #EEE;
-        box-sizing: border-box;
-        float: left;
-        text-align: left;
+
+  .home__inline{
+    width: 90%;
+    max-width: 910px;
+    margin: auto;
+    margin-top: 50px;
+  }
+    #calendar__month {
+      font-family: Montserrat;
+      font-weight: 300;
+      font-size: 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 50px;
+    }
+      .month__change{
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        margin: 0 15px;
+        margin-bottom: -4px;
+      }
+        .month__change--next{
+          background: url(./right_arrow.png) center center no-repeat;
+          background-size: 100%;
+        }
+        .month__change--prev{
+          background: url(./left_arrow.png) center center no-repeat;
+          background-size: 100%;
+        }
+      .calendar__dayLabel{
         font-family: Montserrat;
         font-size: 12px;
-        cursor: pointer;
+        width: 130px;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 4px;
+        font-weight: 200;
       }
-        .calendar__day--old{
-          background-color: #f0f0f0;
-          color: #999;
-        }
-        .day__number{
-          margin: 7.5px;
-          margin-bottom: 3px;
-        }
-        .event__label{
-          padding: 1px 4px;
-          margin: 0 2px;
-          margin-top: 3px;
-          font-family: Montserrat;
-          font-size: 10px;
-          text-transform: uppercase;
-          font-weight: 300;
-          background-color: #000;
-          color: #FFF;
-          border-radius: 3px;
-        }
 
-    /** This styling is for that day planner thing that pops up */
-    #planner{
-      width: 210px;
-      height: 500px;
-      margin: auto;
-      background-color: #6C7A89;
-      box-shadow: 0px 1px 1px #BBB;
-      border-radius: 3px;
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
-      display: inline-block;
-      float: right;
+    #calendar__wrap{
+      margin-top: 30px;
+      float: left;
     }
-      .time__line{
-        width: 100%;
-        border-bottom: 1px dashed rgba(255,255,255,0.1);
-        height: 31px;
-        text-align: left;
-        line-height: 30px;
-        color: #FFF;
-        font-family: Montserrat;
-        font-size: 9px;
-        padding-left: 10px;
-        box-sizing: border-box;
-
+    .calendar__day{
+      height: 130px;
+      width: 130px;
+      background-color: #FFF;
+      float: left;
+      box-sizing: border-box;
+      border-right: 1px solid #EEE;
+      border-bottom: 1px solid #EEE;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+      .calendar__day--disabled{
+        background-color: #f4f4f4;
       }
-        .time__event{
-          float: right;
-          height: 30px;
-          position: absolute;
-
-        }
-
-
+      .calendar__date{
+        font-family: Montserrat;
+        font-size: 12px;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: left;
+        font-weight: 200;
+        color: #444;
+      }
+      .calendar__add{
+        background: url('./add.png') center center no-repeat;
+        background-size: 20px;
+        width: 100%;
+        height: 30px;
+        font-family: Montserrat;
+        font-size: 10px;
+        line-height: 70px;
+        font-weight: 400;
+        color: #999;
+      }
