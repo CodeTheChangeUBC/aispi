@@ -6,6 +6,7 @@
 body{
   text-align: center;
   overflow-y: scroll;
+  background-color: #eee;
 }
   .formPopup{
     position: fixed;

@@ -13,6 +13,3 @@ var calendar=new Vue({
     },  
   }
 })
-$('#keepTimeline').click(function(a){
-   a.stopPropagation()
-})

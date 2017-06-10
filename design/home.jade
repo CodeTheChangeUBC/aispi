@@ -2,9 +2,7 @@ html
   head
     link(rel="stylesheet" href="./home.css")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js")
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
   body
-
     .viewPopup(v-show="inView" v-on:click='toggleTimeLine')
       .container#keepTimeline
         .time(v-for='time in times'){{time}}
@@ -31,10 +29,8 @@ html
 
           .calendar__button.calendar__button--view(v-show="day.current") VIEW
     script(src="./home.js")
+    script(src="./timeline.js")
 
 
 
 
-
-
->>>>>>> 3a2ba211dddcd9f03355a7e862907391d69f3eaf
