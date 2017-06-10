@@ -4,9 +4,46 @@
 
 
 body{
-  background-color: #EEE;
   text-align: center;
 }
+  .formPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+  }
+  .viewPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.8);
+ }
+    .container{
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 20vw;
+      height: 80vh;
+      background-color: rgba(0,0,0,0.9);
+    }
+      .time{
+        color: #fff;
+        width: 100%;
+        height: calc(100%/16);
+        text-align: left;
+        padding-left: 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
   #header{
     width: 100%;
     float: left;

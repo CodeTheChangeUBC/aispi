@@ -2,7 +2,12 @@ html
   head
     link(rel="stylesheet" href="./home.css")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
   body
+
+    .viewPopup(v-show="inView" v-on:click='toggleTimeLine')
+      .container#keepTimeline
+        .time(v-for='time in times'){{time}}
     .home__inline
       #header
         img#header__image(src="./logo.png" height="60px")
@@ -20,5 +25,6 @@ html
           .calendar__event 5:30 PM :: 10:00 PM
           .calendar__event 5:30 PM :: 10:00 PM
           .calendar__button.calendar__button--add(v-show="day.current") ADD
-          .calendar__button.calendar__button--view(v-show="day.current") VIEW
+          .calendar__button.calendar__button--view(v-show="day.current" v-on:click="toggleTimeLine") VIEW
     script(src="./home.js")
+    script(src='./timeline.js')
