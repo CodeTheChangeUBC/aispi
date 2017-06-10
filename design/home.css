@@ -7,15 +7,6 @@ body{
   text-align: center;
   overflow-y: scroll;
 }
-  .formPopup{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0,0,0,0.8);
-    display: none;
-  }
   .viewPopup{
     position: fixed;
     top: 0;
