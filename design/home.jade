@@ -12,19 +12,29 @@ html
       #header
         img#header__image(src="./logo.png" height="60px")
       #calendar__month
-        .month__change.month__change--prev
-        |May 2017
-        .month__change.month__change--next
+        .month__change.month__change--prev(@click="months.prev()")
+        |{{MONTHS[month]}} {{year}}
+        .month__change.month__change--next(@click="months.next()")
       #calendar__wrap
         #calendar__dayWrap
           each day in ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
             .calendar__dayLabel=day
-        .calendar__day(v-for="day in days" v-bind:class="{'calendar__day--disabled': !day.current}") 
-          .calendar__date {{day.number}}
-          .calendar__event 5:30 PM :: 10:00 PM
-          .calendar__event 5:30 PM :: 10:00 PM
-          .calendar__event 5:30 PM :: 10:00 PM
-          .calendar__button.calendar__button--add(v-show="day.current") ADD
-          .calendar__button.calendar__button--view(v-show="day.current" v-on:click="toggleTimeLine") VIEW
+        .calendar__day(v-for="day in days" v-bind:class="{'calendar__day--disabled': !day.number}") 
+          .calendar__date {{day.number||''}}
+          .calendar__eventWrap
+            .calendar__event(
+              v-for="(event,index) in day.events"
+              @mouseover="events.extend(event)"
+              @mouseout="events.contract(event)"
+              v-bind:style="{backgroundColor: SWATCHES[(day.number % SWATCHES.length)][~~(index%2)]}"
+              v-bind:class="{'calendar__event--on': event.toggled}") 5:30 PM :: 10:00 PM
+
+          .calendar__button.calendar__button--view(v-show="day.current") VIEW
     script(src="./home.js")
-    script(src='./timeline.js')
+
+
+
+
+
+
+>>>>>>> 3a2ba211dddcd9f03355a7e862907391d69f3eaf
