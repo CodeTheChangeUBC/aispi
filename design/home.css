@@ -6,6 +6,7 @@
 body{
   background-color: #EEE;
   text-align: center;
+  overflow-y: scroll;
 }
   #header{
     width: 100%;
@@ -103,8 +104,19 @@ body{
         font-size: 11px;
         text-align: center;
         margin-top: 1px;
-        border-radius: 4px;
+        border-radius: 30px;
+        overflow: hidden;
+        width: 15px;
+        height: 15px;
+        margin: 5px 0 0 5px;
+          transition: width .1s;
+        color: transparent;
       }
+        .calendar__event--on{
+          width: calc(100% - 10px);
+          color: #FFF;
+          transition: width .1s;
+        }
       .calendar__button{
         font-family: Montserrat;
         font-weight: 400;
