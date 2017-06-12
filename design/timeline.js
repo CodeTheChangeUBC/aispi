@@ -8,11 +8,11 @@ var calendar=new Vue({
       ],
    },
    methods: {
-    toggleTimeLine: function(){
+    toggleTimeLine: function(e){
+      if(e && document.getElementById('keepTimeline').contains(e.target)){
+        return
+      }
       calendar.inView = !calendar.inView  
     },  
   }
-})
-$('#keepTimeline').click(function(a){
-   a.stopPropagation()
 })
