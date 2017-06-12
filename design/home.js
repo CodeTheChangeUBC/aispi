@@ -28,15 +28,14 @@ var Calendar = new Vue({
     month: 0,
     year: 0,
     days: [],
+    
 
     eventMap: {},
   },
   methods: {
     toggleTimeLine: function(){
       calendar.inView = !calendar.inView
-    }
-  },
-  methods: {
+    },
     events: {
       extend: null,
       contract: null
@@ -106,12 +105,13 @@ Calendar.setDate = function (date) {
 
   // Fill in the appropriate array.
   for(var i = 0; i < days; i++) {
-    this.days.push({number: (i+1), events: []})
+    this.days.push({number: (i+1), events: ['']})
   }
 
   // Beginning empty
   for(var i = 0; i < dayOf; i++) {
     this.days.unshift({number: 0, events: []})
+    
   }
 
   while (this.days.length%7) {

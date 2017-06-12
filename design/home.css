@@ -1,7 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:300');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
-
+*{
+  padding: 0;
+  margin: 0;
+}
 
 body{
   text-align: center;
@@ -9,34 +12,100 @@ body{
   background-color: #eee;
 }
   .viewPopup{
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(108,122,137,0.8);
  }
     .container{
+      font-family: Montserrat;
       z-index: 1;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
-      width: 20vw;
+      width: 80vw;
       height: 80vh;
-      background-color: rgba(0,0,0,0.9);
+      display: flex;
+      flex-direction: row;
     }
-      .time{
-        color: #fff;
-        width: 100%;
-        height: calc(100%/16);
-        text-align: left;
-        padding-left: 10px;
-        box-sizing: border-box;
+      .timeContainer{
+        width: 20vw;
+      }
+        .time{
+          background-color: rgba(34, 49, 63,1);
+          color: #fff;
+          width: 100%;
+          height: calc(100%/16);
+          text-align: left;
+          padding-left: 10px;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          
+        }
+      .form{
+        height: 80vh;
+        width: 60vw;
+        background-color: rgba(52, 73, 94,0.8);
         display: flex;
-        justify-content: center;
         flex-direction: column;
       }
+        .info{
+          text-align: left;
+          width: 100%;
+          height: 70%;
+          padding: 20px;
+          box-sizing: border-box;
+        } 
+          p{
+            color: #fff;
+            margin-bottom: 5px;
+          }
+          input{
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            width: 100%;
+            height: 30px;
+            margin-bottom: 20px;
+            background-color: transparent;
+            outline: 0;
+          }
+          textarea{
+            resize: none;
+            outline: 0;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            width: 100%;
+            height: 50%;
+            margin-bottom: 20px;
+            background-color: transparent;
+          }
+        .submitButton{
+          width: 100%;
+          height: 30%;
+        }
+          #submit{
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background-color: transparent;
+            height: 50px;
+            width: 150px;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 20px;
+            outline: 0;
+            cursor: pointer;
+          }
+
   #header{
     width: 100%;
     float: left;
@@ -163,15 +232,17 @@ body{
           position: absolute;
           bottom: 5px;
           left: 5px;
+          line-height: 5px;
           cursor: pointer;
           padding: 0;
           font-size: 20px;
-          color: #fff;
-          background-color: #6BB9F0;
-          border: none;
+          color: #6BB9F0;
+          background-color: #fff;
+          border: 1px solid #6BB9F0;
           height: 20px;
           width: 20px;
           border-radius: 50%;
+          outline: 0;
         }
         .calendar__button--view{
           background-color: #9A12B3;
