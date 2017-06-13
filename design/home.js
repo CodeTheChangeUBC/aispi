@@ -105,7 +105,7 @@ Calendar.setDate = function (date) {
 
   // Fill in the appropriate array.
   for(var i = 0; i < days; i++) {
-    this.days.push({number: (i+1), events: ['']})
+    this.days.push({number: (i+1), events: []})
   }
 
   // Beginning empty
