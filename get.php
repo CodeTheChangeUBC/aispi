@@ -1,5 +1,5 @@
 <?php
-    header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: *");
 
 define('START_TIME_INDEX', 1);
 
@@ -20,5 +20,5 @@ while (($data = fgetcsv($handle)) != FALSE) {
   }
 }
 
-
+// Output it to the API.
 echo json_encode($time_slice);
