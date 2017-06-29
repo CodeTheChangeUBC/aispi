@@ -23,16 +23,12 @@ body{
     .container{
       font-family: Montserrat;
       z-index: 1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      width: 80vw;
+      width: 50%;
       height: 80vh;
-      display: flex;
-      flex-direction: row;
+      margin: auto;
+      margin-top: 10vh;
     }
-      .timeContainer{
+      .time__container{
         width: 20vw;
       }
         .time{
@@ -45,117 +41,20 @@ body{
           box-sizing: border-box;
           display: flex;
           justify-content: center;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 300;
           flex-direction: column;
+          border-top: 1px solid rgba(255,255,255,0.02);
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
         }
-      .form{
-        height: 80vh;
-        width: 60vw;
-        background-color: rgba(52, 73, 94,0.8);
-        display: flex;
-        flex-direction: column;
+      .form__container{
+        float: right;
+        height: 300px;
+        width: 300px;
       }
-        .info{
-          text-align: left;
-          width: 100%;
-          height: 70%;
-          padding: 20px;
-          box-sizing: border-box;
-        } 
-          .eventType,.school,.address{
-            display: flex;
-            flex-direction: row;
-            color: #fff;
-            margin-bottom: 20px;
-            height: 30px;
-            line-height: 30px;
-          }
-            .choice{
-              margin: 0 40px;
-              height: 30px;
-              padding: 0 20px;
-              line-height: 30px;
-              border: 2px solid #fff;
-              border-radius: 20px;
-            }
-            .choice:hover{
-              background-color: rgba(34, 49, 63,1);
-            }
-            p{
-              color: #fff;
-            }
-            .school input{
-               color: #fff;
-               border: 1px solid #fff;
-               border-radius: 5px;
-               width: 50%;
-               height: 30px;
-               margin-left: 70px;
-               background-color: transparent;
-               outline: 0;
-             }
-              .address input{
-               color: #fff;
-               border: 1px solid #fff;
-               border-radius: 5px;
-               width: 50%;
-               height: 30px;
-               margin-left: 60px;
-               background-color: transparent;
-               outline: 0;
-             }
-            .description{
-              margin-bottom: 30px;
-            }
-              textarea{
-               resize: none;
-               outline: 0;
-               color: #fff;
-               border: 1px solid #fff;
-               border-radius: 5px;
-               width: 100%;
-               height: 50%;
-               margin-top: 10px;
-               background-color: transparent;
-              }
-            .bookingTime{
-              display: flex;
-              flex-direction: row;
-              height: 30px;
-              line-height: 30px;
-            }
-              .bookingTime input{
-                height: 30px;
-                text-align: center;
-                color: #fff;
-                margin: 0 30px;
-                border: 1px solid #fff;
-                background-color: transparent;
-                width: 20%;
-                border-radius: 5px;
-              }
-
-            
-         
-             
-         
-        .submitButton{
-          width: 100%;
-          height: 30%;
-        }
-          #submit{
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            background-color: transparent;
-            height: 50px;
-            width: 150px;
-            border: 2px solid #fff;
-            border-radius: 25px;
-            color: #fff;
-            font-size: 20px;
-            outline: 0;
-            cursor: pointer;
-          }
 
   #header{
     width: 100%;
@@ -298,3 +197,12 @@ body{
         .calendar__button--view{
           background-color: #9A12B3;
         }
+
+
+
+
+
+
+
+
+

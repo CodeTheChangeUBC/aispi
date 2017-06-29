@@ -5,30 +5,10 @@ html
   body
     .viewPopup(v-show="inView" v-on:click='toggleTimeLine($event)')
       .container#keepTimeline
-        .timeContainer
+        .time__container
           .time(v-for='time in times'){{time}}
-        .form
-          .info
-            .eventType 
-              p Event Type:
-              .choice Guess Classes
-              .choice Information Sessions (Pro-D)
-            .school
-              p School:
-              input
-            .address
-              p Address:
-              input
-            .description
-              p Description
-              textarea
-            .bookingTime
-              p From: 
-              input(type='time')
-              p To:
-              input(type='time')
-          .submitButton
-            button#submit Submit
+        .form__container
+
     .home__inline
       #header
         img#header__image(src="./logo.png" height="60px")
