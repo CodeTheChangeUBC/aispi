@@ -41,8 +41,16 @@ class AddEvent {
      */
     public static function BadField ($field, $value) {
         echo json_encode([
-            "Error" => $field,
-            "Msg"   => $value.' is not an appropriate value' 
+            "error" => $field,
+            "msg"   => $value.' is not an appropriate value' 
+        ]);
+        exit;
+    }
+
+    public static function BadWrite () {
+        echo json_encode([
+            "error" => 'FAILED WHILE WRITING',
+            "msg"   => 'Error with the database, please email site admin'
         ]);
         exit;
     }
@@ -57,7 +65,20 @@ class AddEvent {
      * Adds the data from the $_POST data to the events.csv
      */
     public static function AddData () {
+        // Open the events file and add the appropriate data.
+        // Fail safely otherwise.
 
+        $file_handle = fopen(EVENT_FILE, 'a')
+        $data        = '\n'.
+            $_POST['EVENT'].
+            $_POST['SCHOOL'].
+            $_POST['ADDRESS'].
+            $_POST['EMAIL'].
+            $_POST['START'];
+
+        if (fwrite($file_handle, $data) == FALSE) {
+            BadWrite();
+        }
     }
 
     /**
