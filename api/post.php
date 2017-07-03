@@ -1,33 +1,36 @@
 <?php
 
-const EVENT_TYPES = [
-    "GC" => 0
-    "PD" => 1
-]
-
-const MANDATORY_FIELDS = [
-    "EVENT"       => $verify__event,
-    "SCHOOL"      => $verify__school,
-    "ADDRESS"     => $verify__address,
-    "EMAIL"       => $verify__email,
-    "START"       => $verify__start
-]
+require '../index.php';
 
 $verify__event = function ($d) {
-    return isset($d) && (isset(EVENT_TYPES[$d]));
-}
+    return (null !== $d) && (null !== EVENT_TYPES[$d]);
+};
 $verify__school = function ($d) {
-    return isset($d) && ((strlen($d) > 3) && (strlen($d) < 512));
-}
+    return (null !== $d) && ((strlen($d) > 3) && (strlen($d) < 512));
+};
 $verify__address = function ($d) {
-    return isset($d) && ((strlen($d) > 3) && (strlen($d) < 512));
-}
+    return (null !== $d) && ((strlen($d) > 3) && (strlen($d) < 512));
+};
 $verify__email = function ($d) {
-    return isset($d) && (filter_var($d, FILTER_VALIDATE_EMAIL));
-}
+    return (null !== $d) && (filter_var($d, FILTER_VALIDATE_EMAIL));
+};
 $verify__start = function ($d) {
 
-}
+};
+
+
+const EVENT_TYPES = [
+    "GC" => 0,
+    "PD" => 1
+];
+
+const MANDATORY_FIELDS = [
+    "EVENT"       => 'verify__event',
+    "SCHOOL"      => 'verify__school',
+    "ADDRESS"     => 'verify__address',
+    "EMAIL"       => 'verify__email',
+    "START"       => 'verify__start'
+];
 
 
 
@@ -42,7 +45,7 @@ class AddEvent {
     public static function BadField ($field, $value) {
         echo json_encode([
             "error" => $field,
-            "msg"   => $value.' is not an appropriate value' 
+            "msg"   => $value.' is not an appropriate value for '.$field
         ]);
         exit;
     }
@@ -68,7 +71,7 @@ class AddEvent {
         // Open the events file and add the appropriate data.
         // Fail safely otherwise.
 
-        $file_handle = fopen(EVENT_FILE, 'a')
+        $file_handle = fopen(EVENT_FILE, 'a');
         $data        = '\n'.
             $_POST['EVENT'].
             $_POST['SCHOOL'].
@@ -85,11 +88,21 @@ class AddEvent {
      * Go through the MANDATORY_FIELDS and checks each $_POST parameter.
      */
     public static function CheckPost () {
+
+        global $verify__event;
+        global $verify__school;
+        global $verify__address;
+        global $verify__email;
+        global $verify__start;
+
         // Go through the mandatory fields,
         // execute their verification functions.
-        for (MANDATORY_FIELDS as $field => $value) {
-            if ($value($_POST[$field])) {
-                bad_field($field, $_POST[$field]);
+        foreach (MANDATORY_FIELDS as $field => $value) {
+            if (!isset($_POST[$field])) {
+                return AddEvent::BadField($field, 'null');
+            }
+            if (!$$value($_POST[$field])) {
+                return AddEvent::BadField($field, $_POST[$field]);
             }
         }
     }
