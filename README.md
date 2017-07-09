@@ -1,45 +1,24 @@
-# aispi
-Project for Animals in Science Policy Institute
+# AISPI
 
-View API Documentation [HERE](docs/api.md)
+[In Progress](https://img.shields.io/badge/Development-In%20Progress-yellow.svg) Animals in Science Policy Institute Calendar.
 
 
-## How to start this...
+###Running Dev Server:
 
-1. Go Download [XAMPP](https://www.apachefriends.org/index.html)
-2. Edit the Apache config.
-  - Click on the `Config` button
-  - Click on `Apache(httpd.conf)`
-3. Find the section were the line begins with `DocumentRoot`
-4. Edit the that line and the line below it to point to this git directory, it should look something like this in the end:
-  ```
-  DocumentRoot "C:/aispi"
-  <Directory "C:/aispi">
-  ```
-5. Save the config file and Start the Apache Server. 
-6. Open localhost/debug.php in your browser. You're done.
+Two things must happen in order for the dev server to run properly.
 
-## Technical Specifications:
-### Server
-  - No need for databases, instead we're going to use a flat file as a csv
-  - Flat files last for 1 year. Consider moving old csv's to another folder for yearly storage
-  - Written in PHP, with nothing external other than the script
-  - Hardcoded backend with password to edit events
-  - Have some sort of token based authentication system for mail
-  - Recaptcha backend
-  - Send emails a week before
+#### Running the PHP API
 
-### Client
-  - Have a Monthly View, that could go into a weekly view.
-  - Have an adjacent form for entering and submittwing events.
-  - Keep the colour scheme the same as the original website
-  - Integrate Re-Captcha with the front end
-  - Parsing csv data to fill in the calendar
-  - Mandatory Fields for the form are as follows:
-      * Event Type (Enumeration between "Guest Classes" and "Information Sessions (Pro-D)")
-      * School
-      * Address
-      * Email
-      * Description (Additional Info)
-      * Start Time as Unix Timestamp
-      * End Time as Unix Timestamp
+Simply put, you must download a PHP and Apache server or combination like XAMPP or WAMP. Then you must point the server to this directory and run it.
+
+#### Running the design server
+
+The entire site is designed in jade, you must have node and npm installed:
+
+ - run `npm install jade-server -g` in the command line
+ - go into the design directory and run `jade-server .`
+
+
+### Tests
+
+API tests can be run by running `php /api/tests.php` on the command line.
