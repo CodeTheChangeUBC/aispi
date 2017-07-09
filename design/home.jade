@@ -30,7 +30,7 @@ html
               v-bind:style="{backgroundColor: SWATCHES[(day.number % SWATCHES.length)][~~(index%2)]}"
               v-bind:class="{'calendar__event--on': event.toggled}") 5:30 PM :: 10:00 PM
           .calendar__button.calendar__button--view(v-show="day.current") VIEW
-          button.calendar__button--add(v-on:click='toggleTimeLine()') + 
+          button.calendar__button--add(v-show="day.number" v-on:click='toggleTimeLine()') + Add
     script(src="./home.js")
     script(src="./timeline.js")
 
