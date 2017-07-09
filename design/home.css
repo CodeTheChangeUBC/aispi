@@ -30,6 +30,7 @@ body{
     }
       .time__container{
         width: 20vw;
+        float: left;
       }
         .time{
           background-color: rgba(34, 49, 63,1);
@@ -55,6 +56,47 @@ body{
         height: 300px;
         width: 300px;
       }
+        .form__input{
+          box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+          border: 0;
+          padding: 10px;
+          border-radius: 5px;
+          font-family: Montserrat;
+          width: 100%;
+          font-size: 11px;
+          margin-top: 10px;
+          resize: none;
+        }
+          .form__input--text{
+            height: 100px;
+          }
+        .form__buttons {
+          width: 100%;
+          float: left;
+        }
+          .radio__wrap{
+            height: 30px;
+            display: inline-block;
+            margin: 10px;
+          }
+            .radio__item{
+              display: inline-block;
+              cursor: pointer;
+            }
+            .radio__item--circle{
+              height: 20px;
+              width: 20px;
+              border-radius: 30px;
+              border: 3px solid #EEE;
+              display: inline-block;
+            }
+            .radio__item--label{
+              display: inline-block;
+              font-size: 12px;
+              float: right;
+              margin-top: 6px;
+              margin-left: 10px;
+            }
 
   #header{
     width: 100%;

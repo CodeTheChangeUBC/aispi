@@ -8,7 +8,19 @@ html
         .time__container
           .time(v-for='time in times'){{time}}
         .form__container
-
+          input(type="text" placeholder="School Name").form__input
+          br
+          textarea.form__input.form__input--text(placeholder="School Address")
+          br
+          textarea.form__input.form__input--text(placeholder="Additional Information")
+          br
+          div.form__buttons
+            div.radio__wrap
+              div.radio__item.radio__item--circle
+              div.radio__item.radio__item--label PD Day
+            div.radio__wrap
+              .radio__item.radio__item--circle
+              div.radio__item.radio__item--label Info Session
     .home__inline
       #header
         img#header__image(src="./logo.png" height="60px")
