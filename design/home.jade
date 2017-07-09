@@ -6,9 +6,9 @@ html
     .viewPopup(v-show="inView" v-on:click='toggleTimeLine($event)')
       .container#keepTimeline
         .time__container
-          .time(v-for='time in times'){{time}}
+          .time(v-for='time in times'){{time}
+        .events(v-bind:style="{marginTop:start+'px;'height:height+'px;backgroundColor:red;width:100%;'}" v-for='event in bookedEvent') {{bookedEvent.name}}
         .form__container
-
     .home__inline
       #header
         img#header__image(src="./logo.png" height="60px")
