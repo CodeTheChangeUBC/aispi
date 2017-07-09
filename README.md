@@ -1,9 +1,9 @@
 # AISPI
 
-[](http/imging.shields.io/badge/Development-Progressing-yellow.svg) Animals in Science Policy Institute Calendar.
+[](https://img.shields.io/badge/Development-In%20Progress-yellow.svg) Animals in Science Policy Institute Calendar.
 
 
-###Running Dev Server:
+### Running Dev Server:
 
 Two things must happen in order for the dev server to run properly.
 
