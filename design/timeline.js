@@ -17,6 +17,11 @@ var calendar=new Vue({
         startTime: '2:00 pm',
         interval: '120',
       },
+      {
+        name: 'sfu',
+        startTime: '5:00 pm',
+        interval: '120',
+      },
       ],
    },
    methods: {
@@ -43,10 +48,10 @@ window.onload = function bookedEvent(){
     var timeLine = timeLines[i].innerText;
     for(j=0;j<startTime.length;j++){
       if(timeLine==startTime[j]){
-        timeLines[i].style.backgroundColor = 'rgba(236,100,75,0.5)'; 
+        timeLines[i].style.backgroundColor = 'rgb(236,100,75)'; 
         timeLines[i].innerHTML = schoolName[j]; 
         for(b=0;b<interval[j];b++){
-          timeLines[i+b].style.backgroundColor = 'rgba(236,100,75,0.5)';
+          timeLines[i+b].style.backgroundColor = 'rgb(236,100,75)';
           timeLines[i+b].innerHTML = schoolName[j];
         }   
       }  
