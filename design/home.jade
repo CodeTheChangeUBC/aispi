@@ -6,8 +6,9 @@ html
     .viewPopup(v-show="inView" v-on:click='toggleTimeLine($event)')
       .container#keepTimeline
         .time__container
-          .time(v-for='time in times'){{time}
-        .events(v-bind:style="{marginTop:event.start + 'px',height: event.length,backgroundColor:'red'}" v-for='event in bookedEvent') {{bookedEvent.name}}
+          .time(v-for='time in times') {{time}}
+        .event__container
+          .events(v-bind:style="{marginTop: marginTop+'px',height: bookedEvent[0].length*20/60 +'px',backgroundColor:'rgba(236,100,75,0.5)',width:'20vw',color:'#fff'}" v-for='event in bookedEvent') {{event.name}}
         .form__container
     .home__inline
       #header
