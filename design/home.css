@@ -54,6 +54,9 @@ body{
       .event__container{
         position: absolute;
       }
+        .events{
+          position: absolute;
+        }
       .form__container{
         float: right;
         height: 300px;

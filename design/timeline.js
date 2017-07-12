@@ -10,23 +10,46 @@ var calendar=new Vue({
       {
         name: 'Vancouver School',
         startTime: '9:00 am',
-        length: '360'
+        interval: '60',
+      },
+      {
+        name: 'ubc',
+        startTime: '2:00 pm',
+        interval: '120',
       },
       ],
    },
    methods: {
     toggleTimeLine: function(e){
       if(e && document.getElementById('keepTimeline').contains(e.target)){
-        return
+        return;
       }
-      calendar.inView = !calendar.inView  
+      calendar.inView = !calendar.inView;
     },   
   }
-})
-/*var height = bookedEvent.length/60*20;
-var start = '10vh'+ times.indexOf(bookedEvent.startTime)*20
-console.log(height)
-console.log(start)
-*/
-var marginTop = calendar.times.indexOf(calendar.bookedEvent[0].startTime)*20;
-var height = calendar.bookedEvent[0].length*20/60
+});
+
+window.onload = function bookedEvent(){
+  var startTime = [];
+  var schoolName = [];
+  var interval = [];
+  for(i=0;i<calendar.bookedEvent.length;i++){
+    startTime.push(calendar.bookedEvent[i].startTime);
+    schoolName.push(calendar.bookedEvent[i].name);
+    interval.push(parseInt(calendar.bookedEvent[i].interval)/60);
+  }
+  var timeLines = document.getElementsByClassName('time');
+  for(i=0;i<timeLines.length;i++){
+    var timeLine = timeLines[i].innerText;
+    for(j=0;j<startTime.length;j++){
+      if(timeLine==startTime[j]){
+        timeLines[i].style.backgroundColor = 'rgba(236,100,75,0.5)'; 
+        timeLines[i].innerHTML = schoolName[j]; 
+        for(b=0;b<interval[j];b++){
+          timeLines[i+b].style.backgroundColor = 'rgba(236,100,75,0.5)';
+          timeLines[i+b].innerHTML = schoolName[j];
+        }   
+      }  
+    }
+  }
+};
