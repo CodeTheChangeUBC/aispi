@@ -29,4 +29,4 @@ console.log(height)
 console.log(start)
 */
 var marginTop = calendar.times.indexOf(calendar.bookedEvent[0].startTime)*20;
-console.log(marginTop);
+var height = calendar.bookedEvent[0].length*20/60
