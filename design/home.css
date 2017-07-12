@@ -183,21 +183,26 @@ body{
         border-radius: 3px;
       }
         .calendar__button--add{
-          position: absolute;
-          bottom: 5px;
-          left: 5px;
           line-height: 5px;
           cursor: pointer;
-          padding: 0;
-          font-size: 20px;
-          color: #6BB9F0;
+          padding: 0 10px;
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: #004c97;
           background-color: #fff;
-          border: 1px solid #6BB9F0;
+          border: 1px solid #004c97;
           height: 20px;
-          width: 20px;
-          border-radius: 50%;
+          border-radius: 50px;
           outline: 0;
+          margin: auto;
+          transition: background-color .25s;
         }
+          .calendar__button--add:hover{
+            background-color: #004c97;
+            color: #FFF;
+            transition: background-color .25s;
+          }
         .calendar__button--view{
           background-color: #9A12B3;
         }
