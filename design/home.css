@@ -48,8 +48,6 @@ body{
           font-weight: 300;
           flex-direction: column;
           border-top: 1px solid rgba(255,255,255,0.02);
-          border-top-left-radius: 10px;
-          border-bottom-left-radius: 10px;
         }
       .event__container{
         position: absolute;

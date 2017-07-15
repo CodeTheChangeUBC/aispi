@@ -7,8 +7,8 @@ html
       .container#keepTimeline
         .time__container
           .time(v-for='time in times') {{time}}
-        //- .event__container
-        //-   .events(v-bind:style="{top: marginTop+'px',height: height+'px',backgroundColor:'rgba(236,100,75,0.5)',width:'20vw',color:'#fff'}" v-for='event in bookedEvent') {{event.name}}
+        .event__container
+          .events(v-bind:style="{top: event.top+'px',height: event.length+'px',backgroundColor:'rgba(236,100,75,0.5)',width:'20vw',color:'#fff'}" v-for='event in bookedEvent') {{event.name}}
         .form__container
     .home__inline
       #header

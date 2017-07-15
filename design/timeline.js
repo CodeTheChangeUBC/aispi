@@ -11,16 +11,22 @@ var calendar=new Vue({
         name: 'Vancouver School',
         startTime: '9:00 am',
         interval: '60',
+        top: '',
+        length: '',
       },
       {
         name: 'ubc',
         startTime: '2:00 pm',
         interval: '120',
+        top: '',
+        length: '',
       },
       {
         name: 'sfu',
         startTime: '5:00 pm',
         interval: '120',
+        top: '',
+        length: '',
       },
       ],
    },
@@ -30,11 +36,19 @@ var calendar=new Vue({
         return;
       }
       calendar.inView = !calendar.inView;
-    },   
+    },  
+    
   }
 });
+for(i=0;i<calendar.bookedEvent.length;i++){
+  calendar.bookedEvent[i].top = calendar.times.indexOf(calendar.bookedEvent[i].startTime)*20;
+  calendar.bookedEvent[i].length = calendar.bookedEvent[i].interval*20/60;
+}
 
-window.onload = function bookedEvent(){
+
+
+
+/*window.onload = function bookedEvent(){
   var startTime = [];
   var schoolName = [];
   var interval = [];
@@ -57,4 +71,4 @@ window.onload = function bookedEvent(){
       }  
     }
   }
-};
+};*/
