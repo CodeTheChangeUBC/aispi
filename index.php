@@ -9,3 +9,4 @@ define('DEBUG', true);
 // Reporting turned on only if in debug mode.
 error_reporting((DEBUG ? -1 : 0));
 
+echo 'TEST SUCCESSFUL!';
