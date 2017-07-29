@@ -12,7 +12,8 @@ html
         #calendar__dayWrap
           each day in ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
             .calendar__dayLabel=day
-        .calendar__day(v-for="day in days" v-bind:class="{'calendar__day--disabled': !day.number}") 
+        .calendar__day(v-for="day in days" v-bind:class="{'calendar__day--disabled': !day.number}")
+          button(v-show="day.number").calendar__add ADD +
           .calendar__date {{day.number||''}}
           .calendar__eventWrap
             .calendar__event(

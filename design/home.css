@@ -181,15 +181,19 @@ body{
         color: #444;
       }
       .calendar__add{
-        background: url('./add.png') center center no-repeat;
-        background-size: 20px;
-        width: 100%;
-        height: 30px;
         font-family: Montserrat;
         font-size: 10px;
-        line-height: 70px;
         font-weight: 400;
-        color: #999;
+        color: #6BB9F0;
+        border: 1px solid #6BB9F0;
+        background-color: transparent;
+        float: right;
+        margin: 5px;
+        width: 40px;
+        border-radius: 3px;
+        height: 20px;
+        cursor: pointer;
+        outline: none;
       }
       .calendar__event{
         padding: 2px;
@@ -241,14 +245,13 @@ body{
           border-radius: 50%;
           outline: 0;
         }
+          .calendar__add:hover{
+            background-color: #6BB9F0;
+            color: #FFF;
+          }
         .calendar__button--view{
           background-color: #9A12B3;
         }
-
-
-
-
-
 
 
 
