@@ -1,26 +1,5 @@
 
 
-
-// From now on we will use a single object as the truth.
-// All Vue objects will use this to load information.
-var Truth = {
-  UTILS:        UTILS,
-  currentMonth: new Date().getMonth(),
-  currentYear:  new Date().getYear() + 1900,
-  days:         []
-}
-
-// Fill in all the day objects
-Truth.days =  new Array(UTILS.days(Truth.currentMonth, Truth.currentYear))
-.fill(0)
-.map((a,i) => ({
-  number: i + 1,
-  events: []
-}))
-
-
-
-
 // Set up the calendar for Vue to use properly.
 var Calendar = new Vue({
   el: '.home__inline',
@@ -41,6 +20,18 @@ var Calendar = new Vue({
     fetchEvents: null,
   }
 })
+
+
+Calendar.months.next = () => {
+  Truth.currentMonth ++
+  Truth.update() 
+}
+
+Calendar.months.prev = () => {
+  Truth.currentMonth --
+  Truth.update() 
+  
+}
 
 
 

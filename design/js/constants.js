@@ -61,7 +61,10 @@ const UTILS = {
 }
 
 UTILS.days = function (month, year) {
-    return new Date(month, year, 0).getDate()
+    return new Date(year, month + 1, 0).getDate()
+}
+UTILS.week = function (month, year) {
+    return new Date(year, month + 1, 1).getDay()
 }
 
 
