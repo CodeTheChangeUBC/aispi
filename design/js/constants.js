@@ -64,7 +64,11 @@ UTILS.days = function (month, year) {
     return new Date(year, month + 1, 0).getDate()
 }
 UTILS.week = function (month, year) {
-    return new Date(year, month + 1, 1).getDay()
+    if (month == 0) {
+        month = 12
+        year--
+    }
+    return new Date(year, month, 1).getDay()
 }
 
 

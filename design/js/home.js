@@ -24,13 +24,12 @@ var Calendar = new Vue({
 
 Calendar.months.next = () => {
   Truth.currentMonth ++
-  Truth.update() 
+  Truth.update()
 }
 
 Calendar.months.prev = () => {
   Truth.currentMonth --
-  Truth.update() 
-  
+  Truth.update()
 }
 
 

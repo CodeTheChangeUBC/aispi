@@ -23,14 +23,24 @@ Truth.update = (function () {
     this.currentMonth = 11
   }
 
+  var prevYear = this.currentYear
+  var prevMonth = this.currentMonth - 1
+
+  if (prevMonth < 0) {
+    prevYear--
+    prevMonth = 11
+  }
+
+  var last = UTILS.days(prevMonth, prevYear)
   var days = UTILS.days(this.currentMonth, this.currentYear)
   var week = UTILS.week(this.currentMonth, this.currentYear)
 
   // Add the previous month's last week.
-  for (var i = 0; i < week; i++) {
+  for (var i = last - week + 1; i <= last; i++) {
     this.days.push({
-      number: 0,
-      events: []
+      number: i,
+      events: [],
+      enabled: false
     })
   }
 
@@ -38,7 +48,18 @@ Truth.update = (function () {
   for (var i = 0; i < days; i++) {
     this.days.push({
       number: i + 1,
-      events: []
+      events: [],
+      enabled: true
+    })
+  }
+
+  var i = 0
+  // Push in the last days for the month.
+  while (this.days.length % 7) {
+    this.days.push({
+      number: ++i,
+      events: [],
+      enabled: false
     })
   }
 
