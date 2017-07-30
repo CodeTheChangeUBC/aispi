@@ -1,37 +1,30 @@
-const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEPT','OCT','NOV','DEC']
-const TIMES = [
-  '6:00 am','7:00 am','8:00 am','9:00 am','10:00 am','11:00 am','12:00 on',
-  '1:00 pm','2:00 pm','3:00 pm','4:00 pm','5:00 pm','6:00 pm','7:00 pm','8:00 pm', '9:00 pm'
-]
-const SWATCHES = [
-  ['#5D9CEC', '#4A89DC'],
-  ['#4FC1E9', '#3BAFDA'],
-  ['#48CFAD', '#37BC9B'],
-  ['#A0D468', '#8CC152'],
-  ['#FFCE54', '#F6BB42'],
-  ['#FC6E51', '#E9573F'],
-  ['#ED5565', '#DA4453'],
-  ['#AC92EC', '#967ADC'],
-  ['#EC87C0', '#D770AD'],
-  ['#F5F7FA', '#E6E9ED'],
-  ['#CCD1D9', '#AAB2BD'],
-  ['#656D78', '#434A54']
-]
 
+
+
+// From now on we will use a single object as the truth.
+// All Vue objects will use this to load information.
+var Truth = {
+  UTILS:        UTILS,
+  currentMonth: new Date().getMonth(),
+  currentYear:  new Date().getYear() + 1900,
+  days:         []
+}
+
+// Fill in all the day objects
+Truth.days =  new Array(UTILS.days(Truth.currentMonth, Truth.currentYear))
+.fill(0)
+.map((a,i) => ({
+  number: i + 1,
+  events: []
+}))
+
+
+
+
+// Set up the calendar for Vue to use properly.
 var Calendar = new Vue({
   el: '.home__inline',
-  data: {
-    MONTHS: MONTHS,
-    SWATCHES: SWATCHES,
-    TIMES: TIMES,
-    date: null,
-    month: 0,
-    year: 0,
-    days: [],
-    
-
-    eventMap: {},
-  },
+  data: Truth,
   methods: {
     toggleTimeLine: function(){
       calendar.inView = !calendar.inView
@@ -45,8 +38,49 @@ var Calendar = new Vue({
       prev: null,
     },
     setDate: null,
-    fetchEvents: null,  }
+    fetchEvents: null,
+  }
 })
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Calendar.months = {}
 Calendar.events = {}
@@ -135,7 +169,7 @@ Calendar.fetchEvents = function (year, month) {
 
   // Start the AJAX request.
   var request = new XMLHttpRequest()
-  request.open('POST', 'http://localhost/get.php?start=' + start + '&end=' + end, true)
+  request.open('POST', 'http://localhost/api/get.php?start=' + start + '&end=' + end, true)
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
@@ -163,4 +197,4 @@ Calendar.fetchEvents = function (year, month) {
   request.send()
 }
 
-Calendar.setDate(new Date())
+Calendar.setDate(new Date())*/

@@ -134,11 +134,11 @@ body{
         cursor: pointer;
       }
         .month__change--next{
-          background: url(./right_arrow.png) center center no-repeat;
+          background: url(/img/right_arrow.png) center center no-repeat;
           background-size: 100%;
         }
         .month__change--prev{
-          background: url(./left_arrow.png) center center no-repeat;
+          background: url(/img/left_arrow.png) center center no-repeat;
           background-size: 100%;
         }
       .calendar__dayLabel{

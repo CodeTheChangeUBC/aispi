@@ -1,4 +1,8 @@
 <?php
+
+require '../index.php';
+
+
 header("Access-Control-Allow-Origin: *");
 
 define('START_TIME_INDEX', 1);
@@ -6,7 +10,7 @@ define('START_TIME_INDEX', 1);
 $start = (int)$_GET['start'];
 $end = (int)$_GET['end'];
 
-$handle = fopen("events.csv","r");
+$handle = fopen(EVENT_FILE,"r");
 
 // Get rid of that first line.
 fgetcsv($handle);
