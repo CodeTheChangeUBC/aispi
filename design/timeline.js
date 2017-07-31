@@ -1,10 +1,13 @@
 var calendar=new Vue({
    el: '.viewPopup',
    data: {
-      inView: false,
+      inView: true,
       times: [
        '6:00 am','7:00 am','8:00 am','9:00 am','10:00 am','11:00 am','12:00 am',
        '1:00 pm','2:00 pm','3:00 pm','4:00 pm','5:00 pm','6:00 pm','7:00 pm','8:00 pm', '9:00 pm'
+      ],
+      texts: [
+        'Event Type', 'School Name', 'Address', 'Email', 'Start time', 'End time', 'Description',
       ],
       bookedEvent : [
       {
@@ -41,8 +44,8 @@ var calendar=new Vue({
   }
 });
 for(i=0;i<calendar.bookedEvent.length;i++){
-  calendar.bookedEvent[i].top = calendar.times.indexOf(calendar.bookedEvent[i].startTime)*20;
-  calendar.bookedEvent[i].length = calendar.bookedEvent[i].interval*20/60;
+  calendar.bookedEvent[i].top = calendar.times.indexOf(calendar.bookedEvent[i].startTime)*80/16;
+  calendar.bookedEvent[i].length = calendar.bookedEvent[i].interval*80/960;
 }
 
 

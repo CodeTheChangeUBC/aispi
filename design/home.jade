@@ -1,5 +1,6 @@
 html
   head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="./home.css")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js")
   body
@@ -8,8 +9,38 @@ html
         .time__container
           .time(v-for='time in times') {{time}}
         .event__container
-          .events(v-bind:style="{top: event.top+'px',height: event.length+'px',backgroundColor:'rgba(236,100,75,0.5)',width:'20vw',color:'#fff'}" v-for='event in bookedEvent') {{event.name}}
+          .events(v-bind:style="{top: event.top+'%', height: event.length+'%'  }" v-for='event in bookedEvent') {{event.name}}
         .form__container
+          .textContainer
+            .text(v-for="text in texts") {{text}}
+          .inputWrap
+            .input
+              .radioWrap
+                input(type="radio")
+                | Guess Classes
+              .radioWrap
+                input(type="radio")
+                | Information Sessions
+            .input
+              input(type="text")
+            .input
+              input(type="text")
+            .input
+              input(type="text")
+            .input
+              input(type="time")
+            .input
+              input(type="time")
+            .input
+              textarea
+    
+
+
+
+
+
+
+
     .home__inline
       #header
         img#header__image(src="./logo.png" height="60px")
