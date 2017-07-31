@@ -1,12 +1,12 @@
 .viewPopup(v-show="inView" v-on:click='toggleTimeLine($event)')
 	.container#keepTimeline
 		.time__container
-			.time(v-for='time in times') {{time}}
+			.time(v-for='time in UTILS.TIMES') {{time}}
 		.event__container
 			.events(v-bind:style="{top: event.top+'%', height: event.length+'%'  }" v-for='event in bookedEvent') {{event.name}}
 		.form__container
 			.textContainer
-				.text(v-for="text in texts") {{text}}
+				.text(v-for="text in events") {{text}}
 			.inputWrap
 				.input
 					.radioWrap

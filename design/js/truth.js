@@ -6,6 +6,8 @@ var Truth = {
   currentMonth:   new Date().getMonth(),
   currentYear:    new Date().getYear() + 1900,
   days:           [],
+  inView:         true,
+  bookedEvent:    [],
   update:         null
 }
 
