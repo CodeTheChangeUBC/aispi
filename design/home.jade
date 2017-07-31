@@ -14,7 +14,7 @@ html
 					.calendar__day(v-for="day in days" v-bind:class="{'calendar__day--disabled': !day.enabled}")
 						button(v-show="day.enabled").calendar__add ADD +
 						.calendar__date {{day.number||''}}
-
+		footer#footer
 		script(src="/js/constants.js")
 		script(src="/js/truth.js")
 		script(src="/js/home.js")
