@@ -1,4 +1,0 @@
-<form method="POST" action="/recaptcha.php">
-	<div class="g-recaptcha" data-sitekey="6LcKvxoUAAAAAKpzZQYyb6l4S6IB99vnUK7OODiQ"></div>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-</form>
