@@ -14,6 +14,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
 
 body {
+  text-align: center;
   background-color: #EEE;
 }
 #app {

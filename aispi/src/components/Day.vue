@@ -31,6 +31,7 @@
         width: 130px;
         background-color: #FFF;
         float: left;
+        margin: 0 auto;
         box-sizing: border-box;
         border-right: 1px solid #EEE;
         border-bottom: 1px solid #EEE;
