@@ -3,25 +3,38 @@
 require '../index.php';
 
 
+// Set up the appropriate headers and constants.
 header("Access-Control-Allow-Origin: *");
+header("Content-type:application/json");
 
-define('START_TIME_INDEX', 1);
+define('MONTH_INDEX', 2);
+define('YEAR_INDEX', 3);
 
-$start = (int)$_GET['start'];
-$end = (int)$_GET['end'];
+
+// Ensure that the GET variables are properly set.
+if (!isset($_GET['month'])) {
+    echo json_encode(['error' => 'please enter a month']);
+    exit;
+} else if (!isset($_GET['year'])) {
+    echo json_encode(['error' => 'please enter a year']);
+    exit;
+}
+
+
+// Everything seems good, so we start the GET from here.
+$month = (int)$_GET['month'];
+$year = (int)$_GET['year'];
 
 $handle = fopen(EVENT_FILE,"r");
 
-// Get rid of that first line.
 fgetcsv($handle);
 
 $time_slice = [];
 
-// Collect all the matching time lines into the time slice.
-while (($data = fgetcsv($handle)) != FALSE) {
-  if ((int)$data[START_TIME_INDEX] >= $start && (int)$data[START_TIME_INDEX] <= $end) {
-    array_push($time_slice, $data);
-  }
+while ($data = fgetcsv($handle)) {
+    if ($data[MONTH_INDEX] == $month && $data[YEAR_INDEX] == $year) {
+        array_push($time_slice, $data);
+    }
 }
 
 // Output it to the API.
