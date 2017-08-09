@@ -1,24 +1,11 @@
 <template lang="jade">
     div.day
         div.day__number {{number}}
-
-
-
-
-
-
-
-
-
-
-
-
-
 </template>
 
 <script>
     /* eslint-disable */
-    
+
     export default {
         name: 'day',
         props: ['number']

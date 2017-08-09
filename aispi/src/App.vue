@@ -1,13 +1,19 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <popUp></popUp>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import popUp from './components/popUp'
+
+  export default {
+    name: 'app',
+    components: {
+      popUp
+    }
+  }
 </script>
 
 <style>
