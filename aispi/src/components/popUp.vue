@@ -1,33 +1,36 @@
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <template lang='jade'>
-    div.viewPopup(v-show="inView" v-on:click='toggleTimeLine($event)')
-      div.container#keepTimeline
-        div.time__container
-          div.time(v-for='time in times') {{time}}
-        div.event__container
-          div.events(v-bind:style="{top: eventTop + '%', height: eventLength + '%'  }" v-for='event in bookedEvent') {{event.name}}
-        div.form__container
-          div.textContainer
-            div.text(v-for="text in texts") {{text}}
-          div.inputWrap
-            div.input
-              div.radioWrap
-                input(type="radio")
-                | Guess Classes
-              div.radioWrap
-                input(type="radio")
-                | Information Sessions
-            div.input
-              input(type="text")
-            div.input
-              input(type="text")
-            div.input
-              input(type="text")
-            div.input
-              input(type="time")
-            div.input
-              input(type="time")
-            div.input
-              textarea
+  div.viewPopup(v-show="inView" v-on:click='toggleTimeLine($event)')
+    div.container#keepTimeline
+      div.time__container
+        div.time(v-for='time in times') {{time}}
+      div.event__container
+        div.events(v-bind:style="{top: event.top + '%', height: event.length + '%'  }" v-for='event in bookedEvent') {{event.name}}
+      div.form__container
+        div.textContainer
+          div.text(v-for="text in texts") {{text}}
+        div.inputWrap
+          div.input
+            div.radioWrap
+              input(type="radio")
+              | Guess Classes
+            div.radioWrap
+              input(type="radio")
+              | Information Sessions
+          div.input
+            input(type="text")
+          div.input
+            input(type="text")
+          div.input
+            input(type="text")
+          div.input
+            input(type="time")
+          div.input
+            input(type="time")
+          div.input
+            textarea
+          input(type="submit" id='submit')
 </template>
 
 <script>
@@ -68,20 +71,13 @@
         ]
       }
     },
-    computed: {
-      eventLength: function () {
-        for (var i = 0; i < this.bookedEvent.length; i++) {
-          return this.bookedEvent[i].interval * 80 / 960
-        }
-      },
-      eventTop: function () {
-        for (var i = 0; i < this.bookedEvent.length; i++) {
-          return this.times.indexOf(this.bookedEvent[i].startTime) * 80 / 16
-        }
+    created () {
+      for (var i = 0; i < this.bookedEvent.length; i++) {
+        this.bookedEvent[i].length = this.bookedEvent[i].interval * 80 / 960
+        this.bookedEvent[i].top = this.times.indexOf(this.bookedEvent[i].startTime) * 80 / 16
       }
     }
   }
-
 </script>
 
 <style scoped>
@@ -98,13 +94,13 @@
     .container{
       font-family: Montserrat;
       z-index: 1;
-      width: 50%;
-      height: 80%;
+      width: 910px;
+      height: 100%;
       margin: auto;
       margin-top: 10vh;
     }
       .time__container{
-        width: 20vw;
+        width: 300px;
         position: absolute;
         height: 80vh;
       }
@@ -127,7 +123,7 @@
         }
       .event__container{
         position: absolute;
-        width: 20vw;
+        width: 300px;
         height: 100%;
       }
         .events{
@@ -141,8 +137,8 @@
         }
       .form__container{
         float: right;
-        height: 100%;
-        width: 30vw;
+        height: 80vh;
+        width: 610px;
         background-color: #2C3E50;
         color: #fff;
         position: relative;
@@ -184,33 +180,32 @@
           }
             input{
               width: 70%;
+              height: 20px;
               border: none;
+              border-radius: 5px;
+              font-size: 15px;
+            }
+            #submit{
+              position: absolute;
+              bottom: 5%  ;
+              right: 20%;
+              color: #fff;
+              width: 80px;
+              height: 30px;
+              background-color: #446CB3;
+              font-size: 15px;
             }
             textarea{
               width: 70%;
+              height: 40px;
+              border: none;
+              border-radius: 5px;
             }
             .radioWrap{
               flex: 1;
-              text-align: center;
-
             }
               .radioWrap input{
                 width: auto;
                 margin-right: 5px;
               }
-@media only screen and (max-width: 500px) {
-    .container {
-      width: 100%;
-    }
-    .time__container{
-      width: 30%;
-    }
-    .event__container{
-      width: 30%;
-    }
-    .form__container{
-      width: 70%;
-    }
-}
-
 </style>
