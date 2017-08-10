@@ -1,18 +1,12 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <popUp></popUp>
   </div>
 </template>
 
 <script>
-  import popUp from './components/popUp'
-
   export default {
-    name: 'app',
-    components: {
-      popUp
-    }
+    name: 'app'
   }
 </script>
 

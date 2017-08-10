@@ -1,9 +1,10 @@
 <template lang="jade">
     div#calendar__wrap
+        popUp
         div#calendar__header
             div.header__item.header__item--left
                 img(src="../assets/left.png" height="30px")
-            div.header__item.header__item--label 
+            div.header__item.header__item--label
                 .month MAY
                 br
                 .year 2017
@@ -11,17 +12,18 @@
                 img(src="../assets/right.png" height="30px")
         div#calendar
             day(v-for="day in days" v-bind:number="day")
-
 </template>
 
 <script>
     /* eslint-disable */
     import Day from '@/components/Day'
+    import PopUp from '@/components/PopUp'
 
     export default {
         name: 'calendar',
         components: {
-            Day
+            Day,
+            PopUp
         },
         data () {
             return {
@@ -30,7 +32,7 @@
         }
     }
 
-    
+
 </script>
 
 <style scoped>
