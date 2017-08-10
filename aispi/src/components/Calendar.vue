@@ -41,7 +41,9 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        background-color: #EEE;
+        background: #7474BF;
+        background: -webkit-linear-gradient(to top, #348AC7, #7474BF);
+        background: linear-gradient(to top, #348AC7, #7474BF);
     }
     #calendar {
         width: 910px;
@@ -51,7 +53,8 @@
     }
     #calendar__header {
         font-size: 50px;
-        margin-bottom: 40px;
+        color: #FFF;
+        margin: 30px 0;
     }
         .header__item {
             display: inline-block;
