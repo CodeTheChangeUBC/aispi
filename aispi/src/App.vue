@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <popUp></popUp>
   </div>
 </template>
 
@@ -19,10 +18,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
 
-body {
-  text-align: center;
-  background-color: #EEE;
-}
 #app {
   font-family: 'Avenir', Montserrat, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
