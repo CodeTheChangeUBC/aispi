@@ -3,7 +3,7 @@
         #login__box
             .login__header LOGIN
             .login__info Please enter the master password!
-            input.login__input(placeholder="Enter Password")
+            input.login__input(type="password" placeholder="Enter Password")
 </template>
 
 <script>
@@ -30,7 +30,7 @@
         left: 0px;
         height: 100%;
         width: 100%;
-        background-color: #446CB3;
+        background: url('../assets/doodles.png'), #1E8BC3;
     }
         #login__box {
             position: absolute;
@@ -39,17 +39,28 @@
             margin-top: -150px;
             margin-left: -150px;
             width: 300px;
-            height: 300px;
-            background-color: #FFF;
-            border-radius: 10px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 1px 1px #DDD;
+            border-radius: 3px;
             padding: 20px;
         }
             .login__header {
                 font-family: Montserrat;
-                font-size: 30px;
+                font-size: 13px;
                 letter-spacing: 1px;
                 text-align: left;
-                color: #446CB3;
+                background-color: #4B77BE;
+                color: #FFF;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                padding: 10px;
+                font-weight: 200;
+                box-sizing: border-box;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
             .login__info {
                 width: 200px;
@@ -57,7 +68,8 @@
                 font-weight: 400;
                 font-size: 10px;
                 color: #666;
-                margin: 30px auto;
+                margin: 40px auto;
+                margin-top: 70px;
                 text-align: center;
             }
             .login__input{
