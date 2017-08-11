@@ -1,24 +1,28 @@
 # AISPI
 
-[](https://img.shields.io/badge/Development-In%20Progress-yellow.svg) Animals in Science Policy Institute Calendar.
+![](https://img.shields.io/badge/Development-In%20Progress-yellow.svg) 
+
+Animals in Science Policy Institute Calendar.
 
 
 ### Running Dev Server:
 
-Two things must happen in order for the dev server to run properly.
+Execute the following commands to run the development server
 
-#### Running the PHP API
+#### For first time users:
 
-Simply put, you must download a PHP and Apache server or combination like XAMPP or WAMP. Then you must point the server to this directory and run it.
+```
+cd aispi
+npm install
+```
 
-#### Running the design server
-
-The entire site is designed in jade, you must have node and npm installed:
-
- - run `npm install jade-server -g` in the command line
- - go into the design directory and run `jade-server .`
+Now, you're a returning user!
 
 
-### Tests
+#### For returning users:
 
-API tests can be run by running `php /api/tests.php` on the command line.
+Make sure you're in the aispi directory of the git repo.
+```
+npm start
+```
+Wow, how simple, now after a while a browser instance will be launched. Alternatively, you can go to localhost:8080 to see the app. 
