@@ -8,29 +8,11 @@
       div.event__container
         div.events(v-bind:style="{top: event.top + '%', height: event.length + '%'  }" v-for='event in bookedEvent') {{event.name}}
       div.form__container
-        div.textContainer
-          div.text(v-for="text in texts") {{text}}
-        div.inputWrap
-          div.input
-            div.radioWrap
-              input(type="radio")
-              | Guess Classes
-            div.radioWrap
-              input(type="radio")
-              | Information Sessions
-          div.input
-            input(type="text")
-          div.input
-            input(type="text")
-          div.input
-            input(type="text")
-          div.input
-            input(type="time")
-          div.input
-            input(type="time")
-          div.input
-            textarea
-          input(type="submit" id='submit')
+        div.form__header Book Event
+        input(placeholder="School Name").text__input
+        textarea(placeholder="Address").text__input
+        input(placeholder="Contact Email").text__input
+        textarea(placeholder="Additional Details").text__input
 </template>
 
 <script>
@@ -48,21 +30,21 @@
         ],
         bookedEvent: [
           {
-            name: 'Vancouver School',
+            name: 'Vancouver Elementary School',
             startTime: '9:00 am',
             interval: '60',
             top: '',
             length: ''
           },
           {
-            name: 'ubc',
+            name: 'UBC University High School',
             startTime: '2:00 pm',
             interval: '120',
             top: '',
             length: ''
           },
           {
-            name: 'sfu',
+            name: 'SFU School of Arts',
             startTime: '5:00 pm',
             interval: '120',
             top: '',
@@ -89,7 +71,7 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(108,122,137,0.8);
+    background-color: rgba(0,0,0,0.8);
   }
     .container{
       font-family: Montserrat;
@@ -105,7 +87,7 @@
         height: 80vh;
       }
         .time{
-          background-color: rgba(34, 49, 63,1);
+          background-color: #666;
           color: #fff;
           width: 100%;
           height: calc(100%/16);
@@ -114,7 +96,7 @@
           box-sizing: border-box;
           display: flex;
           justify-content: center;
-          font-size: 12px;
+          font-size: 10px;
           text-transform: uppercase;
           letter-spacing: 1px;
           font-weight: 300;
@@ -128,84 +110,45 @@
       }
         .events{
           position: absolute;
-          width: 100%;
-          background-color: rgba(236,100,75,0.5);
+          width: 78%;
+          background-color: rgba(255,255,255,0.1);
           color: #fff;
           display: flex;
           justify-content: center;
           align-items: center;
+          font-weight: 200;
+          font-size: 13px;
+          text-align: right;
+          right: 0;
         }
       .form__container{
         float: right;
         height: 80vh;
         width: 610px;
-        background-color: #2C3E50;
         color: #fff;
         position: relative;
       }
-        .textContainer{
-          height: 100%;
-          width: 30%;
-          position: absolute;
-          left: 0;
-          display: flex;
-          flex-direction: column;
+        .form__header {
+          font-family: Montserrat;
+          font-size: 40px;
+          font-weight: 100;
+          text-align: left;
+          width: 60%;
+          margin: auto;
+          margin-bottom: 40px;
         }
-          .text{
-            flex: 1;
-            text-align: left;
-            padding: 10px 0 0 10px
-          }
-          .text:nth-child(7){
-            flex: 2.5;
-          }
-        .inputWrap{
-          height: 100%;
-          width: 70%;
-          float: right;
-          display: flex;
-          flex-direction: column;
+        .text__input {
+          padding: 10px;
+          border: 0;
+          outline: 0;
+          border-radius: 3px;
+          width: 60%;
+          font-family: Montserrat;
+          margin: 2px;
+          font-size: 12px;
         }
-          .input{
-            flex: 1;
-            padding-top: 10px;
-            text-align: left;
-          }
-          .input:nth-child(1){
-            display: flex;
-            flex-direction: row;
-          }
-          .input:nth-child(7){
-            flex: 2.5;
-          }
-            input{
-              width: 70%;
-              height: 20px;
-              border: none;
-              border-radius: 5px;
-              font-size: 15px;
-            }
-            #submit{
-              position: absolute;
-              bottom: 5%  ;
-              right: 20%;
-              color: #fff;
-              width: 80px;
-              height: 30px;
-              background-color: #446CB3;
-              font-size: 15px;
-            }
-            textarea{
-              width: 70%;
-              height: 40px;
-              border: none;
-              border-radius: 5px;
-            }
-            .radioWrap{
-              flex: 1;
-            }
-              .radioWrap input{
-                width: auto;
-                margin-right: 5px;
-              }
+        textarea.text__input{
+          resize: none;
+          height: 60px;
+        }
 </style>
