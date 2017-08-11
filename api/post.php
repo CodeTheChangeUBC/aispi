@@ -14,9 +14,16 @@ $verify__address = function ($d) {
 $verify__email = function ($d) {
     return (null !== $d) && (filter_var($d, FILTER_VALIDATE_EMAIL));
 };
+$verify__date = function ($d) {
+    return true;
+};
 $verify__start = function ($d) {
     return true;
 };
+$verify__length = function ($d) {
+    return true;
+};
+
 
 
 const EVENT_TYPES = [
@@ -29,7 +36,9 @@ const MANDATORY_FIELDS = [
     "school"      => 'verify__school',
     "address"     => 'verify__address',
     "email"       => 'verify__email',
-    "start"       => 'verify__start'
+    "date"        => 'verify__date',
+    "start"       => 'verify__start',
+    "length"      => 'verify__length'
 ];
 
 
@@ -69,6 +78,7 @@ class AddEvent {
         echo json_encode([
             "success" => 'Added to events DB properly'
         ]);
+        exit;
     }
 
     /**
@@ -88,6 +98,36 @@ class AddEvent {
 
         if (fwrite($file_handle, $data) == FALSE) {
             BadWrite();
+        }
+    }
+
+    /**
+     * Make sure there are no collisions with purposefully set blocks or other events.
+     */
+    public static function CheckCollision () {
+        $date = ParseDate($_POST['date']);
+
+        $handle_event = fopen(EVENT_FILE,"r");
+        $handle_block = fopen(BLOCK_FILE,"r");
+
+        // Skip the first line.
+        fgetcsv($handle_event);
+        fgetcsv($handle_block);
+
+        // First check event collisions.
+        while ($data = fgetcsv($handle_event)) {
+            if ($data[MONTH_INDEX] == $date['month'] && $data[YEAR_INDEX] == $date['year']) {
+                // Maybe have a custom function for event collisions later?
+                BadField($_POST['date'],'date');
+            }
+        }
+        
+        // Now check block collisions.
+        while ($data = fgetcsv($handle_event)) {
+            if ($data[MONTH_INDEX] == $date['month'] && $data[YEAR_INDEX] == $date['year']) {
+                // Maybe have a custom function for event collisions later?
+                BadField($_POST['date'],'date');
+            }
         }
     }
 
@@ -118,5 +158,6 @@ class AddEvent {
 
 // Check the post stuff, if it passes, insert this.
 AddEvent::CheckPost();
+AddEvent::CheckCollision();
 AddEvent::AddData();
 AddEvent::ExitNice();

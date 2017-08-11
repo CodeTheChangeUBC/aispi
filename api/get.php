@@ -3,10 +3,6 @@
 require '../index.php';
 
 
-define('MONTH_INDEX', 2);
-define('YEAR_INDEX', 3);
-
-
 // Ensure that the GET variables are properly set.
 if (!isset($_GET['month'])) {
     echo json_encode(['error' => 'please enter a month']);
