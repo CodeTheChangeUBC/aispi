@@ -29,27 +29,6 @@
           'Event Type', 'School Name', 'Address', 'Email', 'Start time', 'End time', 'Description'
         ],
         bookedEvent: [
-          {
-            name: 'Vancouver Elementary School',
-            startTime: '9:00 am',
-            interval: '60',
-            top: '',
-            length: ''
-          },
-          {
-            name: 'UBC University High School',
-            startTime: '2:00 pm',
-            interval: '120',
-            top: '',
-            length: ''
-          },
-          {
-            name: 'SFU School of Arts',
-            startTime: '5:00 pm',
-            interval: '120',
-            top: '',
-            length: ''
-          }
         ]
       }
     },
