@@ -22,8 +22,6 @@ var $timestamp = date();
 
 
 
-
-
 /**
  * First, we check the EVENT_FILE for old events.
  */
