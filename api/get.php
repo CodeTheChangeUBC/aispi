@@ -3,10 +3,6 @@
 require '../index.php';
 
 
-// Set up the appropriate headers and constants.
-header("Access-Control-Allow-Origin: *");
-header("Content-type:application/json");
-
 define('MONTH_INDEX', 2);
 define('YEAR_INDEX', 3);
 
