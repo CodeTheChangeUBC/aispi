@@ -57,3 +57,11 @@
 [0811/115936.693:INFO:rc_l10n_handler.cc(180)] Retrying after adjustments: en-US
 [0811/115936.694:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en
 >>>>>>> login
+[0811/154231.054:INFO:rc_l10n_handler.cc(131)] Language not in the available languages list: en-US
+[0811/154231.055:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en-US
+[0811/154231.055:INFO:rc_l10n_handler.cc(180)] Retrying after adjustments: en-US
+[0811/154231.056:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en
+[0811/154628.886:INFO:rc_l10n_handler.cc(131)] Language not in the available languages list: en-US
+[0811/154628.888:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en-US
+[0811/154628.889:INFO:rc_l10n_handler.cc(180)] Retrying after adjustments: en-US
+[0811/154628.889:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en

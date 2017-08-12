@@ -5,9 +5,9 @@
             div.header__item.header__item--left
                 img(src="../assets/left.png" height="30px")
             div.header__item.header__item--label
-                .month MAY
+                .month {{consts.MONTHS[current.month]}}
                 br
-                .year 2017
+                .year {{current.year}}
             div.header__item.header__item--right
                 img(src="../assets/right.png" height="30px")
         div#calendar
@@ -19,6 +19,8 @@
     import Day from '@/components/Day'
     import PopUp from '@/components/PopUp'
 
+
+    const MONTHS = []
     export default {
         name: 'calendar',
         components: {
@@ -27,6 +29,13 @@
         },
         data () {
             return {
+                consts: {
+                    MONTHS
+                },
+                current: {
+                    month: 0,
+                    year: 2017
+                },
                 days: '.'.repeat(31).split('').map((a,i) => (i + 1))
             }
         }
