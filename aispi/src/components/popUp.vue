@@ -1,15 +1,13 @@
-<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 <template lang='jade'>
   div.viewPopup(v-show="inView" v-on:click='toggleTimeLine($event)')
     div.container#keepTimeline
       div.time__container
         div.time(v-for='time in times') {{time}}
       div.event__container
-        div.events(v-bind:style="{top: event.top + '%', height: event.length + '%'  }" v-for='event in bookedEvent') {{event.name}}
+        div.events(v-bind:style="{top: startTime + '%', height: duration + '%'  }" v-for='event in bookedEvent') {{schoolName}}
       div.form__container
         div.form__header Book Event
-        input(placeholder="School Name").text__input
+        input(placeholder="School Name" v-bind:value="schoolName").text__input
         textarea(placeholder="Address").text__input
         input(placeholder="Contact Email").text__input
         textarea(placeholder="Additional Details").text__input
@@ -18,15 +16,19 @@
 <script>
   export default{
     name: 'popUp',
+    Vue.component('popUp', {
+      props: [
+        'schoolName',
+        'duration',
+        'startTime'
+      ]
+    })
     data () {
       return {
-        inView: false,
+        inView: true,
         times: [
           '6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 am',
           '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm', '8:00 pm', '9:00 pm'
-        ],
-        texts: [
-          'Event Type', 'School Name', 'Address', 'Email', 'Start time', 'End time', 'Description'
         ],
         bookedEvent: [
         ]
