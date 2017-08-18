@@ -4,7 +4,7 @@
       div.time__container
         div.time(v-for='time in times') {{time}}
       div.event__container
-        div.events(v-bind:state="bookedEvent" v-bind:style="{top: bookedEvent.top + '%', height: bookedEvent.length + '%'  }" v-for='event in bookedEvent') {{bookedEvent.name}}
+        div.events(v-bind:style="{top: bookedEvent.top + '%', height: bookedEvent.length + '%'  }" v-for='event in bookedEvent') {{bookedEvent.name}}
       div.form__container
         div.form__header Book Event
         input(placeholder="School Name" v-bind:value="schoolName").text__input
