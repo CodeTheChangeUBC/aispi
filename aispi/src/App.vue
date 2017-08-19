@@ -1,12 +1,10 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <popUp state="state" v-bind:state="bookedEvent"></popUp>
   </div>
 </template>
 
 <script>
-  import PopUp from '@/components/PopUp'
   export default {
     name: 'app'
   }
