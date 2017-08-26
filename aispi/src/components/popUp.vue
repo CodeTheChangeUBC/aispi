@@ -1,7 +1,8 @@
 <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <template lang='jade'>
-  div.viewPopup(v-show="inView" v-on:click='toggleTimeLine($event)')
+  div.viewPopup(v-show="inView")
+    div.close(@click="close()")
     div.container#keepTimeline
       div.time__container
         div.time(v-for='time in times') {{time}}
@@ -13,14 +14,26 @@
         textarea(placeholder="Address").text__input
         input(placeholder="Contact Email").text__input
         textarea(placeholder="Additional Details").text__input
+        vue-recaptcha(sitekey="6LdxTi4UAAAAALdEW9pPOkXtQSg0jlfXqAM2tcSI")
+        input(type="submit" value="CREATE").form__submit
 </template>
 
 <script>
+  import VueRecaptcha from 'vue-recaptcha'
+
   export default{
     name: 'popUp',
+    components: {
+      VueRecaptcha
+    },
+    methods: {
+      close: function () {
+        this.inView = false
+      }
+    },
     data () {
       return {
-        inView: true,
+        inView: false,
         times: [
           '6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 am',
           '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm', '8:00 pm', '9:00 pm'
@@ -43,6 +56,12 @@
 
 <style scoped>
   @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
+  .close {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: #FFF;
+  }
   .viewPopup{
     z-index: 999;
     position: fixed;
@@ -129,5 +148,18 @@
         textarea.text__input{
           resize: none;
           height: 60px;
+        }
+        .form__submit{
+          padding: 10px 20px;
+          border: 0;
+          background-color: #FFF;
+          color: #000;
+          border-radius: 4px;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: Montserrat;
+          margin-top: 20px;
+          cursor: pointer;
+          outline: 0;
         }
 </style>
