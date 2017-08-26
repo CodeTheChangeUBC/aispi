@@ -3,19 +3,37 @@
         #login__box
             .login__header LOGIN
             .login__info Please enter the master password!
-            input.login__input(type="password" placeholder="Enter Password")
+            input.login__input(type="password" placeholder="Enter Password" v-model="password" @keyup="start()" )
 </template>
 
 <script>
     /* eslint-disable */
+    import Hash from '@/assets/sha256'
+
+    const SALT = 'Joe Thomas is Super Cool'
+    const ITERATIONS = 100000
+    const TYPING_SPEED = 1000
+
+    window.Hash = Hash
 
     export default {
         name: 'login',
-        components: {
-        },
         data () {
             return {
+                typingTimeout: null,
+                password: '',
                 days: '.'.repeat(31).split('').map((a,i) => (i + 1))
+            }
+        },
+        methods: {
+            start: function () {
+                var self = this
+
+                clearTimeout(this.typingTimeout)
+                this.typingTimeout = setTimeout(() => {
+                    console.log(Hash(self.password, SALT, ITERATIONS, 32))
+
+                }, TYPING_SPEED)
             }
         }
     }
@@ -55,12 +73,11 @@
                 position: absolute;
                 top: 0px;
                 left: 0px;
-                width: 100%;
-                padding: 10px;
+                width: 25%;
+                padding: 20px;
                 font-weight: 200;
                 box-sizing: border-box;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                border-top-left-radius: 3px;
             }
             .login__info {
                 width: 200px;
