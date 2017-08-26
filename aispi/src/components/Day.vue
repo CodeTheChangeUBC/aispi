@@ -1,6 +1,6 @@
 <template lang="jade">
-    div.day
-        div.day__number {{number}}
+    div.day(v-bind:class="{'day--disabled': !number.current}")
+        div.day__number {{number.number}}
 </template>
 
 <script>
@@ -28,6 +28,10 @@
         border-radius: 5px;
         color: #444;
     }
+        .day--disabled {
+            background-color: #EEE;
+            color: #999;
+        }
         .day__number {
             font-size: 11px;
             font-weight: 400;

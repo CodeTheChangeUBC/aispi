@@ -6,7 +6,7 @@ import Control from '@/components/Control'
 /* import popUp from '@/components/popUp' */
 
 Vue.use(Router)
-
+console.log(Calendar)
 export default new Router({
   routes: [
     {

@@ -44,17 +44,42 @@
         methods: {
             _updateDays: function () {
                 var { month, year } = this.current
-                var dayL = new Date(year, month + 1, 0).getDate()
+                var dayL = new Date(year, month+1, 0).getDate()
                 var days = []
 
-                // TODO: Add Previous Month
-                for (var i = 0; i < preL; i++) {
+                var preL = 0
+                var startDay = new Date(year, month, 1).getDay()
+                console.log(startDay)
+                // Grab previous month's days
+                if (month == 0) {
+                    preL = new Date(year - 1, 12, 0).getDate()
+                } else {
+                    preL = new Date(year, month, 0).getDate()
+                }
 
+                // Add Previous Month
+                for (var i = 0; i < startDay; i++) {
+                    days.unshift({
+                        number: preL--,
+                        current: false
+                    })
                 }
 
                 // Add Current Month
                 for (var i = 0; i < dayL; i++) {
-                    days.push(i+1)
+                    days.push({
+                        number: i+1,
+                        current: true
+                    })
+                }
+
+                // Add Next Month
+                var i = 1
+                while (days.length % 7 != 0) {
+                    days.push({
+                        number: i++,
+                        current: false
+                    })
                 }
 
                 this.days = days
@@ -80,20 +105,26 @@
             }
         },
         data () {
+            var month = new Date().getMonth()
+            var year = new Date().getYear() + 1900
+            
+            // Add the days after the stack clears.
+            setTimeout(() => {
+                this._updateDays()
+            }, 1)
+
             return {
                 consts: {
                     MONTHS
                 },
                 current: {
-                    month: 0,
-                    year: 2017
+                    month: month,
+                    year: year
                 },
-                days: '.'.repeat(31).split('').map((a,i) => (i + 1))
+                days: []
             }
         }
     }
-
-
 </script>
 
 <style scoped>
