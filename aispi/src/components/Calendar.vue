@@ -11,7 +11,7 @@
             div.header__item.header__item--right(@click="next()")
                 img(src="../assets/right.png" height="30px")
         div#calendar
-            day(v-for="day in days" v-bind:number="day")
+            day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks")
 </template>
 
 <script>
@@ -19,6 +19,8 @@
     import Day from '@/components/Day'
     import PopUp from '@/components/PopUp'
 
+    import Events from '@/api/events'
+    import Blocks from '@/api/blocks'
 
     const MONTHS = [
         'JAN',
@@ -42,6 +44,29 @@
             PopUp
         },
         methods: {
+            _grabAPI: function () {
+                var { month, year } = this.current
+                
+                // Fetch and add the events
+                Events
+                .fetch(month, year)
+                .then(data => {
+
+                })
+                .catch(error => {
+                    self.errorMsg = error.message
+                })
+
+                // Fetch and add the blocks
+                Blocks
+                .fetch(month, year)
+                .then(data => {
+
+                })
+                .catch(error => {
+                    self.errorMsg = error.message
+                })
+            },
             _updateDays: function () {
                 var { month, year } = this.current
                 var dayL = new Date(year, month+1, 0).getDate()
@@ -85,6 +110,7 @@
                 this.days = days
             },
             next: function () {
+                // Set the month to the next month 
                 if (this.current.month == 11) {
                     this.current.year++
                     this.current.month = 0
@@ -94,6 +120,7 @@
                 this._updateDays()
             },
             prev: function () {
+                // Set the month to the prev month 
                 if (this.current.month == 0) {
                     this.current.year--
                     this.current.month = 11
@@ -108,10 +135,13 @@
             var month = new Date().getMonth()
             var year = new Date().getYear() + 1900
             
-            // Add the days after the stack clears.
+            // Things we're doing after the data is set and stack is clear.
             setTimeout(() => {
                 this._updateDays()
+                // Fetch the events and blocks for the month.
+                this._grabAPI()
             }, 1)
+
 
             return {
                 consts: {
@@ -121,6 +151,7 @@
                     month: month,
                     year: year
                 },
+                error: null,
                 days: []
             }
         }
