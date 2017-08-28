@@ -1,6 +1,6 @@
 <template lang="jade">
     div#calendar__wrap
-        popUp
+        popUp(state="state" v-bind:state="bookedEvent")
         div#calendar__header
             div.header__item.header__item--left(@click="prev()")
                 img(src="../assets/left.png" height="30px")
