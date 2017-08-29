@@ -14,9 +14,10 @@ export default class Event {
         return new Promise((resolve, reject) => {
 
             var request = new XMLHttpRequest()
-            request.open('GET', '/api/get.php', true)
+            request.open('GET', `http://localhost:3000/api/get.php?month=${month}&year=${year}`, true)
 
             request.onload = function() {
+                var data
                 try {
                     data = JSON.parse(request.responseText)
                 } catch (e) {
@@ -28,7 +29,6 @@ export default class Event {
                     data = JSON.parse(request.responseText)
 
                     // Update the holder
-                    data.forEach(block => (holder[block.id] = block))
                     resolve(data)
                 } else {
                     reject({

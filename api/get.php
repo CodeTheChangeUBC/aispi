@@ -1,6 +1,6 @@
 <?php
 
-require '../index.php';
+require '../globals.php';
 
 
 // Ensure that the GET variables are properly set.
@@ -24,6 +24,9 @@ fgetcsv($handle);
 $time_slice = [];
 
 while ($data = fgetcsv($handle)) {
+    if (!isset($data[2])) {
+        var_dump($data);
+    }
     if ($data[MONTH_INDEX] == $month && $data[YEAR_INDEX] == $year) {
         array_push($time_slice, $data);
     }

@@ -19,7 +19,7 @@
     import Day from '@/components/Day'
     import PopUp from '@/components/PopUp'
 
-    import Blocks from '@/api/blocks'
+//    import Blocks from '@/api/blocks'
     import Events from '@/api/events'
 
 
@@ -47,26 +47,36 @@
         methods: {
             _grabAPI: function () {
                 var { month, year } = this.current
+                var self = this
+                var days = self.days
                 
                 // Fetch and add the events
                 Events
                 .fetch(month, year)
                 .then(data => {
-                    console.log(data)
+                    data
+                    .forEach(event => {
+                        for(var i = days.length; i--;) {
+                            if (days[i].current && days[i].number == event[1]) {
+                                days[i].events.push(event)
+                            }
+                        }
+                    })
+                    console.log(days)
                 })
                 .catch(error => {
                     self.errorMsg = error.message
                 })
 
                 // Fetch and add the blocks
-                Blocks
+                /*Blocks
                 .fetch(month, year)
                 .then(data => {
 
                 })
                 .catch(error => {
                     self.errorMsg = error.message
-                })
+                })*/
             },
             _updateDays: function () {
                 var { month, year } = this.current
@@ -87,7 +97,8 @@
                 for (var i = 0; i < startDay; i++) {
                     days.unshift({
                         number: preL--,
-                        current: false
+                        current: false,
+                        events: []
                     })
                 }
 
@@ -95,7 +106,8 @@
                 for (var i = 0; i < dayL; i++) {
                     days.push({
                         number: i+1,
-                        current: true
+                        current: true,
+                        events: []
                     })
                 }
 
@@ -104,11 +116,15 @@
                 while (days.length % 7 != 0) {
                     days.push({
                         number: i++,
-                        current: false
+                        current: false,
+                        events: []
                     })
                 }
 
                 this.days = days
+                
+                // Fill these days with appropriate events.
+                this._grabAPI()
             },
             next: function () {
                 // Set the month to the next month 
@@ -139,8 +155,6 @@
             // Things we're doing after the data is set and stack is clear.
             setTimeout(() => {
                 this._updateDays()
-                // Fetch the events and blocks for the month.
-                this._grabAPI()
             }, 1)
 
 
