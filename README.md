@@ -26,4 +26,9 @@ Make sure you're in the aispi directory of the git repo.
 ```
 npm start
 ```
+Also, in seperate command box go into the main git repo directory and run the following:
+```
+php -S localhost:3000
+```
+
 Wow, how simple, now after a while a browser instance will be launched. Alternatively, you can go to localhost:8080 to see the app. 
