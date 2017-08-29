@@ -1,6 +1,6 @@
 <template lang="jade">
     div#calendar__wrap
-        popUp(state="state" v-bind:state="bookedEvent")
+        popUp(state="state" v-bind:state="error")
         div#calendar__header
             div.header__item.header__item--left(@click="prev()")
                 img(src="../assets/left.png" height="30px")
@@ -19,8 +19,9 @@
     import Day from '@/components/Day'
     import PopUp from '@/components/PopUp'
 
-    import Events from '@/api/events'
     import Blocks from '@/api/blocks'
+    import Events from '@/api/events'
+
 
     const MONTHS = [
         'JAN',
@@ -51,7 +52,7 @@
                 Events
                 .fetch(month, year)
                 .then(data => {
-
+                    console.log(data)
                 })
                 .catch(error => {
                     self.errorMsg = error.message

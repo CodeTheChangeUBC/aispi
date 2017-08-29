@@ -8,7 +8,7 @@
         div.events(v-bind:style="{top: bookedEvent.top + '%', height: bookedEvent.length + '%'  }" v-for='event in bookedEvent') {{bookedEvent.name}}
       div.form__container
         div.form__header Book Event
-        input(placeholder="School Name" v-bind:value="schoolName").text__input
+        input(placeholder="School Name").text__input
         textarea(placeholder="Address").text__input
         input(placeholder="Contact Email").text__input
         textarea(placeholder="Additional Details").text__input
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  /* eslint-disable */
   import VueRecaptcha from 'vue-recaptcha'
 
   export default{
