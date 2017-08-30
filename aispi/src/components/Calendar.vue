@@ -1,6 +1,6 @@
 <template lang="jade">
     div#calendar__wrap
-        popUp(state="state" v-bind:viewable="popped" v-bind:state="error" @close="close")
+        popUp(state="state" v-bind:viewable="popped" v-bind:events="events" @close="close")
         div#calendar__header
             div.header__item.header__item--left(@click="prev()")
                 img(src="../assets/left.png" height="30px")
@@ -19,9 +19,7 @@
     import Day from '@/components/Day'
     import PopUp from '@/components/PopUp'
 
-//    import Blocks from '@/api/blocks'
     import Events from '@/api/events'
-
 
     const MONTHS = [
         'JAN',
@@ -45,7 +43,8 @@
             PopUp
         },
         methods: {
-            open: function () {
+            open: function (events) {
+                this.events = events
                 this.popped = true
             },
             close: function () {
@@ -68,7 +67,6 @@
                             }
                         }
                     })
-                    console.log(days)
                 })
                 .catch(error => {
                     self.errorMsg = error.message
@@ -91,7 +89,7 @@
 
                 var preL = 0
                 var startDay = new Date(year, month, 1).getDay()
-                console.log(startDay)
+
                 // Grab previous month's days
                 if (month == 0) {
                     preL = new Date(year - 1, 12, 0).getDate()
@@ -174,6 +172,7 @@
                 },
                 error: null,
                 popped: false,
+                events: [],
                 days: []
             }
         }

@@ -4,7 +4,7 @@
       div.time__container
         div.time(v-for='time in times') {{time}}
       div.event__container
-        div.events(v-bind:style="{top: bookedEvent.top + '%', height: bookedEvent.length + '%'  }" v-for='event in bookedEvent') {{bookedEvent.name}}
+        div.events(v-for='event in events') {{event[7]}} {{event[8]}} {{event[9]}}
       div.form__container
         div.form__header Book Event
         input(placeholder="School Name*").text__input
@@ -20,18 +20,19 @@
   /* eslint-disable */
   import VueRecaptcha from 'vue-recaptcha'
 
-  export default{
+  export default {
     name: 'popUp',
-    props: ['viewable'],
+    props: ['viewable','events'],
     components: {
       VueRecaptcha
     },
     methods: {
-      close: function (e) {
+      close: function () {
         this.$emit('close')
       }
     },
     data () {
+      console.log(this)
       return {
         times: [
           '6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 am',

@@ -1,5 +1,5 @@
 <template lang="jade">
-    div.day(v-bind:class="{'day--disabled': !number.current}"  @click="open()")
+    div.day(v-bind:class="{'day--disabled': !number.current}"  @click="open(events)")
         div.day__number {{number.number}}
         div.event__wrap
             div.event(v-for="event in events") {{event[7]}}
@@ -12,8 +12,8 @@
         name: 'day',
         props: ['number', 'events'],
         methods: {
-            open () {
-                this.$emit('open')
+            open (events) {
+                this.$emit('open', events)
             }
         }
     }
