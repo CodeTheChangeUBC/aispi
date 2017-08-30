@@ -1,6 +1,8 @@
 <template lang="jade">
-    div.day(v-bind:class="{'day--disabled': !number.current}")
+    div.day(v-bind:class="{'day--disabled': !number.current}"  @click="open(events)")
         div.day__number {{number.number}}
+        div.event__wrap
+            div.event(v-for="event in events") {{event[7]}}
 </template>
 
 <script>
@@ -8,7 +10,12 @@
 
     export default {
         name: 'day',
-        props: ['number']
+        props: ['number', 'events'],
+        methods: {
+            open (events) {
+                this.$emit('open', events)
+            }
+        }
     }
 </script>
 
@@ -27,6 +34,7 @@
         position: relative;
         border-radius: 5px;
         color: #444;
+        overflow-y: hidden;
     }
         .day--disabled {
             background-color: #EEE;
@@ -44,5 +52,19 @@
             border-radius: 100px;
             background-color: #EEE;
             color: #999;
+        }
+        .event__wrap {
+            width: calc(100% - 4px);
+            float: left;
+            margin-left: 2px;
+        }
+        .event {
+            padding: 2px;
+            box-sizing: border-box;
+            font-size: 11px;
+            margin-top: 1px;
+            color: #FFF;
+            background-color: #999;
+            border-radius: 5px;
         }
 </style>

@@ -4,17 +4,16 @@
             .login__header LOGIN
             .login__info Please enter the master password!
             input.login__input(type="password" placeholder="Enter Password" v-model="password" @keyup="start()" )
+
 </template>
 
 <script>
     /* eslint-disable */
-    import Hash from '@/assets/sha256'
+    import Hash from 'crypto-js'
 
     const SALT = 'Joe Thomas is Super Cool'
     const ITERATIONS = 100000
     const TYPING_SPEED = 1000
-
-    window.Hash = Hash
 
     export default {
         name: 'login',
@@ -34,6 +33,21 @@
                     console.log(Hash(self.password, SALT, ITERATIONS, 32))
 
                 }, TYPING_SPEED)
+            },
+            submit: function () {
+                var password = Hash
+                .PBKDF2(this.password, SALT, {keySize: 8, iterations: ITERATIONS})
+                .toString()
+                
+                this
+                .$http
+                .post('http://localhost:3000/login', {password: this.password})
+                .then(a => {
+                    localStorage.set(token, data.token)
+                })
+                .catch(e => {
+
+                })
             }
         }
     }
