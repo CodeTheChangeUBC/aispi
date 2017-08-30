@@ -8,11 +8,21 @@ export default class Event {
     }
 
     static fetch (month, year) {
-        var holder = this.Holder
+
+        var cache = this.cache
+        var cacheKey = month + '.' + year
+
+
 
         // Ew, what a mess..
         return new Promise((resolve, reject) => {
 
+            // If we already have this, return it, else AJAX this.
+            if (cache[cacheKey]) {
+                return resolve(cache[cacheKey])
+            }
+
+            // Bare Bones AJAXing XMLHttpRequest masterrace..
             var request = new XMLHttpRequest()
             request.open('GET', `http://localhost:3000/api/get.php?month=${month}&year=${year}`, true)
 
@@ -27,7 +37,7 @@ export default class Event {
                 }
                 if (request.status >= 200 && request.status < 400) {
                     data = JSON.parse(request.responseText)
-
+                    cache[cacheKey] = data
                     // Update the holder
                     resolve(data)
                 } else {
@@ -47,3 +57,6 @@ export default class Event {
         })
     }
 }
+
+
+Event.cache = {}

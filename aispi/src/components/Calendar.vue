@@ -1,6 +1,6 @@
 <template lang="jade">
     div#calendar__wrap
-        popUp(state="state" v-bind:state="error")
+        popUp(state="state" v-bind:viewable="popped" v-bind:state="error" @close="close")
         div#calendar__header
             div.header__item.header__item--left(@click="prev()")
                 img(src="../assets/left.png" height="30px")
@@ -11,7 +11,7 @@
             div.header__item.header__item--right(@click="next()")
                 img(src="../assets/right.png" height="30px")
         div#calendar
-            day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks")
+            day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
 </template>
 
 <script>
@@ -45,6 +45,12 @@
             PopUp
         },
         methods: {
+            open: function () {
+                this.popped = true
+            },
+            close: function () {
+                this.popped = false
+            },
             _grabAPI: function () {
                 var { month, year } = this.current
                 var self = this
@@ -167,6 +173,7 @@
                     year: year
                 },
                 error: null,
+                popped: false,
                 days: []
             }
         }
