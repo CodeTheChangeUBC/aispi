@@ -9,10 +9,6 @@
   export default {
     name: 'app'
   }
-  var el = document.createElement('script')
-  el.setAttribute('type', 'text/javascript')
-  el.setAttribute('src', 'https://www.google.com/recaptcha/api.js')
-  document.getElementsByTagName('head')[0].appendChild(el)
 </script>
 
 <style>

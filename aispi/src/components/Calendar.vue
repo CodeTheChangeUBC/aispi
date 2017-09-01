@@ -1,6 +1,6 @@
 <template lang="jade">
     div#calendar__wrap
-        popUp(state="state" v-bind:viewable="popped" v-bind:events="events" @close="close")
+        popup(state="state" v-bind:viewable="popped" v-bind:events="events" @close="close")
         div#calendar__header
             div.header__item.header__item--left(@click="prev()")
                 img(src="../assets/left.png" height="30px")
@@ -171,7 +171,7 @@
                     year: year
                 },
                 error: null,
-                popped: false,
+                popped: true,
                 events: [],
                 days: []
             }
