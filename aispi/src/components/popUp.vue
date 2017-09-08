@@ -7,6 +7,8 @@
                     div.event__time(v-for="time in TIMES") {{time}}
                 div.event__container
                     event(v-for="event in events" v-bind:event="event")
+            div.form__holder
+                
                 
 </template>
 
@@ -115,16 +117,18 @@
             .event__time {
                 float: left;
                 font-size: 11px;
-                color: #000;
-                font-weight: 400;
+                font-weight: 300;
                 letter-spacing: 1px;
-                padding: 5px;
                 box-sizing: border-box;
-                border-right: 1px solid #EEE;
                 width: 70px;
                 text-align: left;
                 height: 35px;
-                border-bottom: 1px solid #EEE;
+                border-right: 1px solid rgba(0,0,0,0.1);
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                background-color: #222;
+                color: #FFF;
+                line-height: 35px;
+                padding-left: 6px;
             }
 
 
