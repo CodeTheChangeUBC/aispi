@@ -12,8 +12,6 @@ export default class Event {
         var cache = this.cache
         var cacheKey = month + '.' + year
 
-
-
         // Ew, what a mess..
         return new Promise((resolve, reject) => {
 
@@ -24,7 +22,7 @@ export default class Event {
 
             // Bare Bones AJAXing XMLHttpRequest masterrace..
             var request = new XMLHttpRequest()
-            request.open('GET', `/api/get.php?month=${month}&year=${year}`, true)
+            request.open('GET', `http://localhost:3000/api/get.php?month=${month}&year=${year}`, true)
 
             request.onload = function() {
                 var data

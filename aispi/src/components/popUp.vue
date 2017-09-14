@@ -85,9 +85,6 @@
             overflow: hidden;
         }
 
-
-
-
         .event__holder{
             width: 400px;
             background-color: #FFF;
@@ -108,6 +105,8 @@
             height: 100%;
             display: inline-block;
             width: 70px;
+            float: left;
+            font-family: Montserrat;
         }
             .event__time {
                 float: left;

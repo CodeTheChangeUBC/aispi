@@ -24,6 +24,7 @@
                 days: '.'.repeat(31).split('').map((a,i) => (i + 1))
             }
         },
+        
         methods: {
             start: function () {
                 var self = this
