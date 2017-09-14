@@ -10,16 +10,14 @@ include '../index.php'
 
 
 // Get today's date.
-var $date = var_dump(explode('.',date('m.d.y')));
+$date = var_dump(explode('.',date('m.d.y')));
 
 $date['month'] = $date[0];
 $date['day'] = $date[1];
 $date['year'] = $date[2];
 
 // Get a UNIX timestamp for today.
-var $timestamp = date();
-
-
+$timestamp = date();
 
 
 /**
