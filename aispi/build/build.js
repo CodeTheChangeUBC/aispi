@@ -1,3 +1,4 @@
+var fs = require('fs-extra')
 require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
@@ -17,6 +18,12 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
   if (err) throw err
   webpack(webpackConfig, function (err, stats) {
     spinner.stop()
+
+    // Added this to copy up the dist for php production.
+    fs.copy('./dist/','../', err =>{
+      console.log(err)
+    })
+
     if (err) throw err
     process.stdout.write(stats.toString({
       colors: true,

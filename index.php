@@ -1,3 +1,3 @@
 <?php
 
-require './aispi/dist/index.html';
+require './index.html';
