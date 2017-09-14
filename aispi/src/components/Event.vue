@@ -17,7 +17,11 @@
         data: function () {
             var top = (MINUTE_HEIGHT * (+this.event[4])) + 'px'
             var height = (MINUTE_HEIGHT * (+this.event[5])) + 'px'
-            var backgroundColor = randomColor({   luminosity: 'light',hue: 'blue', seed: event[0]})
+            var backgroundColor = randomColor({
+                luminosity: 'light',
+                hue: 'blue',
+                seed: event[0]
+            })
 
 
             var range = this._time(+this.event[4], +this.event[5])
@@ -50,11 +54,9 @@
 <style scoped>
     .event {
         width: 100%;
-        float: right;
         background-color: #999;
         border-radius: 10px;
         position: absolute;
-        right: 5px;
         font-size: 12px;
     }
         .event--time {

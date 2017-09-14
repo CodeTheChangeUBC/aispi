@@ -1,5 +1,6 @@
 <template lang="jade">
     div#calendar__wrap
+        div.header AiSPI Event Planner
         PopUp(state="state" v-bind:viewable="popped" v-bind:events="events" @close="close")
         div#calendar__header
             div.header__item.header__item--left(@click="prev()")
@@ -171,7 +172,7 @@
                     year: year
                 },
                 error: null,
-                popped: true,
+                popped: false,
                 events: [],
                 days: []
             }
@@ -180,6 +181,13 @@
 </script>
 
 <style scoped>
+    .header{
+        font-family: Montserrat;
+        font-weight: 400;
+        color: #FFF;
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+    }
     #calendar__wrap {
         position: fixed;
         top: 0px;
