@@ -12,10 +12,8 @@
 
 include '../index.php';
 
-define('PASSWORD_HASH','426dd33526a62c58620173e350ec42c61d31404476b094177128c07b94320ed5');
-define('SALT','eab7073fc7134ac421eeed049597e01c');
-define('SECRET','123y8hgbfsjkljfaskldfjasdf');
-
+// Domo Arigato, Mr. Roboto.
+$secrets = yaml_parse_file('../secrets.yml');
 
 // Check proof of work is correct, exit otherwise.
 if (hash('sha256', SALT.$_GET['password']) !== PASSWORD_HASH) {

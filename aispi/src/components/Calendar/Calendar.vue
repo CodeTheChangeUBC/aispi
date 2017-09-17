@@ -2,23 +2,24 @@
     div#calendar__wrap
         div.header AiSPI Event Planner
         PopUp(state="state" v-bind:viewable="popped" v-bind:events="events" @close="close")
+        Control
         div#calendar__header
             div.header__item.header__item--left(@click="prev()")
-                img(src="../assets/left.png" height="30px")
+                img(src="../../assets/left.png" height="30px")
             div.header__item.header__item--label
                 .month {{consts.MONTHS[current.month]}}
                 br
                 .year {{current.year}}
             div.header__item.header__item--right(@click="next()")
-                img(src="../assets/right.png" height="30px")
+                img(src="../../assets/right.png" height="30px")
         div#calendar
             day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
 </template>
 
 <script>
     /* eslint-disable */
-    import Day from '@/components/Day'
-    import PopUp from '@/components/PopUp'
+    import Day from '@/components/Calendar/Day'
+    import PopUp from '@/components/Calendar/PopUp'
 
     import Events from '@/api/events'
 

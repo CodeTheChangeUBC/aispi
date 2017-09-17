@@ -63,7 +63,7 @@
         left: 0px;
         height: 100%;
         width: 100%;
-        background: url('../assets/doodles.png'), #1E8BC3;
+        background: url('../../assets/doodles.png'), #1E8BC3;
     }
         #login__box {
             position: absolute;

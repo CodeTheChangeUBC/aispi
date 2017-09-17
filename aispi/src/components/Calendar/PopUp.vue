@@ -17,7 +17,7 @@
 <script>
     /* eslint-disable */
     import VueRecaptcha from 'vue-recaptcha'
-    import Event from '@/components/Event'
+    import Event from '@/components/Calendar/Event'
 
     var TIMES = [
         '6:00 am', 
