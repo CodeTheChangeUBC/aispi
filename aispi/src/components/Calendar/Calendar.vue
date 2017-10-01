@@ -14,6 +14,10 @@
                 img(src="../../assets/right.png" height="30px")
         div#calendar
             day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
+        footer
+            |Made with
+            img(src="../../assets/heart.png" height="10px" style="margin: 0 5px")
+            |by CodeTheChange
 </template>
 
 <script>
@@ -224,4 +228,11 @@
         .month {
             width: 110px;
         }
+    footer {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+    }
 </style>
