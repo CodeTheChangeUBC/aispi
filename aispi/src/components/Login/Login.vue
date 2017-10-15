@@ -2,8 +2,10 @@
     #login__wrap
         #login__box
             .login__header LOGIN
-            .login__info Please enter the master password!
+            .login__info {{heading}}
             input.login__input(type="password" placeholder="Enter Password" v-model="password" @keyup="start()" )
+            br
+            button.submit__button Go
 
 </template>
 
@@ -19,6 +21,7 @@
         name: 'login',
         data () {
             return {
+                heading: "Please enter the master password!",
                 typingTimeout: null,
                 password: '',
                 days: '.'.repeat(31).split('').map((a,i) => (i + 1))
@@ -63,7 +66,7 @@
         left: 0px;
         height: 100%;
         width: 100%;
-        background: url('../../assets/doodles.png'), #1E8BC3;
+        background: url('../../assets/whirlpool.png'), #1E8BC3;
     }
         #login__box {
             position: absolute;
@@ -72,7 +75,7 @@
             margin-top: -150px;
             margin-left: -150px;
             width: 300px;
-            height: 200px;
+            height: 230px;
             background-color: rgba(255, 255, 255, 1);
             box-shadow: 0px 1px 1px #DDD;
             border-radius: 3px;
@@ -83,8 +86,7 @@
                 font-size: 13px;
                 letter-spacing: 1px;
                 text-align: left;
-                background-color: #4B77BE;
-                color: #FFF;
+                color: #000;
                 position: absolute;
                 top: 0px;
                 left: 0px;
@@ -93,6 +95,7 @@
                 font-weight: 200;
                 box-sizing: border-box;
                 border-top-left-radius: 3px;
+                background-color: #EEE;
             }
             .login__info {
                 width: 200px;
@@ -113,5 +116,19 @@
                 width: 180px;
                 text-align: center;
                 outline: 0;
+            }
+            .submit__button {
+                font-family: Montserrat;
+                font-size: 13px;
+                letter-spacing: 1px;
+                text-align: left;
+                background-color: #4B77BE;
+                border: 0;
+                color: #FFF;
+                padding: 10px 20px;
+                margin-top: 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                outline: none;
             }
 </style>
