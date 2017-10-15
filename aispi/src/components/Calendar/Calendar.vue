@@ -11,18 +11,19 @@
                     br
                     br
                     div#calendar__controls
-                        div.calendar__controlBtn
+                        div.calendar__controlBtn(@click="prev()")
                             img(height="20px" src="../../assets/left.png")
-                        div.calendar__controlBtn
+                        div.calendar__controlBtn(@click="next()")
                             img(height="20px" src="../../assets/right.png")
 
             div#calendar__body
-                day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
+                day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="(viewable=true)")
+        PopUp(v-bind:viewable='viewable' @close="(viewable=false)")
 </template>
 
 <script>
     /* eslint-disable */
-    
+    import PopUp from '@/components/Calendar/PopUp'
     import Day from '@/components/Calendar/Day'
     const MONTHS = [
         'JAN',
@@ -42,31 +43,58 @@
     export default {
         name: 'Calendar',
         components: {
-            Day
+            Day,
+            PopUp
         },
         data () {
             var date = new Date()
             var days = []
-            var current =  {month: date.getMonth() + 1, year: date.getYear()+ 1900}
+            var current =  {month: date.getMonth() + 1, year: date.getYear() + 1900}
 
-            for (var i = 0; i < this._days(current.month, current.year); i++) {
-                days.push({
-                    number: i + 1,
-                    current: 1,
-                    events: []
-                })
-            }
+            setTimeout(() => {
+                this._writeDays()
+            })
 
             return {
                 MONTHS,
-                days,
                 current,
-                days
+                days,
+                viewable: false
             }
         },
         methods: {
-            next () {
+            prev () {
+                this.current.month--
 
+                // Handle underflow
+                if (this.current.month < 1) {
+                    this.current.month = 12
+                    this.current.year--
+                }
+            },
+            next () {
+                this.current.month++
+
+                // Handle overflow
+                if (this.current.month > 12)
+                 {
+                    this.current.month = 1
+                    this.current.year++
+                }
+
+            },
+            open () {
+
+            },
+            _writeDays () {
+                var {month, year} = this.current
+                for (var i = 0; i < this._days(month, year); i++) {
+                    this.days.push({
+                        number: i + 1,
+                        current: 1,
+                        events: []
+                    })
+                }
             },
             _days (month, year) {
                 return new Date(year, month, 0).getDate();
