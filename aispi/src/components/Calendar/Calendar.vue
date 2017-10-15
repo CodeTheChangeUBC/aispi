@@ -1,28 +1,29 @@
 <template lang="jade">
-    div#calendar__wrap
-        div.header AiSPI Event Planner
-        PopUp(state="state" v-bind:viewable="popped" v-bind:events="events" @close="close")
-        Control
-        div#calendar__header
-            div.header__item.header__item--left(@click="prev()")
-                img(src="../../assets/left.png" height="30px")
-            div.header__item.header__item--label
-                .month {{consts.MONTHS[current.month]}}
-                br
-                .year {{current.year}}
-            div.header__item.header__item--right(@click="next()")
-                img(src="../../assets/right.png" height="30px")
-        div#calendar
-            day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
+    div
+        div#calendar__wrap
+            div#calendar__head
+                div.calendar__inner
+                    //img(src="../../assets/ASPI.K.png" height="50px")#calendar__logo
+                    span.logo__text Event Planner
+                    #date__text
+                        .date__text--month {{MONTHS[current.month - 1]}}
+                        .date__text--year {{current.year}}
+                    br
+                    br
+                    div#calendar__controls
+                        div.calendar__controlBtn
+                            img(height="20px" src="../../assets/left.png")
+                        div.calendar__controlBtn
+                            img(height="20px" src="../../assets/right.png")
+
+            div#calendar__body
+                day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
 </template>
 
 <script>
     /* eslint-disable */
+    
     import Day from '@/components/Calendar/Day'
-    import PopUp from '@/components/Calendar/PopUp'
-
-    import Events from '@/api/events'
-
     const MONTHS = [
         'JAN',
         'FEB',
@@ -39,189 +40,121 @@
     ]
 
     export default {
-        name: 'calendar',
+        name: 'Calendar',
         components: {
-            Day,
-            PopUp
-        },
-        methods: {
-            open: function (events) {
-                this.events = events
-                this.popped = true
-            },
-            close: function () {
-                this.popped = false
-            },
-            _grabAPI: function () {
-                var { month, year } = this.current
-                var self = this
-                var days = self.days
-                
-                // Fetch and add the events
-                Events
-                .fetch(month, year)
-                .then(data => {
-                    data
-                    .forEach(event => {
-                        for(var i = days.length; i--;) {
-                            if (days[i].current && days[i].number == event[1]) {
-                                days[i].events.push(event)
-                            }
-                        }
-                    })
-                })
-                .catch(error => {
-                    self.errorMsg = error.message
-                })
-
-                // Fetch and add the blocks
-                /*Blocks
-                .fetch(month, year)
-                .then(data => {
-
-                })
-                .catch(error => {
-                    self.errorMsg = error.message
-                })*/
-            },
-            _updateDays: function () {
-                var { month, year } = this.current
-                var dayL = new Date(year, month+1, 0).getDate()
-                var days = []
-
-                var preL = 0
-                var startDay = new Date(year, month, 1).getDay()
-
-                // Grab previous month's days
-                if (month == 0) {
-                    preL = new Date(year - 1, 12, 0).getDate()
-                } else {
-                    preL = new Date(year, month, 0).getDate()
-                }
-
-                // Add Previous Month
-                for (var i = 0; i < startDay; i++) {
-                    days.unshift({
-                        number: preL--,
-                        current: false,
-                        events: []
-                    })
-                }
-
-                // Add Current Month
-                for (var i = 0; i < dayL; i++) {
-                    days.push({
-                        number: i+1,
-                        current: true,
-                        events: []
-                    })
-                }
-
-                // Add Next Month
-                var i = 1
-                while (days.length % 7 != 0) {
-                    days.push({
-                        number: i++,
-                        current: false,
-                        events: []
-                    })
-                }
-
-                this.days = days
-                
-                // Fill these days with appropriate events.
-                this._grabAPI()
-            },
-            next: function () {
-                // Set the month to the next month 
-                if (this.current.month == 11) {
-                    this.current.year++
-                    this.current.month = 0
-                } else {
-                    this.current.month++
-                }
-                this._updateDays()
-            },
-            prev: function () {
-                // Set the month to the prev month 
-                if (this.current.month == 0) {
-                    this.current.year--
-                    this.current.month = 11
-
-                } else {
-                    this.current.month--
-                }
-                this._updateDays()
-            }
+            Day
         },
         data () {
-            var month = new Date().getMonth()
-            var year = new Date().getYear() + 1900
-            
-            // Things we're doing after the data is set and stack is clear.
-            setTimeout(() => {
-                this._updateDays()
-            }, 1)
+            var date = new Date()
+            var days = []
+            var current =  {month: date.getMonth() + 1, year: date.getYear()+ 1900}
 
+            for (var i = 0; i < this._days(current.month, current.year); i++) {
+                days.push({
+                    number: i + 1,
+                    current: 1,
+                    events: []
+                })
+            }
 
             return {
-                consts: {
-                    MONTHS
-                },
-                current: {
-                    month: month,
-                    year: year
-                },
-                error: null,
-                popped: false,
-                events: [],
-                days: []
+                MONTHS,
+                days,
+                current,
+                days
+            }
+        },
+        methods: {
+            next () {
+
+            },
+            _days (month, year) {
+                return new Date(year, month, 0).getDate();
             }
         }
     }
 </script>
+<style lang="sass">
+    body
+        overflow-y: scroll
+    #calendar__wrap
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        min-height: 100%
+        text-align: center
+        background: #7474BF
+        background: -webkit-linear-gradient(to top, #348AC7, #7474BF)
+        background: linear-gradient(to top, #348AC7, #7474BF)
+    
+    .calendar__inner
+        width: 800px
+        margin: auto
+        text-align: left
+        line-height: 70px
 
-<style scoped>
-    .header{
-        font-family: Montserrat;
-        font-weight: 400;
-        color: #FFF;
-        margin-top: 20px;
-        letter-spacing: 0.5px;
-    }
-    #calendar__wrap {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        background: #7474BF;
-        background: -webkit-linear-gradient(to top, #348AC7, #7474BF);
-        background: linear-gradient(to top, #348AC7, #7474BF);
-    }
-    #calendar {
-        width: 910px;
+    #calendar__head
+        position: absolute
+        top: 40px
+        left: 0px
+        width: 100%
+        text-align: center
+
+        #calendar__logo
+            height: 70px
+            background: rgba(255,255,255, 0.5)
+            padding: 10px
+            border-radius: 15px
+            float: right
+            box-sizing: border-box
+
+        .logo__text
+            color: #FFF
+            font-family: Montserrat
+            font-weight: 100
+            font-size: 20px
+            letter-spacing: 1px
+            margin-left: 20px
+            float: right
+
+        #date__text
+            font-family: Montserrat
+            font-weight: 300
+            font-size: 50px
+            float: left
+            color: #FFF
+        .date__text--month
+            display: inline-block
+        .date__text--year
+            display: inline-block
+            font-size: 16px
+            margin-left: 20px
+            margin-top: 10px
+
+
+
+    #calendar__controls
+        float: left
+        margin-top: -70px
+        margin-left: 20px
+
+        .calendar__controlBtn
+            background-color: #FFF
+            border-radius: 5px
+            height: 30px
+            line-height: 40px
+            width: 40px
+            text-align: center
+            display: inline-block
+            margin-right: 10px
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+            cursor: pointer
+
+    #calendar__body
         margin: auto;
-        text-align: center;
-        display: inline-block;
-    }
-    #calendar__header {
-        font-size: 50px;
-        color: #FFF;
-        margin: 30px 0;
-    }
-        .header__item {
-            display: inline-block;
-            margin: 0 10px;
-            cursor: pointer;
-            line-height: 20px;
-        }
-        .year{
-            font-size: 20px;
-            letter-spacing: 1px;
-        }
-        .month {
-            width: 110px;
-        }
+        margin-top: 200px;
+        width: 910px;
+    
+
 </style>

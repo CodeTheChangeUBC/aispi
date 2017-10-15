@@ -1,15 +1,14 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'C:\\Users\\joe\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'run',
-1 verbose cli   'build' ]
+1 verbose cli   'start' ]
 2 info using npm@3.10.6
 3 info using node@v8.3.0
 4 verbose config Skipping project config: C:\Users\joe/.npmrc. (matches userconfig)
 5 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\joe\package.json'
 6 verbose cwd C:\Users\joe\Dropbox\projects\aispi
 7 error Windows_NT 6.3.9600
-8 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\joe\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "run" "build"
+8 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\joe\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
 9 error node v8.3.0
 10 error npm  v3.10.6
 11 error path C:\Users\joe\package.json

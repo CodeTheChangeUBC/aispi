@@ -22,6 +22,17 @@ class CSVDB {
     }
 
     /**
+     * Rewinds the file pointer back to the beginning.
+     */
+    private function _rewind () {
+        rewind($this->file);
+        // Get rid of first description line.
+        fgetcsv($this->file);
+
+        return $list;
+    }
+
+    /**
      * Creates the CSV row from an associative array $args
      * @param  {{Associative Array}} $args - Associative Array of arguments.
      */
@@ -43,15 +54,28 @@ class CSVDB {
         fputcsv($this->file, $row);
     }
 
+    /**
+     * Grabs an array of rows from the CSV based on the condition function.
+     * @param  {{Function}} $condition - Boundry for the return list. 
+     * @return {{Array}}               - List of events that satisfy $condition. 
+     */
     public function read ($condition) {
+        $list = [];
+
+        // Grab the rows, and push them if they satisfy $condition.
+        while ($row = fgetcsv($this->file)) {
+            if ($condition($row)) {
+                array_push($list, $row);
+            }
+        }
         
+        $this->_rewind();
+        return $list;
     }
 
-    public function update () {
-
+    public function update ($condition, $update) {
     }
 
     public function delete () {
-
     }
 }
