@@ -1,16 +1,23 @@
 <template lang="jade">
-    div.day(v-bind:class="{'day--disabled': !number.current}"  @click="open(events)")
+    div.day(v-bind:class="{'day--disabled': !number.current}")
         div.day__number {{number.number}}
         div.event__wrap
-            div.event(v-for="event in events") {{event[7]}}
+            event(v-for="event in events" type="label")
 </template>
 
 <script>
     /* eslint-disable */
+    import Event from '@/components/Calendar/Event'
 
     export default {
         name: 'day',
+        components: {
+            Event
+        },
         props: ['number', 'events'],
+        data () {
+            return {}
+        },
         methods: {
             open (events) {
                 this.$emit('open', events)

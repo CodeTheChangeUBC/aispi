@@ -25,6 +25,8 @@
     /* eslint-disable */
     import PopUp from '@/components/Calendar/PopUp'
     import Day from '@/components/Calendar/Day'
+    import Events from '@/api/events'
+
     const MONTHS = [
         'JAN',
         'FEB',
@@ -48,18 +50,16 @@
         },
         data () {
             var date = new Date()
-            var days = []
-            var current =  {month: date.getMonth() + 1, year: date.getYear() + 1900}
-
+            var current = {month: date.getMonth() + 1, year: date.getYear() + 1900}
             setTimeout(() => {
-                this._writeDays()
+                this._writeDays(current.month, current.year)
+                this._fetch()
             })
-
             return {
                 MONTHS,
                 current,
-                days,
-                viewable: false
+                viewable: false,
+                days: []
             }
         },
         methods: {
@@ -71,30 +71,45 @@
                     this.current.month = 12
                     this.current.year--
                 }
+
+                this._writeDays(this.current.month, this.current.year)
+                this._fetch()
             },
             next () {
                 this.current.month++
 
                 // Handle overflow
-                if (this.current.month > 12)
-                 {
+                if (this.current.month > 12) {
                     this.current.month = 1
                     this.current.year++
                 }
 
+                this._writeDays(this.current.month, this.current.year)
+                this._fetch()
             },
-            open () {
-
-            },
-            _writeDays () {
-                var {month, year} = this.current
+            _writeDays (month, year) {
+                var days = []
                 for (var i = 0; i < this._days(month, year); i++) {
-                    this.days.push({
+                    days.push({
                         number: i + 1,
                         current: 1,
                         events: []
                     })
                 }
+                
+                this.days = days
+            },
+            _handleEvents (data) {
+                var self = this // Preserve context in forEach
+
+                data.forEach((event) => {
+                    self.days[event[1] - 1].events.push(event)
+                })
+            },
+            _fetch () {                
+                Events
+                .fetch(this.current.month, this.current.year)
+                .then(this._handleEvents)
             },
             _days (month, year) {
                 return new Date(year, month, 0).getDate();
@@ -129,36 +144,36 @@
         width: 100%
         text-align: center
 
-        #calendar__logo
-            height: 70px
-            background: rgba(255,255,255, 0.5)
-            padding: 10px
-            border-radius: 15px
-            float: right
-            box-sizing: border-box
+    #calendar__logo
+        height: 70px
+        background: rgba(255,255,255, 0.5)
+        padding: 10px
+        border-radius: 15px
+        float: right
+        box-sizing: border-box
 
-        .logo__text
-            color: #FFF
-            font-family: Montserrat
-            font-weight: 100
-            font-size: 20px
-            letter-spacing: 1px
-            margin-left: 20px
-            float: right
+    .logo__text
+        color: #FFF
+        font-family: Montserrat
+        font-weight: 100
+        font-size: 20px
+        letter-spacing: 1px
+        margin-left: 20px
+        float: right
 
-        #date__text
-            font-family: Montserrat
-            font-weight: 300
-            font-size: 50px
-            float: left
-            color: #FFF
-        .date__text--month
-            display: inline-block
-        .date__text--year
-            display: inline-block
-            font-size: 16px
-            margin-left: 20px
-            margin-top: 10px
+    #date__text
+        font-family: Montserrat
+        font-weight: 300
+        font-size: 50px
+        float: left
+        color: #FFF
+    .date__text--month
+        display: inline-block
+    .date__text--year
+        display: inline-block
+        font-size: 16px
+        margin-left: 20px
+        margin-top: 10px
 
 
 
@@ -167,17 +182,17 @@
         margin-top: -70px
         margin-left: 20px
 
-        .calendar__controlBtn
-            background-color: #FFF
-            border-radius: 5px
-            height: 30px
-            line-height: 40px
-            width: 40px
-            text-align: center
-            display: inline-block
-            margin-right: 10px
-            box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
-            cursor: pointer
+    .calendar__controlBtn
+        background-color: #FFF
+        border-radius: 5px
+        height: 30px
+        line-height: 40px
+        width: 40px
+        text-align: center
+        display: inline-block
+        margin-right: 10px
+        box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+        cursor: pointer
 
     #calendar__body
         margin: auto;

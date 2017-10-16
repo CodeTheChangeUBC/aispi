@@ -1,5 +1,8 @@
 /*eslint-disable */
 
+
+const URL = 'http://127.0.0.1:3000'
+
 // Abstractions for events on the API
 
 export default class Event {
@@ -22,8 +25,7 @@ export default class Event {
 
             // Bare Bones AJAXing XMLHttpRequest masterrace..
             var request = new XMLHttpRequest()
-            request.open('GET', `/api/get.php?month=${month}&year=${year}`, true)
-
+            request.open('GET', URL + `/api/get.php?month=${month}&year=${year}`, true)
             request.onload = function() {
                 var data
                 try {

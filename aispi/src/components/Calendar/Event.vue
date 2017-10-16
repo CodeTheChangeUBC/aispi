@@ -1,7 +1,10 @@
 <template lang="jade">
-    div.event(v-bind:style="{top, height, backgroundColor}")
-        div.event--time {{range}}
-        div.event--school {{school}}
+    div.event__cover
+        div(v-if="type=='label'")
+            div.label__container(v-bind:style="{backgroundColor}")
+                |12:30 am | Guest Event
+        div(v-else)
+
 </template>
 
 <script>
@@ -13,26 +16,16 @@
 
     export default {
         name: 'event',
-        props: ['event'],
-        data: function () {
-            var top = (MINUTE_HEIGHT * (+this.event[4])) + 'px'
-            var height = (MINUTE_HEIGHT * (+this.event[5])) + 'px'
+        props: ['event','type'],
+        data () {
             var backgroundColor = randomColor({
                 luminosity: 'light',
                 hue: 'blue',
-                seed: event[0]
+                seed: ~~(Math.random()*10000)
             })
 
-
-            var range = this._time(+this.event[4], +this.event[5])
-            var school = this.event[6]
-
             return {
-                top,
-                height,
-                backgroundColor,
-                range,
-                school
+                backgroundColor
             }
         },
         methods: {
@@ -51,27 +44,32 @@
     } 
 </script>
 
-<style scoped>
-    .event {
-        width: 100%;
-        background-color: #999;
-        border-radius: 10px;
-        position: absolute;
-        font-size: 12px;
-    }
-        .event--time {
-            font-weight: 600;
-            font-size: 11px;
-            margin: 5px;
-            letter-spacing: 1px;
-            width: 100%;
-            text-align: left;
-        }
-        .event--school {
-            width: 100%;
-            margin-top: 0px;
-            text-align: left;
-            padding-left: 5px;
-        }
+<style scoped lang="sass">
+.label__container
+    padding: 5px 0px
+    color: #FFF
+    font-size: 10px
+
+
+.event
+    width: 100%
+    background-color: #999
+    border-radius: 10px
+    position: absolute
+    font-size: 12px
+
+.event--time
+    font-weight: 600
+    font-size: 11px
+    margin: 5px
+    letter-spacing: 1px
+    width: 100%
+    text-align: left
+
+.event--school
+    width: 100%
+    margin-top: 0px
+    text-align: left
+    padding-left: 5px
 
 </style>
