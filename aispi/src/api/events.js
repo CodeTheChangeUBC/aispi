@@ -25,7 +25,7 @@ export default class Event {
 
             // Bare Bones AJAXing XMLHttpRequest masterrace..
             var request = new XMLHttpRequest()
-            request.open('GET', URL + `/api/get.php?month=${month}&year=${year}`, true)
+            request.open('GET', `/api/get.php?month=${month}&year=${year}`, true)
             request.onload = function() {
                 var data
                 try {
