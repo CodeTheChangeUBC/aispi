@@ -2,9 +2,12 @@
     div.event__cover
         div(v-if="type=='label'")
             div.label__container(v-bind:style="{backgroundColor}")
-                |12:30 am | Guest Event
+                | 12:30 am | Guest Event
         div(v-else)
-
+            div.block__container(v-bind:style="{backgroundColor}")
+                span.block__event {{event[6]}} Guest Event
+                span.block__time {{~~(event[4]/60)+':'+event[4]%60}}
+                div.block__description {{event[9]}}
 </template>
 
 <script>
@@ -21,7 +24,7 @@
             var backgroundColor = randomColor({
                 luminosity: 'light',
                 hue: 'blue',
-                seed: ~~(Math.random()*10000)
+                seed: (this.event && this.event[0]) || 0
             })
 
             return {
@@ -71,5 +74,38 @@
     margin-top: 0px
     text-align: left
     padding-left: 5px
+
+
+
+.block__container
+    padding: 5px
+    width: 100%
+    display: inline-block
+    border-radius: 3px
+    box-shadow: 0px 1px 1px #999
+
+.block__event
+    font-family: Montserrat
+    font-size: 12px
+    font-weight: 300
+    letter-spacing: 1px
+    margin: 5px
+    text-transform: uppercase
+    color: #FFF
+    float: left
+
+.block__time
+    font-family: Helvetica
+    font-size: 14px
+    float: right
+    width: 100%
+    margin: 5px 0 10px 0
+    color: #FFF
+
+.block__description
+    font-family: Montserrat
+    font-size: 11px
+    color: #FFF
+    float: left
 
 </style>

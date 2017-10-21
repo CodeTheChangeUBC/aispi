@@ -17,8 +17,8 @@
                             img(height="20px" src="../../assets/right.png")
 
             div#calendar__body
-                day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="(viewable=true)")
-        PopUp(v-bind:viewable='viewable' @close="(viewable=false)")
+                day(v-for="day in days" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
+        PopUp(v-bind:viewable='viewable' v-bind:events="events" @close="(viewable=false)")
 </template>
 
 <script>
@@ -59,6 +59,7 @@
                 MONTHS,
                 current,
                 viewable: false,
+                events: [],
                 days: []
             }
         },
@@ -86,6 +87,11 @@
 
                 this._writeDays(this.current.month, this.current.year)
                 this._fetch()
+            },
+            open (evs) {
+                this.viewable = true
+                this.events = evs
+                console.log(evs)
             },
             _writeDays (month, year) {
                 var days = []

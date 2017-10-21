@@ -120,6 +120,7 @@
     display: inline-block
     position: relative
     text-align: center
+    width: calc(100% - 150px)
 
 .time__container
     height: 100%
