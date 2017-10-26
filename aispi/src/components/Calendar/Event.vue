@@ -2,7 +2,7 @@
     div.event__cover
         div(v-if="type=='label'")
             div.label__container(v-bind:style="{backgroundColor}")
-                | 12:30 am | Guest Event
+                | {{time}} #[em Day]
         div(v-else)
             div.block__container(v-bind:style="{backgroundColor}")
                 span.block__event {{event[6]}} Guest Event
@@ -22,13 +22,16 @@
         props: ['event','type'],
         data () {
             var backgroundColor = randomColor({
-                luminosity: 'light',
-                hue: 'blue',
+                luminosity: 'bright',
+                hue: 'purple',
                 seed: (this.event && this.event[0]) || 0
             })
 
+            var time = this._time(+this.event[4], +this.event[5])
+
             return {
-                backgroundColor
+                backgroundColor,
+                time
             }
         },
         methods: {
@@ -36,10 +39,12 @@
                 var end = start + length
 
                 var s_hr = ~~(start / 60) + 6
-                var s_mn = start % 60
+                var s_mn = (start % 60) + ""
+                s_mn ='00'.substr(s_mn.length) + s_mn
 
                 var e_hr = ~~(end / 60) + 6
-                var e_mn = end % 60
+                var e_mn = (end % 60) + ""
+                e_mn ='00'.substr(e_mn.length) + e_mn
 
                 return s_hr + ':' + s_mn + ' - ' + e_hr + ':' + e_mn
             }
