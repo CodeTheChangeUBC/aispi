@@ -8,38 +8,40 @@
                     event(v-for="event in events" v-bind:event="event")
             div.form__holder
                 div.form__header Event Details
-                table.inp__form
-                    tr
-                        td.inp__label School Name:
-                        td
-                            input(type="text" placeholder="").inp__full
-                    tr
-                        td.inp__label Start Time:
-                        td
-                            input(type="text" placeholder="").inp__full.inp__full--half
-                            div.time__label 8:00 PM
+                form(@submit.prevent="sendEvent")
+                    table.inp__form
+                        tr
+                            td.inp__label School Name:
+                            td
+                                input(type="text" placeholder="").inp__full
+                        tr
+                            td.inp__label Start Time:
+                            td
+                                input(type="text" placeholder="").inp__full.inp__full--half
+                                div.time__label 8:00 PM
 
-                    tr
-                        td.inp__label Email:
-                        td
-                            input(type="text" placeholder="").inp__full
-                    tr
-                        td.inp__label Address:
-                        td
-                            input(type="text" placeholder="").inp__full
-                    tr
-                        td.inp__label Additional Info:
-                        td
-                            textarea(type="text" placeholder="").inp__full
-                    tr
-                        td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
-                            div(class="g-recaptcha" style="display:inline-block" data-sitekey="6LdxTi4UAAAAALdEW9pPOkXtQSg0jlfXqAM2tcSI")
-                button#submit__button Create Event
+                        tr
+                            td.inp__label Email:
+                            td
+                                input(type="text" placeholder="").inp__full
+                        tr
+                            td.inp__label Address:
+                            td
+                                input(type="text" placeholder="").inp__full
+                        tr
+                            td.inp__label Additional Info:
+                            td
+                                textarea(type="text" placeholder="").inp__full
+                        tr
+                            td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
+                                vue-recaptcha(sitekey="6LdxTi4UAAAAALdEW9pPOkXtQSg0jlfXqAM2tcSI" ref="recaptcha" @verify="onVerify")
+                    input(type="submit" value="Create Event")#submit__button
 </template>
 
 <script>
     /* eslint-disable */
     import Event from '@/components/Calendar/Event'
+    import VueRecaptcha from 'vue-recaptcha'
 
     var TIMES = [ 
         '7:00 am', 
@@ -63,12 +65,20 @@
         name: 'PopUp',
         props: ['viewable','events'],
         components: {
-            Event
+            Event,
+            VueRecaptcha
         },
         methods: {
             close: function () {
                 this.$emit('close')
-            }
+            },
+            sendEvent: function () {
+                console.log(arguments)
+                console.log(this.$refs)
+            },  
+            onVerify: function (response) {
+                console.log('Verify: ' + response)
+            },
         },
         data () {
             return {

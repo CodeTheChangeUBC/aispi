@@ -9,6 +9,16 @@ export default class Event {
     constructor () {
         
     }
+    static post (args) {
+
+        return new Promise ((resolve, reject) => {
+            var request = new XMLHttpRequest()
+            request.open('POST', '/api/post.php', true)
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+            request.send(data)
+            resolve()
+        })
+    }
 
     static fetch (month, year) {
 
