@@ -4,10 +4,6 @@
 //          Each archival file should be accessible by the control panel.
 //
 
-// We just want some of the constants
-include '../index.php'
-
-
 
 // Get today's date.
 $date = var_dump(explode('.',date('m.d.y')));
