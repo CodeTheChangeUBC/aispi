@@ -5,7 +5,7 @@
                 div.time__container
                     div.event__time(v-for="time in TIMES") {{time}}
                 div.event__container
-                    event(v-for="event in events" v-bind:event="event")
+                    event(v-for="event in events" v-bind:data="event" v-bind:key="index" v-bind:event="event")
             div.form__holder
                 div.form__header Event Details
                 table.inp__form

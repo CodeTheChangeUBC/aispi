@@ -2,7 +2,7 @@
     div.day(v-bind:class="{'day--disabled': !number.current}" @click="open()")
         div.day__number {{number.number}}
         div.event__wrap
-            event(v-for="event in events" v-bind:event="event" type="label")
+            event(v-for="event in events"  v-bind:data="event" v-bind:key="index" v-bind:event="event" type="label")
 </template>
 
 <script>
