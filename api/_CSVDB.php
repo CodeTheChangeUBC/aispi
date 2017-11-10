@@ -73,6 +73,25 @@ class CSVDB {
         return $list;
     }
 
+    /**
+     * Checks for the existence of a row based on a condition
+     * @param  {{Function}} $condition - The condition the row must satisfy
+     * @return {{Boolean}}             - True if the row exists
+     */
+    public function exists ($condition) {
+
+        // Grab the rows, return true if they satisfy the condition
+        while ($row = fgetcsv($this->file)) {
+            if ($condition($row)) {
+                $this->rewind();
+                return true;
+            }
+        }
+        
+        $this->_rewind();
+        return false;
+    }
+
     public function update ($condition, $update) {
     }
 

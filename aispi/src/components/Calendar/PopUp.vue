@@ -2,40 +2,38 @@
     div.view__popup(v-show="viewable" @click.self="close($event)")
         div.container
             div.event__holder
-                div.time__container
-                    div.event__time(v-for="time in TIMES") {{time}}
-                div.event__container
-                    event(v-for="event in events" v-bind:data="event" v-bind:key="index" v-bind:event="event")
+                div.form__header Scheduled EVENTS
+                event(v-for="event in events" v-bind:data="event" v-bind:key="event[0]" v-bind:event="event")
             div.form__holder
-                div.form__header Event Details
+                div.form__header Register an Event
                 form(@submit.prevent="sendEvent")
                     table.inp__form
                         tr
                             td.inp__label School Name:
                             td
-                                input(type="text" placeholder="").inp__full
+                                input(type="text" placeholder="" v-model="form.name").inp__full
                         tr
                             td.inp__label Start Time:
                             td
-                                input(type="text" placeholder="").inp__full.inp__full--half
+                                input(type="text" placeholder="" v-model="form.start").inp__full.inp__full--half
                                 div.time__label 8:00 PM
 
                         tr
                             td.inp__label Email:
                             td
-                                input(type="text" placeholder="").inp__full
+                                input(type="text" placeholder="" v-model="form.email").inp__full
                         tr
                             td.inp__label Address:
                             td
-                                input(type="text" placeholder="").inp__full
+                                input(type="text" placeholder="" v-model="form.address").inp__full
                         tr
                             td.inp__label Additional Info:
                             td
-                                textarea(type="text" placeholder="").inp__full
+                                textarea(type="text" placeholder="" v-model="form.info").inp__full
                         tr
                             td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
                                 vue-recaptcha(sitekey="6LdxTi4UAAAAALdEW9pPOkXtQSg0jlfXqAM2tcSI" ref="recaptcha" @verify="onVerify")
-                    input(type="submit" value="Create Event")#submit__button
+                    input(type="submit" value="Register Event")#submit__button
 </template>
 
 <script>
@@ -74,7 +72,7 @@
             },
             sendEvent: function () {
                 console.log(arguments)
-                console.log(this.$refs)
+                console.log(this.form)
             },  
             onVerify: function (response) {
                 console.log('Verify: ' + response)
@@ -83,6 +81,13 @@
         data () {
             return {
                 TIMES,
+                form: {
+                    name: '',
+                    start: '',
+                    email: '',
+                    address: '',
+                    info: ''
+                }
             }
         }
     }

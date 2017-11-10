@@ -2,7 +2,7 @@
     div.event__cover
         div(v-if="type=='label'")
             div.label__container(v-bind:style="{backgroundColor}")
-                | {{time}} #[em Day]
+                | {{time}} #[em]
         div(v-else)
             div.block__container(v-bind:style="{backgroundColor}")
                 span.block__event {{event[6]}} Guest Event
@@ -22,25 +22,31 @@
         props: ['event','type'],
         data () {
             var backgroundColor = randomColor((this.event && this.event[0]) || "")
-            var time = this._time(+this.event[4], +this.event[5])
+            var time = this._start(+this.event[4], +this.event[5])
+            var full = time + ' - ' + this._end(+this.event[4], +this.event[5])
+
             return {
                 backgroundColor,
-                time
+                time,
+                full
             }
         },
         methods: {
-            _time (start, length) {
-                var end = start + length
-
+            _start (start, length) {
                 var s_hr = ~~(start / 60) + 6
                 var s_mn = (start % 60) + ""
                 s_mn ='00'.substr(s_mn.length) + s_mn
+
+                return s_hr + ':' + s_mn 
+            },
+            _end (start, length) {
+                var end = start + length
 
                 var e_hr = ~~(end / 60) + 6
                 var e_mn = (end % 60) + ""
                 e_mn ='00'.substr(e_mn.length) + e_mn
 
-                return s_hr + ':' + s_mn + ' - ' + e_hr + ':' + e_mn
+                return e_hr + ':'
             }
         }
     } 
@@ -78,10 +84,12 @@
 
 .block__container
     padding: 5px
-    width: 100%
+    width: calc(100% - 10px)
     display: inline-block
     border-radius: 3px
     box-shadow: 0px 1px 1px #999
+    box-sizing: border-box
+    margin: 5px
 
 .block__event
     font-family: Montserrat

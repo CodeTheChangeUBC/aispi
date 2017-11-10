@@ -17,7 +17,7 @@
                             img(height="20px" src="../../assets/right.png")
 
             div#calendar__body
-                day(v-for="day in days" v-bind:data="day" v-bind:key="index" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" open="open")
+                day(v-for="day in days" v-bind:data="day" v-bind:key="day.number" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
         PopUp(v-bind:viewable='viewable' v-bind:events="events" @close="(viewable=false)")
 </template>
 

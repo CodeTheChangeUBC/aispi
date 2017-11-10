@@ -13,7 +13,7 @@ export default class Event {
 
         return new Promise ((resolve, reject) => {
             var request = new XMLHttpRequest()
-            request.open('POST', '/api/post.php', true)
+            request.open('POST', URL+'/api/post.php', true)
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
             request.send(data)
             resolve()
@@ -35,7 +35,7 @@ export default class Event {
 
             // Bare Bones AJAXing XMLHttpRequest masterrace..
             var request = new XMLHttpRequest()
-            request.open('GET',`/api/get.php?month=${month}&year=${year}`, true)
+            request.open('GET',URL+`/api/get.php?month=${month}&year=${year}`, true)
             request.onload = function() {
                 var data
                 try {

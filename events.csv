@@ -1,271 +1,1001 @@
-id,day,month,year,start,length,school,address,email,description
-1,23,9,2018,100,161,Dynabox,2 Scofield Center,bbrazier0@usnews.com,Nonimag Nucl Med Prob of Up Extrem using Technetium 99m
-2,10,7,2017,100,2,Jabberstorm,6 Sullivan Hill,tmattersey1@bizjournals.com,"Release Left Peroneal Artery, Open Approach"
-3,21,6,2018,100,85,Yamia,8538 Columbus Court,ltartt2@flavors.me,"Replace of R Zygomatic Bone with Autol Sub, Open Approach"
-4,25,6,2018,100,28,Zooxo,72085 Toban Court,jbarff3@over-blog.com,"Supplement Duodenum with Autol Sub, Via Opening"
-5,20,4,2017,100,33,Feedfire,2146 American Crossing,nnewport4@myspace.com,"Extirpation of Matter from Stomach, Percutaneous Approach"
-6,26,4,2018,100,20,Aimbu,34 Tennyson Drive,drawne5@usda.gov,LDR Brachytherapy of Hard Palate using Iridium 192
-7,4,6,2017,100,163,Skimia,16187 Mendota Drive,rvolante6@jigsy.com,"Destruction of Sup Mesent Art, Perc Endo Approach"
-8,12,8,2017,100,105,Wikibox,20 Westend Road,adodman7@stanford.edu,"Dilate 2 Cor Art, Bifurc, w Radioact Intralum, Perc"
-9,5,1,2018,100,13,Topiclounge,9 Fallview Street,sshowl8@miibeian.gov.cn,"Restriction of Hepatic Artery, Perc Endo Approach"
-10,20,5,2017,100,59,Flipopia,2176 Fallview Parkway,mtrahearn9@icio.us,"Restriction of Left Cephalic Vein, Open Approach"
-11,24,4,2018,100,230,Mybuzz,076 Nelson Terrace,kbreslanea@netscape.com,"Restrict R Axilla Art w Intralum Dev, Perc Endo"
-12,4,6,2017,100,101,Feedmix,4922 Mockingbird Alley,hwalshb@marriott.com,"Release Lower Gingiva, External Approach"
-13,16,8,2018,100,219,Yakidoo,08 Anderson Junction,beagersc@house.gov,Beam Radiation of Sinuses using Photons >10 MeV
-14,22,1,2017,100,205,Rhyloo,7612 Dakota Circle,mfonesd@netvibes.com,"Drainage of Accessory Pancreatic Duct, Endo, Diagn"
-15,2,1,2017,100,222,Vimbo,175 Buell Drive,wteanbye@mashable.com,"Excision of Right Humeral Shaft, Percutaneous Approach"
-16,20,4,2017,100,219,Yodel,11472 Mockingbird Way,fnekrewsf@umn.edu,Beam Radiation of Spleen using Photons >10 MeV
-17,6,0,2018,100,148,Vitz,410 Hanson Place,eandrysg@blogger.com,Fluoroscopy of Left Upper Extremity Veins using Oth Contrast
-18,12,4,2018,100,174,Bubblebox,09128 Rockefeller Avenue,amivalh@nba.com,"Occlusion of Right Subclavian Artery, Percutaneous Approach"
-19,30,5,2017,100,27,Flipopia,0896 Anzinger Hill,ccurryeri@sphinn.com,"Removal of Autol Sub from R Tarsal, Perc Endo Approach"
-20,14,7,2017,100,75,Meezzy,85369 Westport Center,ddyottj@furl.net,"Bypass L Atrium to Pulm Vn Cnfl w Synth Sub, Open"
-21,20,4,2017,100,54,Jabbercube,37802 Texas Road,rdittsk@usgs.gov,Isolation
-22,13,3,2018,100,239,Dabshots,0 Main Circle,bstarzakerl@hibu.com,"Remove Infusion Pump from Trunk Subcu/Fascia, Extern"
-23,18,5,2018,100,229,Lazz,23037 Rigney Lane,nchislettm@kickstarter.com,"Replacement of Sacrum with Autol Sub, Open Approach"
-24,23,1,2017,100,124,Aimbo,6173 Canary Crossing,oleonidan@nsw.gov.au,"Bypass Middle Esophagus to Ileum, Open Approach"
-25,8,2,2018,100,47,Kwideo,8 Prentice Crossing,cnapoleoneo@github.io,"Occlusion of Celiac Artery with Intralum Dev, Perc Approach"
-26,11,3,2018,100,142,Jabbercube,311 3rd Street,cstollwerckp@skype.com,CT Scan of L Toe using Oth Contrast
-27,24,11,2018,100,35,Browsebug,12133 Schiller Terrace,gpoytresq@mashable.com,"Removal of Neuro Lead from Azygos Vein, Open Approach"
-28,6,1,2017,100,237,Eire,5777 Elka Center,vwillemanr@nationalgeographic.com,"Removal of Int Fix from Lum Vertebra, Extern Approach"
-29,1,3,2018,100,169,Blogtag,62 Butternut Junction,mgillhams@ftc.gov,"Release Lumbosacral Plexus, Percutaneous Endoscopic Approach"
-30,6,7,2018,100,214,Yakitri,254 Barby Plaza,abriart@earthlink.net,"Drainage of R Ext Auditory Canal, Open Approach, Diagn"
-31,7,4,2017,100,18,Mita,049 Killdeer Terrace,emonkmanu@intel.com,"Transfer L Low Arm Subcu/Fascia w Skin, Subcu, Fascia, Open"
-32,9,11,2017,100,227,Bluezoom,59396 Bartelt Plaza,msurmonv@pen.io,"Alteration of Lower Jaw with Autol Sub, Perc Approach"
-33,27,5,2017,100,147,Skilith,26 Straubel Pass,dkerwoodw@jiathis.com,"Supplement Left Thyroid Artery with Autol Sub, Perc Approach"
-34,20,7,2018,100,53,Meevee,5348 Boyd Drive,nforkerx@spiegel.de,"Destruction of Basal Ganglia, Percutaneous Approach"
-35,16,10,2018,100,63,Meezzy,356 Spaight Avenue,elandaly@mysql.com,"Removal of Infusion Device from L Hip Jt, Extern Approach"
-36,12,3,2018,100,16,Zooveo,587 Vermont Court,ctomikz@sitemeter.com,"Excision of Left Shoulder Region, Open Approach, Diagnostic"
-37,20,6,2017,100,65,Photobug,86955 Dovetail Lane,godaly10@paginegialle.it,"Drainage of Cystic Duct, Percutaneous Approach, Diagnostic"
-38,7,11,2018,100,140,Mymm,2 Cottonwood Avenue,ajugging11@etsy.com,"Insertion of Ext Heart Assist into Heart, Perc Endo Approach"
-39,1,0,2017,100,132,Yamia,49 Scofield Park,cshotter12@rakuten.co.jp,"Dilate R Foot Art, Bifurc, w Drug-elut Intra, Perc"
-40,20,5,2017,100,194,Roomm,3497 Summer Ridge Avenue,tbabbage13@last.fm,Removal of Intermittent Pressure Device on Abdominal Wall
-41,26,2,2017,100,238,Voomm,234 Charing Cross Crossing,wfoulkes14@techcrunch.com,"Reattachment of Left Adrenal Gland, Perc Endo Approach"
-42,13,7,2018,100,226,Riffpedia,991 Delladonna Avenue,creisin15@exblog.jp,"Drain L Up Extrem Bursa/Lig w Drain Dev, Perc Endo"
-43,20,10,2017,100,104,Thoughtsphere,7 Bonner Avenue,ishinfield16@list-manage.com,"Drainage of Left Zygomatic Bone, Open Approach"
-44,15,9,2017,100,61,Aivee,56 Scofield Parkway,tpetow17@redcross.org,"Drainage of Lingula Bronchus, Perc Endo Approach"
-45,10,9,2017,100,35,LiveZ,482 Lerdahl Park,cboatswain18@unc.edu,"Dilate L Hand Art, Bifurc, w Intralum Dev, Perc Endo"
-46,7,4,2017,100,206,Photolist,4401 Del Mar Circle,apocknoll19@elpais.com,"Repair Right Lower Extremity Lymphatic, Open Approach"
-47,21,10,2017,100,78,Gigazoom,89 Granby Place,kgoodding1a@house.gov,Change Pressure Dressing on Left Finger
-48,12,2,2017,100,240,Reallinks,81 Dixon Way,sblasgen1b@liveinternet.ru,LDR Brachytherapy of Bone Marrow using Palladium 103
-49,7,3,2017,100,103,Mudo,61 4th Lane,tdunphie1c@wp.com,"Replacement of Left Foot Vein with Autol Sub, Open Approach"
-50,11,3,2018,100,108,Wikivu,692 Maywood Circle,ffreen1d@salon.com,"Supplement Left Knee Joint with Synth Sub, Open Approach"
-51,12,8,2017,100,159,DabZ,869 Mosinee Crossing,cgadney1e@bravesites.com,"Dilation of Right Renal Artery, Bifurcation, Open Approach"
-52,8,9,2018,100,34,Trudeo,172 Loeprich Plaza,sdezamudio1f@theglobeandmail.com,LDR Brachytherapy of Soft Palate using Iodine 125
-53,7,1,2018,100,7,Eabox,8991 Eagan Parkway,doldrey1g@washingtonpost.com,"Drainage of Rectum, Endo"
-54,15,0,2017,100,45,Voolith,384 Sommers Lane,mspeakman1h@washingtonpost.com,"Removal of Infusion Device from R Wrist Jt, Perc Approach"
-55,5,4,2018,100,48,Jayo,7772 Nobel Center,elibrey1i@icq.com,"Repair Left Trunk Bursa and Ligament, Perc Endo Approach"
-56,1,10,2017,100,153,Eabox,39 Burrows Place,rkuhn1j@xing.com,LDR Brachytherapy of Diaphragm using Iodine 125
-57,8,11,2018,100,173,Flashspan,01525 Goodland Drive,cisakson1k@reddit.com,"Replacement of L Knee Tendon with Nonaut Sub, Open Approach"
-58,11,8,2017,100,213,Babbleblab,1 Tennyson Park,jhawksley1l@i2i.jp,"Removal of Drainage Device from Lum Disc, Perc Endo Approach"
-59,8,1,2018,100,49,Brainlounge,3 Delladonna Trail,amantrip1m@alibaba.com,"Release Mesenteric Lymphatic, Open Approach"
-60,15,2,2018,100,30,Gabcube,250 Cardinal Parkway,vrenachowski1n@umn.edu,"Excision of Para-aortic Body, Open Approach, Diagnostic"
-61,6,8,2017,100,13,Flashset,1 Schurz Point,cgrunguer1o@apache.org,"Excision of Right Vocal Cord, Endo"
-62,28,5,2017,100,40,Yotz,24 Old Gate Drive,bhayball1p@scientificamerican.com,"Excision of Left Shoulder Region, Open Approach"
-63,23,10,2018,100,192,Blogtag,1 Elgar Place,ematticci1q@ft.com,CT Scan of R Pulm Art using Intravasc Optic Cohere
-64,13,0,2017,100,205,Kwilith,80617 Muir Hill,echisnall1r@github.com,"Revision of Drainage Device in R Tarsal Jt, Open Approach"
-65,12,11,2018,100,46,Flashspan,4256 Caliangt Parkway,bagerskow1s@merriam-webster.com,"CT Scan of Liver & Spleen using Oth Contrast, Unenh, Enhance"
-66,25,8,2018,100,85,Jaxnation,1284 Cordelia Junction,ascandroot1t@dropbox.com,"Revision of Nonaut Sub in R Ulna, Perc Endo Approach"
-67,8,0,2018,100,28,Flipopia,3464 North Crossing,iagutter1u@hexun.com,"Radiation Therapy, Male Reproductive System, Brachytherapy"
-68,27,10,2018,100,196,Livetube,54369 Becker Junction,lternault1v@elegantthemes.com,"Replace of L Pelvic Bone with Synth Sub, Perc Endo Approach"
-69,13,9,2018,100,59,Photobug,56740 Jana Crossing,rkleiner1w@newyorker.com,Removal of Pressure Dressing on Left Thumb
-70,4,8,2017,100,29,Feedspan,723 Vernon Plaza,bhearmon1x@ameblo.jp,"Replacement of L Peroneal Art with Nonaut Sub, Open Approach"
-71,12,7,2017,100,65,Browsetype,71279 Scoville Center,gnewbury1y@typepad.com,"Dilate L Brach Art w Drug-elut Intra, Perc Endo"
-72,27,10,2017,100,175,Wordware,2 Fremont Hill,pivanonko1z@studiopress.com,"Release Large Intestine, Percutaneous Approach"
-73,13,10,2017,100,1,Eazzy,4 Grayhawk Point,pbrockwell20@amazon.co.jp,"Revision of Synth Sub in Mouth/Throat, Via Opening"
-74,16,10,2018,100,41,Oba,6203 Nelson Junction,nleveritt21@networksolutions.com,"Restriction of Right Upper Lobe Bronchus, Perc Endo Approach"
-75,28,5,2018,100,185,Voonte,502 Esker Plaza,kguerreru22@sfgate.com,"Repair Mitral Valve, Percutaneous Endoscopic Approach"
-76,3,5,2017,100,215,Quatz,7360 Coolidge Hill,mgold23@gravatar.com,"Revision of Autol Sub in Testis, Perc Approach"
-77,20,7,2018,100,213,Fivespan,727 Becker Plaza,rburriss24@ftc.gov,"Extirpation of Matter from Cervix, Perc Endo Approach"
-78,21,11,2018,100,55,Realblab,5144 Steensland Hill,tarent25@ihg.com,Range of Motion and Joint Integrity Assessment of Neuro Body
-79,20,2,2018,100,160,Yoveo,353 Starling Street,bmasson26@blog.com,"Division of Right Lower Leg Tendon, Perc Endo Approach"
-80,28,10,2018,100,188,Flashpoint,0337 Buhler Trail,dlorant27@webeden.co.uk,"Restriction of Azygos Vein with Extralum Dev, Perc Approach"
-81,28,5,2018,100,92,Cogilith,32063 Service Terrace,lpinching28@jiathis.com,"Restrict of L Int Iliac Art with Extralum Dev, Open Approach"
-82,30,10,2017,100,233,Linkbridge,376 Magdeline Way,zfarrin29@intel.com,"Bypass R Subclav Art to L Up Leg Art, Open Approach"
-83,10,5,2018,100,36,Wordtune,109 Truax Road,ctomankiewicz2a@samsung.com,Removal of Packing Material on Right Upper Leg
-84,29,1,2018,100,240,Chatterpoint,00720 Oneill Crossing,nlist2b@list-manage.com,"Introduction of Local Anesthetic into POC, Via Opening"
-85,26,7,2017,100,131,Thoughtsphere,1 Westport Road,abarkess2c@bigcartel.com,"Inspection of Facial Bone, Open Approach"
-86,12,2,2018,100,50,Dabfeed,15388 Randy Street,dbitchener2d@opera.com,"Release Brain, Open Approach"
-87,6,3,2018,100,70,Twitterworks,4 Rockefeller Hill,mmcgookin2e@washingtonpost.com,"Repair Vagina, Percutaneous Approach"
-88,28,5,2018,100,114,Vimbo,7544 East Hill,jvlach2f@etsy.com,"Reposition R Femur Shaft with Ext Fix, Perc Endo Approach"
-89,18,8,2018,100,144,Quamba,55666 Dovetail Center,kelie2g@123-reg.co.uk,"Dilation of Hepatic Artery, Bifurcation, Perc Endo Approach"
-90,25,0,2017,100,233,Divanoodle,8493 Stone Corner Place,mmokes2h@mapquest.com,"Remove of Nonaut Sub from L Finger Phalanx Jt, Perc Approach"
-91,15,7,2017,100,67,Browsebug,3186 Muir Lane,etammadge2i@yellowpages.com,"Removal of Synthetic Substitute from Right Breast, Endo"
-92,16,3,2017,100,87,Kazio,6675 Waubesa Hill,gshiril2j@wisc.edu,"Excision of Left Hand Bursa and Ligament, Perc Endo Approach"
-93,12,6,2017,100,166,Myworks,7598 Elka Way,aingerman2k@edublogs.org,"Bypass Duodenum to Duodenum with Synthetic Substitute, Endo"
-94,28,9,2018,100,220,Pixope,63 4th Terrace,blebourn2l@cafepress.com,"Drainage of R Innom Vein with Drain Dev, Perc Endo Approach"
-95,19,3,2017,100,113,Kwinu,47 Victoria Pass,bspong2m@furl.net,"Excision of Head and Neck Sympathetic Nerve, Perc Approach"
-96,16,2,2018,100,86,Dablist,9660 Dawn Drive,hmcgrah2n@aol.com,"Bypass Pulm Trunk from Carotid w Nonaut Sub, Open"
-97,8,1,2017,100,2,Browsezoom,4 Reinke Parkway,astout2o@ustream.tv,"Extirpation of Matter from Right Frontal Bone, Open Approach"
-98,5,0,2018,100,32,Teklist,84960 Kings Street,smckeighan2p@ezinearticles.com,"Bypass R Axilla Art to L Extracran Art w Synth Sub, Open"
-99,30,1,2018,100,78,Oyondu,88 Pankratz Terrace,kchicco2q@ehow.com,"Dilation of Pancreatic Duct, Via Opening"
-100,27,4,2018,100,216,Centizu,123 Toban Junction,amerwood2r@networksolutions.com,"Inspection of Urethra, Endo"
-101,1,1,2018,100,76,Meeveo,626 Orin Pass,spenticost2s@amazon.com,"Resection of Left Tunica Vaginalis, Open Approach"
-102,19,9,2018,100,44,Gabspot,3954 Ohio Hill,akydd2t@purevolume.com,"Dilate Inf Mesent Art, Bifurc, w Intralum Dev, Perc"
-103,14,1,2017,100,15,Gevee,98 Marcy Street,tgeillier2u@booking.com,"Drainage of Right Iris, Percutaneous Approach"
-104,5,8,2017,100,68,Kazu,4555 Hintze Court,dbambra2v@psu.edu,"Dilate R Int Iliac Art, Bifurc, w 2 Intralum Dev, Open"
-105,5,2,2017,100,82,Kwilith,76 Dapin Place,dgrattage2w@behance.net,"Drainage of Hymen, Via Natural or Artificial Opening, Diagn"
-106,29,0,2018,100,130,Teklist,6 Commercial Hill,kguisot2x@studiopress.com,"Tomo Nucl Med Imag Musculo Sys, Oth w Oth Radionuclide"
-107,23,8,2018,100,66,Skimia,4452 Gulseth Crossing,hhurlestone2y@irs.gov,"Removal of Radioactive Element from Esophagus, Perc Approach"
-108,21,11,2018,100,81,Blogpad,3 Algoma Park,icrayk2z@nps.gov,"Removal of Autol Sub from R Scapula, Perc Endo Approach"
-109,10,0,2017,100,169,Gabtune,4742 Brickson Park Alley,cpittem30@google.ru,"Transplantation of Lung Lingula, Syngeneic, Open Approach"
-110,29,6,2017,100,110,Eabox,9589 Kings Point,wquinnelly31@mozilla.com,"Reposition Duodenum, Open Approach"
-111,12,0,2017,100,174,Yakitri,135 Mendota Road,apoulsom32@hao123.com,"Fusion of Left Ankle Joint with Synth Sub, Open Approach"
-112,3,7,2017,100,132,Quinu,054 Sommers Park,lellcome33@phpbb.com,"Bypass Splenic Art to R Renal A with Autol Vn, Open Approach"
-113,19,5,2018,100,54,Zooxo,26 Division Plaza,gamyes34@salon.com,"Dilation of Pancreatic Duct, Via Opening"
-114,4,9,2018,100,228,Eare,27 Spohn Drive,amacchaell35@hao123.com,"Bypass Transverse Colon to Desc Colon with Autol Sub, Endo"
-115,2,2,2018,100,174,Demizz,83 Pankratz Court,chuckfield36@privacy.gov.au,"Division of Left Thumb Phalanx, Perc Endo Approach"
-116,23,8,2018,100,223,Realcube,58725 Randy Junction,fjosephi37@shareasale.com,"Resection of Right Pelvic Bone, Open Approach"
-117,22,8,2017,100,26,Lazzy,865 East Junction,jolley38@jimdo.com,Comm/Cognit Skill Assess Neuro Body w Augment Comm Equip
-118,9,11,2018,100,102,Zoombeat,88306 Birchwood Trail,tboeter39@bravesites.com,"Revision of Radioact Elem in Mouth/Throat, Open Approach"
-119,19,4,2018,100,118,Omba,35 Hintze Street,emenier3a@tuttocitta.it,"Revision of Intraluminal Device in Nose, Perc Approach"
-120,7,11,2018,100,36,Teklist,67285 Killdeer Crossing,hmurrey3b@hatena.ne.jp,"Insertion of Intralum Dev into R Renal Vein, Perc Approach"
-121,29,3,2017,100,240,Skyble,83 Gerald Trail,hokuddyhy3c@infoseek.co.jp,"Reposition Left Parietal Bone with Int Fix, Perc Approach"
-122,12,5,2018,100,152,Quimba,1 Dovetail Plaza,eluca3d@quantcast.com,"Repair Right Palatine Bone, Percutaneous Approach"
-123,20,7,2017,100,175,Jabberbean,43 Hoffman Way,ctaffe3e@ftc.gov,"Removal of Autol Sub from R Knee Jt, Perc Endo Approach"
-124,17,9,2017,100,212,Fiveclub,64 Elgar Terrace,tbernli3f@sohu.com,Wound Mgmt Treatment of Musculosk Up Back/UE using Oth Equip
-125,3,1,2017,100,34,Demizz,145 Old Gate Park,diacomettii3g@weebly.com,"Bypass R Radial Art to Low Arm Vein w Autol Vn, Open"
-126,13,6,2018,100,168,Skinte,22 Forest Run Hill,kbowgen3h@comcast.net,"Replacement of Right Rib with Autol Sub, Perc Approach"
-127,1,9,2018,100,49,Youspan,7 Hovde Plaza,bhansemann3i@ucoz.ru,"Excision of L Up Leg Subcu/Fascia, Open Approach, Diagn"
-128,1,4,2017,100,87,Jabbercube,14594 Moland Alley,tmclaren3j@oakley.com,"Introduction of Nutritional into Central Art, Open Approach"
-129,30,2,2018,100,27,Oyondu,39217 Buell Pass,knand3k@meetup.com,"Excision of Left Vertebral Vein, Perc Approach, Diagn"
-130,28,6,2018,100,74,Zava,860 Oakridge Lane,hsandry3l@joomla.org,"Excision of Stomach, Percutaneous Approach"
-131,25,6,2018,100,109,Meezzy,9192 Boyd Place,fattersoll3m@shareasale.com,"Dilation of Right Greater Saphenous Vein, Open Approach"
-132,19,5,2017,100,125,Divavu,80 Mandrake Crossing,lsimione3n@360.cn,"Fusion of R Hip Jt with Nonaut Sub, Perc Endo Approach"
-133,17,1,2017,100,233,Youspan,822 Arrowood Way,cditchburn3o@amazonaws.com,"Alteration of Lower Back with Nonaut Sub, Perc Endo Approach"
-134,8,2,2018,100,142,Skidoo,039 Division Trail,gtitcomb3p@cdc.gov,"Drainage of L Up Lung Lobe with Drain Dev, Perc Approach"
-135,19,0,2017,100,49,Voolith,7 Kipling Lane,esmaling3q@bloglovin.com,"Removal of Spacer from L Acromioclav Jt, Perc Endo Approach"
-136,22,5,2018,100,144,Dablist,22 Columbus Court,cdickerson3r@pen.io,"Extirpation of Matter from R Verteb Vein, Open Approach"
-137,19,3,2017,100,227,Gabvine,9484 Independence Place,dfitzpatrick3s@eepurl.com,"Removal of Radioactive Element from Hepatobiliary Duct, Endo"
-138,4,7,2017,100,180,Tagpad,85180 Marcy Parkway,lberthelet3t@wunderground.com,"Release Cervicothoracic Vertebral Disc, Perc Approach"
-139,29,3,2017,100,154,Midel,918 Kensington Terrace,awetherhead3u@facebook.com,"Dilate R Hand Art, Bifurc, w Drug-elut Intra, Perc Endo"
-140,6,5,2017,100,135,Jatri,46421 Meadow Valley Plaza,ekingsnod3v@npr.org,"Bypass L Com Iliac Art to L Int Ilia w Autol Art, Perc Endo"
-141,9,2,2018,100,28,Chatterbridge,62 Dottie Parkway,lbraim3w@washingtonpost.com,"Excision of Left Testis, Percutaneous Approach, Diagnostic"
-142,27,1,2017,100,158,Talane,86 Canary Crossing,moglevie3x@multiply.com,"Alteration of Left Breast, External Approach"
-143,25,3,2018,100,213,Mita,53 Elgar Junction,aaldis3y@psu.edu,"Extraction of Dura Mater, Percutaneous Endoscopic Approach"
-144,8,1,2018,100,73,Skimia,824 Bobwhite Plaza,vdenty3z@angelfire.com,"Insertion of Infusion Device into Lumsac Jt, Open Approach"
-145,6,3,2018,100,0,Tagfeed,93844 Calypso Terrace,tjeromson40@rambler.ru,"Occlusion of Left Brachial Vein, Open Approach"
-146,1,3,2017,100,51,Skidoo,6 Oak Valley Crossing,kferrelli41@creativecommons.org,Fluoroscopy of R Int Mamm Graft using Oth Contrast
-147,25,4,2018,100,91,Realcube,08889 Scott Drive,blansbury42@networksolutions.com,"Removal of Infusion Device from R Up Extrem, Perc Approach"
-148,30,4,2017,100,175,Trilith,2 Monica Park,zkorn43@spotify.com,"Revision of Monitor Dev in Great Vessel, Extern Approach"
-149,30,10,2018,100,139,Tavu,3 Mallory Drive,rloiseau44@wikipedia.org,"Extirpation of Matter from L Abd Tendon, Perc Endo Approach"
-150,27,11,2018,100,106,Layo,625 Mayfield Way,lroyall45@amazon.de,"Supplement R Ext Iliac Vein with Synth Sub, Open Approach"
-151,9,3,2018,100,175,Dazzlesphere,0 Chinook Circle,deddison46@domainmarket.com,"Drainage of Left Hand Muscle, Perc Endo Approach, Diagn"
-152,9,5,2018,100,88,Kazu,864 Karstens Crossing,mcordoba47@cdc.gov,"Revision of Synth Sub in L Patella, Extern Approach"
-153,6,5,2018,100,35,Katz,5341 Derek Trail,tenticknap48@naver.com,"Restrict R Less Saphenous w Extralum Dev, Open"
-154,30,3,2018,100,5,Jayo,7 Anderson Avenue,pdoorbar49@deviantart.com,"Extirpation of Matter from Peroneal Nerve, Perc Approach"
-155,15,3,2017,100,67,Janyx,65 Muir Terrace,pavramov4a@xinhuanet.com,"Dilation of Splenic Artery, Bifurcation, Perc Approach"
-156,1,11,2018,100,14,Skipstorm,6 Jackson Hill,glythgoe4b@mac.com,"Restriction of Pelvis Lymphatic, Open Approach"
-157,22,3,2017,100,148,Yata,338 Eastlawn Center,mbuyers4c@msu.edu,"Bypass Right Hepatic Duct to Stomach, Open Approach"
-158,3,7,2018,100,162,Twitterbridge,59461 Buhler Junction,rhalbord4d@intel.com,"Removal of Synthetic Substitute from Kidney, Open Approach"
-159,30,8,2018,100,114,Wordpedia,70878 Buhler Lane,lpietron4e@toplist.cz,"Dilate L Subclav Art, Bifurc, w 3 Drug-elut, Perc"
-160,20,11,2018,100,15,InnoZ,88 Bonner Crossing,kbentke4f@wp.com,"Excision of Trigeminal Nerve, Perc Endo Approach"
-161,9,3,2018,100,32,Kazu,69 4th Crossing,jbuckel4g@xinhuanet.com,Plain Radiography of L Salivary Gland using H Osm Contrast
-162,29,5,2018,100,79,Zava,841 Chive Hill,cgiddens4h@parallels.com,"Dilation of Bladder, Via Natural or Artificial Opening"
-163,21,11,2017,100,145,Realfire,16 Bonner Hill,nreinhardt4i@who.int,"Drainage of Right Fallopian Tube, Perc Approach, Diagn"
-164,15,10,2018,100,60,Aivee,2 Basil Street,dbrauninger4j@nhs.uk,"Bypass L Ureter to R Ureter w Synth Sub, Perc Endo"
-165,16,5,2018,100,74,Devpulse,87 Vidon Street,pdunrige4k@timesonline.co.uk,Plain Radiography of Left Pulmonary Vein using Oth Contrast
-166,28,11,2017,100,217,Wikido,3 Rieder Place,rlawton4l@zimbio.com,"Dilation of R Fem Art with Intralum Dev, Open Approach"
-167,26,10,2017,100,139,Flipstorm,3261 Manitowish Trail,jdrabble4m@cam.ac.uk,"Division of Left Mandible, Open Approach"
-168,6,4,2018,100,73,Photobug,48119 Cambridge Plaza,mwixey4n@cpanel.net,"Drainage of Tibial Nerve, Percutaneous Approach"
-169,5,6,2018,100,106,Skimia,63 Riverside Drive,lwotton4o@disqus.com,"Fusion Thor Jt w Nonaut Sub, Ant Appr A Col, Open"
-170,13,8,2018,100,142,Myworks,88433 Kings Point,kjouandet4p@spotify.com,"Reattachment of Left Thyroid Gland Lobe, Open Approach"
-171,15,2,2018,100,198,Wikivu,901 Hermina Alley,cfearnehough4q@canalblog.com,"Insertion of Int Fix into L Glenoid Cav, Perc Approach"
-172,1,3,2018,100,211,Jazzy,9060 Butternut Street,tkobierra4r@fotki.com,"Replace of Azygos Vein with Nonaut Sub, Perc Endo Approach"
-173,29,0,2018,100,199,Blognation,5 Butterfield Trail,omiddis4s@usatoday.com,"Exercise Trmt Circ Head, Neck w Electrotherap Equip"
-174,12,7,2018,100,39,Oyonder,1 Knutson Avenue,mtrimbey4t@hibu.com,Plain Radiography of R Low Extrem Vein using Oth Contrast
-175,7,5,2017,100,113,Gabtype,87255 Longview Alley,odwelly4u@who.int,"Drainage of Left Breast, Via Natural or Artificial Opening"
-176,25,7,2017,100,43,Pixope,81779 6th Junction,bbratton4v@squidoo.com,"Replace R Thumb Phalanx w Autol Sub, Perc Endo"
-177,25,6,2017,100,29,Skyvu,9840 Miller Drive,sheffernon4w@w3.org,"Bypass R Cephalic Vein to Up Vein w Autol Sub, Open"
-178,14,11,2017,100,166,Youspan,30 Eagle Crest Terrace,kewdale4x@house.gov,"Destruction of Left Submaxillary Gland, Perc Approach"
-179,21,8,2018,100,181,Dabfeed,18216 Rigney Trail,ejentzsch4y@hp.com,"Reposition Right Humeral Shaft, Perc Endo Approach"
-180,8,9,2018,100,129,Realcube,727 Portage Center,cstebbins4z@dailymotion.com,"Drainage of Left Finger Phalangeal Joint, Perc Approach"
-181,2,10,2017,100,112,Flashdog,9 Sullivan Park,lmacwhan50@bandcamp.com,"Extirpation of Matter from Sacral Plexus, Perc Endo Approach"
-182,22,3,2018,100,49,Vinte,8 3rd Lane,bgeering51@phoca.cz,"Resection of Left Sacroiliac Joint, Open Approach"
-183,12,2,2017,100,90,Eire,4 Michigan Trail,fmartel52@princeton.edu,"Reposition Nose, Percutaneous Endoscopic Approach"
-184,29,1,2018,100,115,Eazzy,3709 Lyons Way,aralphs53@thetimes.co.uk,"Fluoroscopy of Epidural Veins using H Osm Contrast, Guidance"
-185,1,11,2017,100,222,Camimbo,69 Jenifer Avenue,hkale54@networksolutions.com,"Dilation of Left Brachial Artery, Bifurcation, Perc Approach"
-186,5,9,2018,100,77,Rhycero,03 Spenser Drive,aseeney55@example.com,"Revision of Infusion Device in Upper Back, External Approach"
-187,29,0,2018,100,59,Bubblebox,6 Upham Alley,lcliffe56@trellian.com,"Excision of Trachea, Via Opening, Diagn"
-188,15,8,2018,100,60,Meetz,27789 Hollow Ridge Place,scoltart57@deliciousdays.com,"Bypass Abd Aorta to L Ext Ilia with Autol Art, Open Approach"
-189,15,8,2018,100,215,Feedfish,8 Esker Parkway,lcancellario58@paypal.com,"Replacement of Right Eye with Synth Sub, Open Approach"
-190,6,6,2018,100,130,Innotype,33587 Mayer Way,jtainton59@mapquest.com,"Bypass L Kidney Pelvis to R Kid Pelv w Autol Sub, Open"
-191,26,7,2017,100,67,Trupe,12484 Mesta Avenue,bdenziloe5a@jalbum.net,"Excision of Right Upper Arm Tendon, Percutaneous Approach"
-192,28,6,2017,100,86,Tagcat,10417 Bluejay Road,fkennicott5b@elegantthemes.com,"Release Olfactory Nerve, Percutaneous Endoscopic Approach"
-193,17,5,2017,100,44,Omba,48746 Forest Dale Way,kratray5c@va.gov,"Excision of Cecum, Open Approach, Diagnostic"
-194,28,10,2017,100,220,Gabspot,40 Schmedeman Circle,wclymo5d@reddit.com,"Dilate Hepatic Art, Bifurc, w 4 Drug-elut, Perc Endo"
-195,20,10,2018,100,95,Brightdog,14799 Mcbride Hill,jbendle5e@phpbb.com,"Alteration of Nose with Synth Sub, Perc Endo Approach"
-196,21,7,2018,100,44,Roombo,96640 Ohio Center,sroles5f@amazon.co.uk,"Restriction of Head Lymph with Extralum Dev, Perc Approach"
-197,11,7,2018,100,137,Podcat,072 Moose Street,lnuzzi5g@unblog.fr,"Repair Left Upper Leg Skin, External Approach"
-198,16,1,2017,100,168,Jaloo,13484 Summer Ridge Way,srobun5h@yandex.ru,"Insert Pace. Dual Cham in Abd Subcu/Fascia, Open"
-199,4,4,2018,100,37,Cogidoo,05 Monica Street,sblucher5i@seattletimes.com,"Excision of R Less Saphenous, Perc Endo Approach, Diagn"
-200,21,1,2017,100,58,Twimbo,19488 Hagan Alley,mgrandison5j@timesonline.co.uk,"Repair Coccygeal Glomus, Percutaneous Approach"
-201,23,6,2017,100,62,Photospace,73195 Almo Pass,atippings5k@dailymail.co.uk,"Introduce of Oxazolidinones into Periton Cav, Perc Approach"
-202,22,8,2018,100,66,Tanoodle,1 Ridgeway Avenue,awinkell5l@cnn.com,"Fusion 2-7 T Jt w Autol Sub, Post Appr P Col, Open"
-203,16,3,2017,100,4,Aivee,9639 Northland Road,karundel5m@icq.com,"Resection of R Hand Bursa/Lig, Perc Endo Approach"
-204,29,1,2018,100,57,Pixope,5283 Graedel Junction,ajaquest5n@twitter.com,"Supplement Pericardium with Nonaut Sub, Perc Approach"
-205,13,4,2018,100,196,Linkbuzz,3438 Menomonie Park,lvampouille5o@oracle.com,"Dilation of Innom Art with Drug-elut Intra, Perc Approach"
-206,7,1,2018,100,182,Mydeo,1 Sage Street,dsieghard5p@tamu.edu,"Dilate L Temporal Art, Bifurc, w Drug-elut Intra, Perc Endo"
-207,1,9,2017,100,53,Flipopia,563 Clyde Gallagher Park,nbastow5q@bluehost.com,Caregiver Training in Feeding and Eating using Orthosis
-208,4,9,2018,100,180,Bluezoom,133 Huxley Court,ewedmore5r@slate.com,"Replace of R Metacarpal with Nonaut Sub, Perc Endo Approach"
-209,18,7,2017,100,199,Voomm,2858 Shelley Junction,mvinsen5s@csmonitor.com,Change Cast on Right Lower Leg
-210,13,6,2017,100,41,Dynabox,6 Dapin Center,apeal5t@friendfeed.com,"Fusion Lumsac Jt w Nonaut Sub, Post Appr P Col, Perc"
-211,19,0,2018,100,104,Thoughtsphere,1750 Schiller Road,kyarnold5u@howstuffworks.com,"Resection of Hyoid Bone, Open Approach"
-212,10,7,2017,100,112,Thoughtstorm,572 Darwin Terrace,ebarg5v@google.de,"Dilation of Esophageal Vein with Intralum Dev, Perc Approach"
-213,7,0,2017,100,1,Zoonder,6 Shoshone Pass,cdobie5w@earthlink.net,"Transfer Tibial Nerve to Tibial Nerve, Perc Endo Approach"
-214,16,1,2017,100,27,Ozu,60796 Namekagon Lane,avonbrook5x@mapy.cz,"Extraction of Left Pleura, Open Approach"
-215,14,7,2017,100,215,Katz,8 Sunnyside Drive,ebeagen5y@xrea.com,"Excision of Right Upper Lung Lobe, Open Approach, Diagnostic"
-216,25,1,2018,100,236,Blogtags,1975 Maywood Crossing,aexton5z@cornell.edu,"Supplement Left Axilla with Nonaut Sub, Perc Endo Approach"
-217,27,10,2017,100,120,Trupe,30041 Northfield Point,jwellfare60@youtu.be,"Revision of Infusion Device in Face, Perc Endo Approach"
-218,5,6,2018,100,37,Dabjam,97411 Butterfield Parkway,hglasspool61@yolasite.com,"Division of Scalp Subcu/Fascia, Open Approach"
-219,7,9,2018,100,184,Twimbo,73470 Novick Point,carnaez62@bloglovin.com,"Dilation of R Int Carotid, Perc Endo Approach"
-220,21,0,2017,100,27,Trunyx,15781 Emmet Pass,ipye63@noaa.gov,"Replace of L Hip Jt, Femoral with Synth Sub, Open Approach"
-221,8,4,2017,100,100,Gigaclub,577 Express Road,tchristmas64@uiuc.edu,LDR Brachytherapy of Diaphragm using Cesium 137
-222,18,5,2017,100,227,Zoozzy,595 Tony Court,mchilley65@jiathis.com,"Resection of Appendix, Open Approach"
-223,3,1,2017,100,33,Eadel,0 Columbus Drive,kdoohan66@hud.gov,"Supplement R Foot Art with Nonaut Sub, Perc Endo Approach"
-224,4,4,2017,100,108,Skynoodle,558 Heffernan Alley,rabilowitz67@seattletimes.com,"Inspection of Left Hip Joint, Perc Endo Approach"
-225,9,10,2018,100,28,Yadel,407 Birchwood Trail,jdwane68@angelfire.com,"Revision of Autol Sub in R Eye, Via Opening"
-226,5,5,2018,100,81,Voonyx,05236 Sachs Circle,echilds69@nsw.gov.au,"Destruction of Right Upper Arm Muscle, Open Approach"
-227,5,1,2018,100,237,Podcat,5 Brown Lane,sjuliff6a@nsw.gov.au,Tomo Nucl Med Imag of Thoracic Spine using Oth Radionuclide
-228,17,3,2018,100,187,JumpXS,24 Colorado Plaza,pstreat6b@howstuffworks.com,"Excision of Duodenum, Perc Endo Approach, Diagn"
-229,6,2,2017,100,148,Bluejam,3625 Green Road,bchatainier6c@stanford.edu,Removal of Cast on Left Finger
-230,28,11,2018,100,166,Photobug,44 Talmadge Terrace,lmcillroy6d@wikispaces.com,"Destruction of Thymus, Percutaneous Approach"
-231,16,8,2017,100,194,Twimbo,748 Holmberg Center,yjoubert6e@unicef.org,"Destruction of Ulnar Nerve, Percutaneous Approach"
-232,21,0,2017,100,41,Voolia,9 Red Cloud Parkway,bshelliday6f@cisco.com,"Excision of Left Sphenoid Bone, Percutaneous Approach, Diagn"
-233,26,1,2018,100,165,Youtags,0 Basil Way,krevan6g@diigo.com,"Release Median Nerve, Open Approach"
-234,25,3,2017,100,217,Wikibox,279 High Crossing Park,lgregson6h@usda.gov,"Insertion of Infusion Device into Stomach, Open Approach"
-235,1,11,2018,100,131,Jamia,3690 Pine View Point,jvallentin6i@google.com,"Dilation of Trachea with Intraluminal Device, Via Opening"
-236,10,0,2018,100,187,InnoZ,153 Farwell Avenue,cshowell6j@creativecommons.org,"Supplement Sup Vena Cava with Nonaut Sub, Perc Endo Approach"
-237,27,6,2017,100,111,Mita,5816 Dapin Lane,gcapelow6k@telegraph.co.uk,"Supplement Right Ankle Joint with Nonaut Sub, Perc Approach"
-238,28,3,2017,100,14,Feedspan,52 Schlimgen Way,chousden6l@liveinternet.ru,"Insertion of Ext Fix into R Tarsal, Perc Endo Approach"
-239,27,10,2017,100,14,Latz,980 Linden Drive,mtellenbrok6m@hibu.com,"Removal of Nonaut Sub from R Tibia, Perc Endo Approach"
-240,11,3,2018,100,36,Photojam,9 Packers Hill,ccrumpton6n@auda.org.au,"Restrict Thor Aorta Desc w Fenestr Dev 1 or 2, Open"
-241,29,5,2018,100,168,Plajo,65005 Coleman Crossing,fbrandassi6o@umich.edu,"Revision of Drainage Device in Occip Jt, Open Approach"
-242,1,3,2017,100,106,Wordtune,8 Miller Parkway,mrodolico6p@wikispaces.com,"Occlusion L Innom Vein w Extralum Dev, Perc Endo"
-243,7,10,2017,100,3,Oba,44 Kennedy Hill,dtempleman6q@amazon.co.uk,"Fusion L Metacarpophal Jt w Autol Sub, Perc Endo"
-244,12,8,2017,100,49,Blogpad,11182 Debra Court,evandermerwe6r@narod.ru,"Excision of L Up Arm Subcu/Fascia, Perc Approach"
-245,13,0,2018,100,71,Tagopia,29119 Derek Parkway,bscarth6s@technorati.com,"Repair Lumbosacral Plexus, Open Approach"
-246,21,10,2017,100,118,Eare,29331 Hoepker Pass,dgillise6t@uiuc.edu,"Removal of Autol Sub from L Tarsal Jt, Perc Approach"
-247,19,4,2017,100,216,Topiczoom,6074 Bunker Hill Drive,bmegainey6u@naver.com,"Restriction of Cervix with Extralum Dev, Open Approach"
-248,14,6,2018,100,114,Feedmix,0355 Nevada Pass,jallward6v@webnode.com,Hyperthermia of Pelvic Region
-249,7,2,2018,100,212,Blogtag,95 Susan Crossing,ailsley6w@google.com.au,"Replace of L Renal Art with Synth Sub, Perc Endo Approach"
-250,25,1,2017,100,98,Trudoo,55798 Dahle Parkway,cneeves6x@seattletimes.com,"Dilation of 1 Cor Art with Intralum Dev, Perc Approach"
-251,5,7,2018,100,69,Edgeblab,9 Eagle Crest Park,scanto6y@nhs.uk,"Transfuse Nonaut Fresh Plasma in Central Vein, Perc"
-252,23,3,2018,100,199,Plajo,62134 Kinsman Alley,tmoulin6z@washington.edu,"Insert of Cardiac Lead into L Ventricle, Perc Endo Approach"
-253,12,5,2018,100,149,Skyndu,635 Trailsway Hill,ftyson70@prlog.org,"Revision of Ext Fix in R Ankle Jt, Perc Approach"
-254,22,8,2017,100,154,Buzzbean,9240 Bartillon Junction,mgreenway71@huffingtonpost.com,"Revise Intralum Dev in Vagina & Cul-de-sac, Extern"
-255,19,1,2017,100,86,Browsebug,54 Mariners Cove Pass,mhaucke72@virginia.edu,"Drainage of Cerebral Meninges, Percutaneous Approach, Diagn"
-256,26,4,2018,100,34,Oyoyo,9 Muir Parkway,pberesford73@ed.gov,"Destruction of Bilateral Vas Deferens, Open Approach"
-257,11,10,2017,100,49,Quaxo,6413 Oriole Junction,cmosedall74@csmonitor.com,"Supplement Sup Mesent Art with Autol Sub, Perc Approach"
-258,18,3,2018,100,145,Yotz,987 Aberg Street,dbissell75@clickbank.net,"Transfer Left Abdomen Muscle, TRAM Flap, Perc Endo Approach"
-259,7,9,2017,100,218,Skaboo,32 Glacier Hill Circle,sbroseman76@unc.edu,"Revision of Intraluminal Device in Stomach, Via Opening"
-260,30,4,2018,100,73,Flipbug,816 Schmedeman Park,lhaberfield77@freewebs.com,Nonspoken Language Treatment using Audiovisual Equipment
-261,14,5,2018,100,88,Geba,85 Lillian Trail,lkikke78@theguardian.com,"Inspection of Finger Nail, External Approach"
-262,11,4,2018,100,218,Centidel,67 Monterey Way,wsessions79@edublogs.org,"Reattachment of Right Testis, Open Approach"
-263,30,1,2018,100,195,Bubblebox,2 Dwight Circle,kliver7a@quantcast.com,"Fusion of Left Wrist Joint with Int Fix, Open Approach"
-264,29,5,2018,100,183,Skimia,5 Kinsman Drive,pthripp7b@opera.com,"Bypass Stomach to Duodenum, Percutaneous Endoscopic Approach"
-265,4,10,2017,100,84,Kanoodle,995 Oak Valley Terrace,wflorez7c@state.gov,"Measurement of Venous Pulse, Peripheral, Perc Approach"
-266,22,3,2018,100,25,Minyx,384 Loomis Pass,hyoakley7d@ibm.com,"Bypass Cereb Vent to Periton Cav w Synth Sub, Perc"
-267,3,4,2018,100,175,Youspan,66706 Northridge Avenue,twidmoor7e@woothemes.com,"Exercise Trmt Neuro Head, Neck w Electrotherap Equip"
-268,17,5,2017,100,111,Flipstorm,803 Green Park,lchippin7f@pbs.org,"Bypass Portal Vein to Low Vein w Autol Art, Perc Endo"
-269,26,6,2018,100,83,Skinder,0090 Buhler Street,ssaphin7g@mail.ru,"Bypass R Subclav Art to R Low Leg Art w Autol Art, Open"
-270,6,1,2018,100,222,Trilia,30383 Graedel Pass,agheerhaert7h@wufoo.com,"Dilate R Ext Carotid w Drug-elut Intra, Perc Endo"
+id,day,month,year,start,length,school,address,email,description,type
+416862742,4,0,2016,414,1,blah school,blah street,joe@gmail.com,You are joe,GC
+717698079,21,9,2017,52,2,blah school,blah street,joe@gmail.com,You are joe,GC
+127860154,7,4,2016,518,1,blah school,blah street,joe@gmail.com,You are joe,GC
+424803278,4,7,2016,242,1,blah school,blah street,joe@gmail.com,You are joe,GC
+476672641,19,10,2017,268,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1068792364,14,11,2016,420,1,blah school,blah street,joe@gmail.com,You are joe,GC
+291254433,1,9,2017,462,3,blah school,blah street,joe@gmail.com,You are joe,GC
+513610018,8,2,2016,301,2,blah school,blah street,joe@gmail.com,You are joe,GC
+676924382,5,10,2017,216,3,blah school,blah street,joe@gmail.com,You are joe,GC
+502750870,2,4,2017,100,0,blah school,blah street,joe@gmail.com,You are joe,GC
+558133039,5,10,2017,239,1,blah school,blah street,joe@gmail.com,You are joe,GC
+47021068,4,0,2017,148,0,blah school,blah street,joe@gmail.com,You are joe,GC
+299793793,10,11,2016,97,3,blah school,blah street,joe@gmail.com,You are joe,GC
+250155115,17,1,2016,544,3,blah school,blah street,joe@gmail.com,You are joe,GC
+209180036,10,2,2016,503,0,blah school,blah street,joe@gmail.com,You are joe,GC
+908565410,1,2,2016,198,0,blah school,blah street,joe@gmail.com,You are joe,GC
+141572320,29,11,2017,491,1,blah school,blah street,joe@gmail.com,You are joe,GC
+192678785,8,10,2016,11,0,blah school,blah street,joe@gmail.com,You are joe,GC
+533116847,3,2,2016,109,2,blah school,blah street,joe@gmail.com,You are joe,GC
+15090558,23,1,2017,522,0,blah school,blah street,joe@gmail.com,You are joe,GC
+172493294,17,1,2016,44,0,blah school,blah street,joe@gmail.com,You are joe,GC
+604033951,2,9,2016,245,3,blah school,blah street,joe@gmail.com,You are joe,GC
+784481070,22,7,2016,315,3,blah school,blah street,joe@gmail.com,You are joe,GC
+315678380,20,7,2017,212,2,blah school,blah street,joe@gmail.com,You are joe,GC
+983126606,25,7,2017,209,0,blah school,blah street,joe@gmail.com,You are joe,GC
+588128651,16,11,2016,382,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1032584301,22,2,2016,283,2,blah school,blah street,joe@gmail.com,You are joe,GC
+902903080,25,9,2017,166,1,blah school,blah street,joe@gmail.com,You are joe,GC
+726092139,27,8,2017,1,1,blah school,blah street,joe@gmail.com,You are joe,GC
+724388391,25,3,2016,551,2,blah school,blah street,joe@gmail.com,You are joe,GC
+559444433,25,2,2017,529,1,blah school,blah street,joe@gmail.com,You are joe,GC
+310550226,1,3,2016,201,0,blah school,blah street,joe@gmail.com,You are joe,GC
+528036815,11,9,2016,562,0,blah school,blah street,joe@gmail.com,You are joe,GC
+337241128,27,3,2016,207,2,blah school,blah street,joe@gmail.com,You are joe,GC
+226741337,21,10,2016,400,1,blah school,blah street,joe@gmail.com,You are joe,GC
+714068553,18,8,2016,474,1,blah school,blah street,joe@gmail.com,You are joe,GC
+294613351,12,10,2016,277,0,blah school,blah street,joe@gmail.com,You are joe,GC
+14764072,4,0,2017,185,1,blah school,blah street,joe@gmail.com,You are joe,GC
+46753073,20,2,2016,4,1,blah school,blah street,joe@gmail.com,You are joe,GC
+453055532,8,10,2016,381,2,blah school,blah street,joe@gmail.com,You are joe,GC
+423711090,6,3,2017,470,3,blah school,blah street,joe@gmail.com,You are joe,GC
+813689318,6,8,2016,145,0,blah school,blah street,joe@gmail.com,You are joe,GC
+912170143,27,7,2017,397,2,blah school,blah street,joe@gmail.com,You are joe,GC
+474055407,31,2,2017,486,0,blah school,blah street,joe@gmail.com,You are joe,GC
+484713147,25,0,2016,392,2,blah school,blah street,joe@gmail.com,You are joe,GC
+813526653,13,7,2016,330,1,blah school,blah street,joe@gmail.com,You are joe,GC
+614316142,13,7,2016,322,2,blah school,blah street,joe@gmail.com,You are joe,GC
+362247598,16,8,2017,27,0,blah school,blah street,joe@gmail.com,You are joe,GC
+130430905,2,7,2017,113,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1017238011,5,1,2016,461,2,blah school,blah street,joe@gmail.com,You are joe,GC
+685758796,8,6,2017,524,0,blah school,blah street,joe@gmail.com,You are joe,GC
+53114230,4,8,2016,312,0,blah school,blah street,joe@gmail.com,You are joe,GC
+600789010,29,5,2016,105,0,blah school,blah street,joe@gmail.com,You are joe,GC
+187215027,30,4,2017,297,2,blah school,blah street,joe@gmail.com,You are joe,GC
+77634682,8,5,2017,224,3,blah school,blah street,joe@gmail.com,You are joe,GC
+383695446,12,8,2017,250,3,blah school,blah street,joe@gmail.com,You are joe,GC
+399839875,19,5,2016,1,3,blah school,blah street,joe@gmail.com,You are joe,GC
+63573500,27,10,2017,412,2,blah school,blah street,joe@gmail.com,You are joe,GC
+482502316,25,9,2016,358,3,blah school,blah street,joe@gmail.com,You are joe,GC
+639630224,27,8,2016,311,2,blah school,blah street,joe@gmail.com,You are joe,GC
+147939780,26,6,2016,574,3,blah school,blah street,joe@gmail.com,You are joe,GC
+529104214,4,11,2017,544,3,blah school,blah street,joe@gmail.com,You are joe,GC
+321327805,24,9,2017,331,1,blah school,blah street,joe@gmail.com,You are joe,GC
+405024041,28,2,2017,509,0,blah school,blah street,joe@gmail.com,You are joe,GC
+135463379,20,0,2017,202,0,blah school,blah street,joe@gmail.com,You are joe,GC
+277213552,8,2,2016,483,1,blah school,blah street,joe@gmail.com,You are joe,GC
+730285978,6,6,2017,42,0,blah school,blah street,joe@gmail.com,You are joe,GC
+688453862,2,5,2017,37,2,blah school,blah street,joe@gmail.com,You are joe,GC
+380524916,14,6,2016,215,1,blah school,blah street,joe@gmail.com,You are joe,GC
+697876312,24,6,2017,103,0,blah school,blah street,joe@gmail.com,You are joe,GC
+856222068,27,9,2017,236,2,blah school,blah street,joe@gmail.com,You are joe,GC
+396465790,10,10,2017,154,3,blah school,blah street,joe@gmail.com,You are joe,GC
+687625836,8,1,2017,340,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1048649591,13,2,2017,353,1,blah school,blah street,joe@gmail.com,You are joe,GC
+61782948,19,3,2016,342,2,blah school,blah street,joe@gmail.com,You are joe,GC
+926093102,28,7,2017,41,2,blah school,blah street,joe@gmail.com,You are joe,GC
+152258249,30,4,2016,198,0,blah school,blah street,joe@gmail.com,You are joe,GC
+837090316,24,6,2016,135,3,blah school,blah street,joe@gmail.com,You are joe,GC
+957956021,25,4,2016,294,3,blah school,blah street,joe@gmail.com,You are joe,GC
+347757879,12,1,2017,265,3,blah school,blah street,joe@gmail.com,You are joe,GC
+960011587,16,2,2016,230,1,blah school,blah street,joe@gmail.com,You are joe,GC
+461235945,13,4,2017,419,3,blah school,blah street,joe@gmail.com,You are joe,GC
+46246330,17,10,2016,497,0,blah school,blah street,joe@gmail.com,You are joe,GC
+680708226,24,6,2017,255,3,blah school,blah street,joe@gmail.com,You are joe,GC
+395067049,4,0,2017,64,2,blah school,blah street,joe@gmail.com,You are joe,GC
+323363817,14,9,2017,430,2,blah school,blah street,joe@gmail.com,You are joe,GC
+103465309,17,6,2017,9,0,blah school,blah street,joe@gmail.com,You are joe,GC
+285140865,16,7,2016,242,0,blah school,blah street,joe@gmail.com,You are joe,GC
+527128745,14,10,2017,582,1,blah school,blah street,joe@gmail.com,You are joe,GC
+828768834,22,1,2017,44,2,blah school,blah street,joe@gmail.com,You are joe,GC
+981310951,5,3,2016,442,3,blah school,blah street,joe@gmail.com,You are joe,GC
+227194483,17,6,2016,542,2,blah school,blah street,joe@gmail.com,You are joe,GC
+329090083,13,9,2017,269,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1067948597,27,2,2017,414,2,blah school,blah street,joe@gmail.com,You are joe,GC
+151247708,17,9,2016,71,3,blah school,blah street,joe@gmail.com,You are joe,GC
+925458486,27,6,2017,365,3,blah school,blah street,joe@gmail.com,You are joe,GC
+862302048,16,10,2016,166,0,blah school,blah street,joe@gmail.com,You are joe,GC
+938687160,23,11,2016,337,0,blah school,blah street,joe@gmail.com,You are joe,GC
+349897924,20,11,2017,493,1,blah school,blah street,joe@gmail.com,You are joe,GC
+547422128,6,10,2016,217,3,blah school,blah street,joe@gmail.com,You are joe,GC
+677016880,31,11,2017,316,1,blah school,blah street,joe@gmail.com,You are joe,GC
+743263519,18,8,2017,115,1,blah school,blah street,joe@gmail.com,You are joe,GC
+957609970,14,8,2016,538,0,blah school,blah street,joe@gmail.com,You are joe,GC
+77313061,30,9,2017,205,1,blah school,blah street,joe@gmail.com,You are joe,GC
+242401102,4,5,2017,355,3,blah school,blah street,joe@gmail.com,You are joe,GC
+391744068,22,7,2016,68,3,blah school,blah street,joe@gmail.com,You are joe,GC
+205313476,13,4,2016,337,1,blah school,blah street,joe@gmail.com,You are joe,GC
+190400369,4,4,2016,512,1,blah school,blah street,joe@gmail.com,You are joe,GC
+653710738,2,11,2017,541,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1026225247,17,2,2017,439,2,blah school,blah street,joe@gmail.com,You are joe,GC
+749492864,1,6,2016,376,1,blah school,blah street,joe@gmail.com,You are joe,GC
+335909692,14,3,2016,120,3,blah school,blah street,joe@gmail.com,You are joe,GC
+61839747,10,8,2017,503,2,blah school,blah street,joe@gmail.com,You are joe,GC
+497424494,13,0,2016,219,3,blah school,blah street,joe@gmail.com,You are joe,GC
+608473446,12,1,2016,89,0,blah school,blah street,joe@gmail.com,You are joe,GC
+166916048,2,7,2016,116,2,blah school,blah street,joe@gmail.com,You are joe,GC
+237235431,25,10,2016,484,3,blah school,blah street,joe@gmail.com,You are joe,GC
+377307455,7,6,2017,435,2,blah school,blah street,joe@gmail.com,You are joe,GC
+8639078,1,4,2017,2,0,blah school,blah street,joe@gmail.com,You are joe,GC
+161431389,30,11,2017,335,3,blah school,blah street,joe@gmail.com,You are joe,GC
+199721271,26,6,2017,499,3,blah school,blah street,joe@gmail.com,You are joe,GC
+99231780,11,1,2017,437,2,blah school,blah street,joe@gmail.com,You are joe,GC
+128789739,21,4,2017,542,2,blah school,blah street,joe@gmail.com,You are joe,GC
+898043401,20,0,2017,298,0,blah school,blah street,joe@gmail.com,You are joe,GC
+769834863,12,5,2017,450,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1019220816,11,9,2016,455,1,blah school,blah street,joe@gmail.com,You are joe,GC
+455993739,19,3,2016,35,2,blah school,blah street,joe@gmail.com,You are joe,GC
+125269770,20,2,2017,170,0,blah school,blah street,joe@gmail.com,You are joe,GC
+916537393,11,10,2016,293,0,blah school,blah street,joe@gmail.com,You are joe,GC
+326736219,18,9,2017,419,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1063695608,1,3,2016,544,3,blah school,blah street,joe@gmail.com,You are joe,GC
+91208662,6,3,2016,27,1,blah school,blah street,joe@gmail.com,You are joe,GC
+131766542,18,0,2017,388,1,blah school,blah street,joe@gmail.com,You are joe,GC
+913676954,10,9,2017,41,1,blah school,blah street,joe@gmail.com,You are joe,GC
+829794461,8,0,2017,517,3,blah school,blah street,joe@gmail.com,You are joe,GC
+528935041,16,7,2016,424,0,blah school,blah street,joe@gmail.com,You are joe,GC
+810499128,3,6,2016,406,2,blah school,blah street,joe@gmail.com,You are joe,GC
+977843469,23,0,2017,375,1,blah school,blah street,joe@gmail.com,You are joe,GC
+361167991,21,4,2017,11,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1067109394,8,4,2017,272,2,blah school,blah street,joe@gmail.com,You are joe,GC
+891898403,21,6,2016,92,2,blah school,blah street,joe@gmail.com,You are joe,GC
+86483935,27,11,2016,404,3,blah school,blah street,joe@gmail.com,You are joe,GC
+470174261,13,1,2017,18,0,blah school,blah street,joe@gmail.com,You are joe,GC
+641751989,7,2,2016,566,0,blah school,blah street,joe@gmail.com,You are joe,GC
+344996775,26,0,2017,166,2,blah school,blah street,joe@gmail.com,You are joe,GC
+906738188,3,10,2016,80,0,blah school,blah street,joe@gmail.com,You are joe,GC
+811495739,11,8,2016,255,2,blah school,blah street,joe@gmail.com,You are joe,GC
+265865820,26,3,2016,89,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1009316881,13,10,2016,190,0,blah school,blah street,joe@gmail.com,You are joe,GC
+575861952,15,3,2016,537,1,blah school,blah street,joe@gmail.com,You are joe,GC
+158406205,10,0,2016,83,1,blah school,blah street,joe@gmail.com,You are joe,GC
+865092539,3,7,2017,303,2,blah school,blah street,joe@gmail.com,You are joe,GC
+587006817,15,9,2016,128,3,blah school,blah street,joe@gmail.com,You are joe,GC
+727090650,24,5,2017,272,0,blah school,blah street,joe@gmail.com,You are joe,GC
+186738549,26,5,2016,19,3,blah school,blah street,joe@gmail.com,You are joe,GC
+529965129,7,6,2017,511,0,blah school,blah street,joe@gmail.com,You are joe,GC
+155769567,19,9,2016,390,2,blah school,blah street,joe@gmail.com,You are joe,GC
+869705327,2,2,2016,268,3,blah school,blah street,joe@gmail.com,You are joe,GC
+623848647,3,7,2016,279,0,blah school,blah street,joe@gmail.com,You are joe,GC
+982220773,19,10,2017,528,3,blah school,blah street,joe@gmail.com,You are joe,GC
+398795611,4,9,2016,488,2,blah school,blah street,joe@gmail.com,You are joe,GC
+628144599,27,9,2017,191,2,blah school,blah street,joe@gmail.com,You are joe,GC
+666555472,20,2,2017,474,0,blah school,blah street,joe@gmail.com,You are joe,GC
+400618266,9,8,2016,244,1,blah school,blah street,joe@gmail.com,You are joe,GC
+375508518,24,11,2017,381,1,blah school,blah street,joe@gmail.com,You are joe,GC
+195272905,13,1,2016,540,3,blah school,blah street,joe@gmail.com,You are joe,GC
+243237131,6,8,2017,19,1,blah school,blah street,joe@gmail.com,You are joe,GC
+845867952,23,11,2016,482,3,blah school,blah street,joe@gmail.com,You are joe,GC
+386540894,23,1,2017,488,2,blah school,blah street,joe@gmail.com,You are joe,GC
+773642103,29,4,2016,122,3,blah school,blah street,joe@gmail.com,You are joe,GC
+767006783,13,11,2017,442,0,blah school,blah street,joe@gmail.com,You are joe,GC
+212283917,14,7,2016,118,0,blah school,blah street,joe@gmail.com,You are joe,GC
+996548883,2,9,2017,77,2,blah school,blah street,joe@gmail.com,You are joe,GC
+673979242,17,6,2016,275,0,blah school,blah street,joe@gmail.com,You are joe,GC
+49947437,18,7,2017,279,1,blah school,blah street,joe@gmail.com,You are joe,GC
+616421183,30,10,2016,79,0,blah school,blah street,joe@gmail.com,You are joe,GC
+955434843,13,10,2016,186,1,blah school,blah street,joe@gmail.com,You are joe,GC
+783098437,10,4,2017,526,0,blah school,blah street,joe@gmail.com,You are joe,GC
+451599347,12,5,2017,270,1,blah school,blah street,joe@gmail.com,You are joe,GC
+448889168,12,11,2016,67,3,blah school,blah street,joe@gmail.com,You are joe,GC
+205751973,28,3,2017,522,3,blah school,blah street,joe@gmail.com,You are joe,GC
+918564708,29,4,2016,291,0,blah school,blah street,joe@gmail.com,You are joe,GC
+104933678,12,7,2017,492,2,blah school,blah street,joe@gmail.com,You are joe,GC
+403926747,28,5,2016,436,0,blah school,blah street,joe@gmail.com,You are joe,GC
+882587014,21,1,2016,486,3,blah school,blah street,joe@gmail.com,You are joe,GC
+320197745,9,5,2016,357,2,blah school,blah street,joe@gmail.com,You are joe,GC
+933776204,14,8,2017,570,3,blah school,blah street,joe@gmail.com,You are joe,GC
+197617224,26,4,2017,0,3,blah school,blah street,joe@gmail.com,You are joe,GC
+166461320,13,9,2016,509,1,blah school,blah street,joe@gmail.com,You are joe,GC
+678073475,10,7,2017,387,1,blah school,blah street,joe@gmail.com,You are joe,GC
+249773234,2,3,2016,473,3,blah school,blah street,joe@gmail.com,You are joe,GC
+271029281,22,6,2017,495,1,blah school,blah street,joe@gmail.com,You are joe,GC
+148158500,26,2,2016,333,2,blah school,blah street,joe@gmail.com,You are joe,GC
+174718968,26,5,2016,199,2,blah school,blah street,joe@gmail.com,You are joe,GC
+402078279,26,6,2017,230,1,blah school,blah street,joe@gmail.com,You are joe,GC
+514320355,8,5,2016,539,3,blah school,blah street,joe@gmail.com,You are joe,GC
+212365492,29,3,2017,143,1,blah school,blah street,joe@gmail.com,You are joe,GC
+109827137,17,0,2016,224,2,blah school,blah street,joe@gmail.com,You are joe,GC
+880685845,31,7,2016,471,3,blah school,blah street,joe@gmail.com,You are joe,GC
+489096982,30,0,2017,509,3,blah school,blah street,joe@gmail.com,You are joe,GC
+591348826,31,4,2016,293,3,blah school,blah street,joe@gmail.com,You are joe,GC
+894204266,1,1,2017,269,0,blah school,blah street,joe@gmail.com,You are joe,GC
+254257168,20,0,2017,271,2,blah school,blah street,joe@gmail.com,You are joe,GC
+58164500,9,7,2016,467,1,blah school,blah street,joe@gmail.com,You are joe,GC
+347644584,20,10,2017,256,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1017988678,29,6,2016,525,2,blah school,blah street,joe@gmail.com,You are joe,GC
+775319208,30,9,2017,508,3,blah school,blah street,joe@gmail.com,You are joe,GC
+852965358,13,6,2017,281,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1060951651,9,7,2016,423,2,blah school,blah street,joe@gmail.com,You are joe,GC
+787711671,7,5,2017,283,2,blah school,blah street,joe@gmail.com,You are joe,GC
+906568111,16,5,2016,379,1,blah school,blah street,joe@gmail.com,You are joe,GC
+161889297,22,4,2017,197,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1031848216,10,9,2017,518,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1039694232,3,3,2017,59,2,blah school,blah street,joe@gmail.com,You are joe,GC
+70400681,2,0,2016,441,2,blah school,blah street,joe@gmail.com,You are joe,GC
+372707271,12,2,2017,456,2,blah school,blah street,joe@gmail.com,You are joe,GC
+953370209,10,5,2017,51,1,blah school,blah street,joe@gmail.com,You are joe,GC
+916061320,18,6,2016,500,0,blah school,blah street,joe@gmail.com,You are joe,GC
+91836413,9,8,2016,573,1,blah school,blah street,joe@gmail.com,You are joe,GC
+797251466,28,5,2016,58,1,blah school,blah street,joe@gmail.com,You are joe,GC
+18481932,5,11,2016,33,1,blah school,blah street,joe@gmail.com,You are joe,GC
+598059283,12,2,2017,364,3,blah school,blah street,joe@gmail.com,You are joe,GC
+838036998,8,8,2016,304,0,blah school,blah street,joe@gmail.com,You are joe,GC
+13467874,31,11,2017,521,1,blah school,blah street,joe@gmail.com,You are joe,GC
+760950395,31,11,2017,341,0,blah school,blah street,joe@gmail.com,You are joe,GC
+79326025,18,5,2017,254,1,blah school,blah street,joe@gmail.com,You are joe,GC
+928921393,23,6,2017,304,3,blah school,blah street,joe@gmail.com,You are joe,GC
+812775811,20,11,2016,428,3,blah school,blah street,joe@gmail.com,You are joe,GC
+810904626,22,4,2016,99,0,blah school,blah street,joe@gmail.com,You are joe,GC
+912151875,22,9,2016,354,1,blah school,blah street,joe@gmail.com,You are joe,GC
+127497257,7,5,2016,422,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1030872966,8,5,2016,109,0,blah school,blah street,joe@gmail.com,You are joe,GC
+105634864,17,11,2016,578,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1048693247,22,8,2017,571,2,blah school,blah street,joe@gmail.com,You are joe,GC
+9181803,24,8,2017,416,1,blah school,blah street,joe@gmail.com,You are joe,GC
+876908449,27,11,2016,473,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1027327901,23,2,2016,490,2,blah school,blah street,joe@gmail.com,You are joe,GC
+71923585,11,2,2017,341,1,blah school,blah street,joe@gmail.com,You are joe,GC
+992699208,25,10,2017,534,1,blah school,blah street,joe@gmail.com,You are joe,GC
+587756411,20,1,2016,265,3,blah school,blah street,joe@gmail.com,You are joe,GC
+718571663,12,4,2016,326,0,blah school,blah street,joe@gmail.com,You are joe,GC
+373732602,17,11,2016,214,3,blah school,blah street,joe@gmail.com,You are joe,GC
+16677015,16,2,2017,411,2,blah school,blah street,joe@gmail.com,You are joe,GC
+140738603,10,10,2017,421,2,blah school,blah street,joe@gmail.com,You are joe,GC
+284366299,24,10,2016,588,3,blah school,blah street,joe@gmail.com,You are joe,GC
+107123556,8,1,2016,229,1,blah school,blah street,joe@gmail.com,You are joe,GC
+684482615,16,7,2016,368,0,blah school,blah street,joe@gmail.com,You are joe,GC
+216397727,21,4,2016,560,1,blah school,blah street,joe@gmail.com,You are joe,GC
+986772428,8,9,2017,177,3,blah school,blah street,joe@gmail.com,You are joe,GC
+565208550,24,1,2016,581,2,blah school,blah street,joe@gmail.com,You are joe,GC
+561313866,22,1,2017,175,0,blah school,blah street,joe@gmail.com,You are joe,GC
+834305608,30,6,2016,470,3,blah school,blah street,joe@gmail.com,You are joe,GC
+16172484,25,1,2017,560,3,blah school,blah street,joe@gmail.com,You are joe,GC
+342871359,12,4,2017,366,0,blah school,blah street,joe@gmail.com,You are joe,GC
+996478990,6,5,2016,183,2,blah school,blah street,joe@gmail.com,You are joe,GC
+330986505,22,8,2017,83,2,blah school,blah street,joe@gmail.com,You are joe,GC
+137253613,8,9,2017,284,0,blah school,blah street,joe@gmail.com,You are joe,GC
+357601530,6,9,2016,319,2,blah school,blah street,joe@gmail.com,You are joe,GC
+549205799,17,2,2017,559,0,blah school,blah street,joe@gmail.com,You are joe,GC
+550317844,6,3,2017,574,1,blah school,blah street,joe@gmail.com,You are joe,GC
+732371599,25,9,2016,382,3,blah school,blah street,joe@gmail.com,You are joe,GC
+239201037,13,10,2017,191,1,blah school,blah street,joe@gmail.com,You are joe,GC
+391407997,18,6,2017,547,3,blah school,blah street,joe@gmail.com,You are joe,GC
+947282557,1,6,2017,100,3,blah school,blah street,joe@gmail.com,You are joe,GC
+829094672,4,7,2016,249,1,blah school,blah street,joe@gmail.com,You are joe,GC
+615290628,8,10,2017,210,1,blah school,blah street,joe@gmail.com,You are joe,GC
+746736800,5,7,2017,386,1,blah school,blah street,joe@gmail.com,You are joe,GC
+942498226,15,11,2016,72,1,blah school,blah street,joe@gmail.com,You are joe,GC
+352402023,13,3,2017,550,3,blah school,blah street,joe@gmail.com,You are joe,GC
+576707684,25,1,2017,65,0,blah school,blah street,joe@gmail.com,You are joe,GC
+103892039,24,1,2017,508,3,blah school,blah street,joe@gmail.com,You are joe,GC
+711412228,31,4,2017,266,1,blah school,blah street,joe@gmail.com,You are joe,GC
+146301875,2,8,2017,226,1,blah school,blah street,joe@gmail.com,You are joe,GC
+231553845,12,7,2017,413,1,blah school,blah street,joe@gmail.com,You are joe,GC
+435384064,20,6,2017,458,0,blah school,blah street,joe@gmail.com,You are joe,GC
+166771116,13,9,2017,205,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1023043268,3,1,2017,453,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1796788,2,2,2017,106,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1008493924,29,0,2017,579,1,blah school,blah street,joe@gmail.com,You are joe,GC
+742144162,22,2,2016,310,2,blah school,blah street,joe@gmail.com,You are joe,GC
+691427731,5,8,2016,364,0,blah school,blah street,joe@gmail.com,You are joe,GC
+145481713,14,0,2016,567,2,blah school,blah street,joe@gmail.com,You are joe,GC
+840967219,12,6,2017,141,3,blah school,blah street,joe@gmail.com,You are joe,GC
+944807065,2,11,2017,395,1,blah school,blah street,joe@gmail.com,You are joe,GC
+488634132,29,0,2016,459,1,blah school,blah street,joe@gmail.com,You are joe,GC
+927692331,23,11,2016,452,2,blah school,blah street,joe@gmail.com,You are joe,GC
+747104186,3,5,2017,200,0,blah school,blah street,joe@gmail.com,You are joe,GC
+951814101,25,8,2016,142,3,blah school,blah street,joe@gmail.com,You are joe,GC
+870517362,3,5,2017,185,3,blah school,blah street,joe@gmail.com,You are joe,GC
+747774661,31,0,2016,509,3,blah school,blah street,joe@gmail.com,You are joe,GC
+38349979,20,8,2016,455,1,blah school,blah street,joe@gmail.com,You are joe,GC
+104675116,3,3,2016,326,1,blah school,blah street,joe@gmail.com,You are joe,GC
+578963344,23,8,2017,383,3,blah school,blah street,joe@gmail.com,You are joe,GC
+354966512,6,10,2016,282,2,blah school,blah street,joe@gmail.com,You are joe,GC
+505369715,7,3,2016,293,1,blah school,blah street,joe@gmail.com,You are joe,GC
+583882485,17,10,2017,276,0,blah school,blah street,joe@gmail.com,You are joe,GC
+146655290,21,6,2017,475,0,blah school,blah street,joe@gmail.com,You are joe,GC
+729847345,27,8,2016,461,0,blah school,blah street,joe@gmail.com,You are joe,GC
+395081863,4,0,2017,267,2,blah school,blah street,joe@gmail.com,You are joe,GC
+397658688,24,9,2016,225,1,blah school,blah street,joe@gmail.com,You are joe,GC
+123502675,21,5,2017,124,0,blah school,blah street,joe@gmail.com,You are joe,GC
+45443836,29,4,2016,42,2,blah school,blah street,joe@gmail.com,You are joe,GC
+326948376,6,4,2016,573,0,blah school,blah street,joe@gmail.com,You are joe,GC
+758530108,24,1,2016,147,3,blah school,blah street,joe@gmail.com,You are joe,GC
+332965827,3,3,2017,178,1,blah school,blah street,joe@gmail.com,You are joe,GC
+525459095,7,3,2016,321,0,blah school,blah street,joe@gmail.com,You are joe,GC
+822552136,8,5,2016,481,0,blah school,blah street,joe@gmail.com,You are joe,GC
+120651847,27,9,2017,423,2,blah school,blah street,joe@gmail.com,You are joe,GC
+5393428,20,2,2017,409,1,blah school,blah street,joe@gmail.com,You are joe,GC
+762626535,20,10,2017,17,0,blah school,blah street,joe@gmail.com,You are joe,GC
+145265404,10,2,2017,387,0,blah school,blah street,joe@gmail.com,You are joe,GC
+990654032,13,4,2017,303,2,blah school,blah street,joe@gmail.com,You are joe,GC
+660059051,11,1,2016,113,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1588861,1,8,2016,319,1,blah school,blah street,joe@gmail.com,You are joe,GC
+460253663,12,11,2016,264,1,blah school,blah street,joe@gmail.com,You are joe,GC
+112855920,6,2,2017,40,3,blah school,blah street,joe@gmail.com,You are joe,GC
+876068717,29,8,2017,471,3,blah school,blah street,joe@gmail.com,You are joe,GC
+670455275,8,5,2017,528,2,blah school,blah street,joe@gmail.com,You are joe,GC
+81270768,3,9,2017,398,2,blah school,blah street,joe@gmail.com,You are joe,GC
+611534984,15,8,2016,523,0,blah school,blah street,joe@gmail.com,You are joe,GC
+577811844,19,2,2016,595,0,blah school,blah street,joe@gmail.com,You are joe,GC
+112886907,21,6,2016,348,2,blah school,blah street,joe@gmail.com,You are joe,GC
+936811547,25,3,2016,233,0,blah school,blah street,joe@gmail.com,You are joe,GC
+212491997,24,4,2017,433,2,blah school,blah street,joe@gmail.com,You are joe,GC
+575418140,23,10,2017,443,2,blah school,blah street,joe@gmail.com,You are joe,GC
+130455655,26,2,2017,278,0,blah school,blah street,joe@gmail.com,You are joe,GC
+294136201,18,4,2016,276,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1036333502,9,5,2017,310,3,blah school,blah street,joe@gmail.com,You are joe,GC
+6761469,15,9,2017,451,3,blah school,blah street,joe@gmail.com,You are joe,GC
+572367323,18,6,2017,123,0,blah school,blah street,joe@gmail.com,You are joe,GC
+2609519,16,0,2016,465,3,blah school,blah street,joe@gmail.com,You are joe,GC
+399166357,30,3,2016,194,3,blah school,blah street,joe@gmail.com,You are joe,GC
+164508470,7,4,2017,237,3,blah school,blah street,joe@gmail.com,You are joe,GC
+675673169,6,5,2017,523,3,blah school,blah street,joe@gmail.com,You are joe,GC
+970020844,7,6,2016,311,3,blah school,blah street,joe@gmail.com,You are joe,GC
+390124015,3,5,2017,236,3,blah school,blah street,joe@gmail.com,You are joe,GC
+55102313,27,10,2017,166,2,blah school,blah street,joe@gmail.com,You are joe,GC
+677634386,20,10,2017,270,1,blah school,blah street,joe@gmail.com,You are joe,GC
+222542562,26,7,2017,497,0,blah school,blah street,joe@gmail.com,You are joe,GC
+797745144,2,5,2016,252,3,blah school,blah street,joe@gmail.com,You are joe,GC
+825495250,5,8,2016,255,1,blah school,blah street,joe@gmail.com,You are joe,GC
+680375520,12,8,2016,272,1,blah school,blah street,joe@gmail.com,You are joe,GC
+100144389,6,1,2017,392,1,blah school,blah street,joe@gmail.com,You are joe,GC
+901312332,7,8,2017,247,2,blah school,blah street,joe@gmail.com,You are joe,GC
+753020097,26,5,2017,358,3,blah school,blah street,joe@gmail.com,You are joe,GC
+363055460,11,1,2016,592,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1024568980,13,2,2017,342,3,blah school,blah street,joe@gmail.com,You are joe,GC
+656675835,25,1,2017,424,0,blah school,blah street,joe@gmail.com,You are joe,GC
+112065274,25,5,2017,363,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1042504569,15,9,2016,556,2,blah school,blah street,joe@gmail.com,You are joe,GC
+44377368,19,11,2017,441,3,blah school,blah street,joe@gmail.com,You are joe,GC
+786423115,24,9,2017,28,0,blah school,blah street,joe@gmail.com,You are joe,GC
+780126866,18,0,2016,196,0,blah school,blah street,joe@gmail.com,You are joe,GC
+280805715,26,10,2017,159,1,blah school,blah street,joe@gmail.com,You are joe,GC
+391337355,10,2,2017,566,3,blah school,blah street,joe@gmail.com,You are joe,GC
+649569297,29,10,2017,183,0,blah school,blah street,joe@gmail.com,You are joe,GC
+620010782,29,11,2017,577,3,blah school,blah street,joe@gmail.com,You are joe,GC
+664973839,16,0,2017,239,1,blah school,blah street,joe@gmail.com,You are joe,GC
+120553340,3,1,2017,547,0,blah school,blah street,joe@gmail.com,You are joe,GC
+955674398,12,3,2016,593,2,blah school,blah street,joe@gmail.com,You are joe,GC
+564188991,27,0,2017,201,2,blah school,blah street,joe@gmail.com,You are joe,GC
+400901404,6,7,2017,174,2,blah school,blah street,joe@gmail.com,You are joe,GC
+906317292,2,6,2017,371,0,blah school,blah street,joe@gmail.com,You are joe,GC
+415294006,22,0,2016,474,3,blah school,blah street,joe@gmail.com,You are joe,GC
+960284133,15,3,2017,586,0,blah school,blah street,joe@gmail.com,You are joe,GC
+211607535,28,4,2016,536,1,blah school,blah street,joe@gmail.com,You are joe,GC
+826443761,9,6,2016,43,3,blah school,blah street,joe@gmail.com,You are joe,GC
+747680821,16,2,2016,424,1,blah school,blah street,joe@gmail.com,You are joe,GC
+595032302,14,3,2016,590,0,blah school,blah street,joe@gmail.com,You are joe,GC
+322832071,14,9,2017,393,1,blah school,blah street,joe@gmail.com,You are joe,GC
+824266138,8,1,2016,115,2,blah school,blah street,joe@gmail.com,You are joe,GC
+169999128,3,0,2016,45,3,blah school,blah street,joe@gmail.com,You are joe,GC
+772336041,26,10,2017,555,3,blah school,blah street,joe@gmail.com,You are joe,GC
+774143594,17,0,2017,490,2,blah school,blah street,joe@gmail.com,You are joe,GC
+308698868,15,6,2016,376,3,blah school,blah street,joe@gmail.com,You are joe,GC
+373305327,30,9,2016,234,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1062555182,14,10,2016,359,0,blah school,blah street,joe@gmail.com,You are joe,GC
+460760869,5,7,2016,513,3,blah school,blah street,joe@gmail.com,You are joe,GC
+853263130,13,7,2016,284,1,blah school,blah street,joe@gmail.com,You are joe,GC
+82949300,1,1,2016,584,2,blah school,blah street,joe@gmail.com,You are joe,GC
+352316219,6,7,2016,185,1,blah school,blah street,joe@gmail.com,You are joe,GC
+388978872,21,6,2017,512,0,blah school,blah street,joe@gmail.com,You are joe,GC
+46527340,29,10,2017,157,3,blah school,blah street,joe@gmail.com,You are joe,GC
+852434240,29,2,2016,371,2,blah school,blah street,joe@gmail.com,You are joe,GC
+502916779,11,5,2016,158,0,blah school,blah street,joe@gmail.com,You are joe,GC
+661091588,2,9,2017,180,0,blah school,blah street,joe@gmail.com,You are joe,GC
+197783077,16,1,2017,539,3,blah school,blah street,joe@gmail.com,You are joe,GC
+921274957,27,10,2016,286,0,blah school,blah street,joe@gmail.com,You are joe,GC
+666635575,15,8,2016,385,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1061042363,9,2,2017,269,2,blah school,blah street,joe@gmail.com,You are joe,GC
+779489277,5,9,2016,313,0,blah school,blah street,joe@gmail.com,You are joe,GC
+884909701,24,4,2016,592,0,blah school,blah street,joe@gmail.com,You are joe,GC
+779329811,21,7,2017,143,0,blah school,blah street,joe@gmail.com,You are joe,GC
+271959164,1,5,2017,233,3,blah school,blah street,joe@gmail.com,You are joe,GC
+664087536,22,10,2016,208,2,blah school,blah street,joe@gmail.com,You are joe,GC
+365542167,22,5,2016,485,2,blah school,blah street,joe@gmail.com,You are joe,GC
+315741788,1,10,2016,387,3,blah school,blah street,joe@gmail.com,You are joe,GC
+476163666,31,2,2016,311,1,blah school,blah street,joe@gmail.com,You are joe,GC
+833435666,18,5,2017,47,1,blah school,blah street,joe@gmail.com,You are joe,GC
+972001698,29,9,2016,149,3,blah school,blah street,joe@gmail.com,You are joe,GC
+112834532,2,3,2016,512,3,blah school,blah street,joe@gmail.com,You are joe,GC
+516258135,4,7,2017,566,3,blah school,blah street,joe@gmail.com,You are joe,GC
+163865054,9,4,2017,192,0,blah school,blah street,joe@gmail.com,You are joe,GC
+760548255,31,7,2017,72,0,blah school,blah street,joe@gmail.com,You are joe,GC
+12127434,30,0,2017,140,2,blah school,blah street,joe@gmail.com,You are joe,GC
+466710712,28,11,2016,281,2,blah school,blah street,joe@gmail.com,You are joe,GC
+895743758,5,5,2016,458,1,blah school,blah street,joe@gmail.com,You are joe,GC
+188046940,28,0,2016,130,3,blah school,blah street,joe@gmail.com,You are joe,GC
+350431302,18,9,2016,458,2,blah school,blah street,joe@gmail.com,You are joe,GC
+437671949,11,10,2017,446,2,blah school,blah street,joe@gmail.com,You are joe,GC
+856680210,13,8,2017,585,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1052639597,7,10,2016,219,2,blah school,blah street,joe@gmail.com,You are joe,GC
+606422408,3,9,2016,436,2,blah school,blah street,joe@gmail.com,You are joe,GC
+189211583,8,6,2016,162,0,blah school,blah street,joe@gmail.com,You are joe,GC
+903264771,30,9,2017,386,3,blah school,blah street,joe@gmail.com,You are joe,GC
+196987070,12,0,2017,108,1,blah school,blah street,joe@gmail.com,You are joe,GC
+911920683,7,9,2017,92,0,blah school,blah street,joe@gmail.com,You are joe,GC
+946428474,1,1,2017,567,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1057523075,5,3,2017,97,2,blah school,blah street,joe@gmail.com,You are joe,GC
+87573934,19,3,2017,401,1,blah school,blah street,joe@gmail.com,You are joe,GC
+416152526,8,3,2016,251,0,blah school,blah street,joe@gmail.com,You are joe,GC
+351218349,17,2,2016,124,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1010703624,1,11,2017,7,0,blah school,blah street,joe@gmail.com,You are joe,GC
+31418921,27,7,2016,246,1,blah school,blah street,joe@gmail.com,You are joe,GC
+868688373,15,8,2016,374,3,blah school,blah street,joe@gmail.com,You are joe,GC
+384583543,28,10,2017,504,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1012633118,18,9,2017,198,1,blah school,blah street,joe@gmail.com,You are joe,GC
+21765393,5,2,2016,288,0,blah school,blah street,joe@gmail.com,You are joe,GC
+626317741,28,9,2016,374,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1037928302,19,1,2017,551,0,blah school,blah street,joe@gmail.com,You are joe,GC
+114167743,18,7,2017,202,0,blah school,blah street,joe@gmail.com,You are joe,GC
+639160940,29,4,2017,510,0,blah school,blah street,joe@gmail.com,You are joe,GC
+453744661,16,5,2016,50,1,blah school,blah street,joe@gmail.com,You are joe,GC
+888243190,3,1,2016,327,1,blah school,blah street,joe@gmail.com,You are joe,GC
+369626266,23,1,2016,566,1,blah school,blah street,joe@gmail.com,You are joe,GC
+686294055,16,6,2017,246,0,blah school,blah street,joe@gmail.com,You are joe,GC
+425483908,26,2,2017,295,2,blah school,blah street,joe@gmail.com,You are joe,GC
+312590776,5,2,2017,229,3,blah school,blah street,joe@gmail.com,You are joe,GC
+527226047,27,7,2017,37,3,blah school,blah street,joe@gmail.com,You are joe,GC
+296890220,15,11,2017,96,1,blah school,blah street,joe@gmail.com,You are joe,GC
+397572234,9,2,2017,84,0,blah school,blah street,joe@gmail.com,You are joe,GC
+571424894,21,9,2016,224,3,blah school,blah street,joe@gmail.com,You are joe,GC
+22550219,1,7,2016,36,3,blah school,blah street,joe@gmail.com,You are joe,GC
+823611146,4,10,2016,119,0,blah school,blah street,joe@gmail.com,You are joe,GC
+415712581,4,11,2016,173,1,blah school,blah street,joe@gmail.com,You are joe,GC
+63221608,4,6,2017,277,2,blah school,blah street,joe@gmail.com,You are joe,GC
+749729393,25,6,2017,116,0,blah school,blah street,joe@gmail.com,You are joe,GC
+886561334,18,7,2017,310,3,blah school,blah street,joe@gmail.com,You are joe,GC
+994283171,27,0,2017,93,1,blah school,blah street,joe@gmail.com,You are joe,GC
+711114331,6,7,2017,275,0,blah school,blah street,joe@gmail.com,You are joe,GC
+879975340,29,1,2016,489,2,blah school,blah street,joe@gmail.com,You are joe,GC
+479448494,17,2,2017,265,2,blah school,blah street,joe@gmail.com,You are joe,GC
+715434507,9,4,2016,366,0,blah school,blah street,joe@gmail.com,You are joe,GC
+203793537,14,10,2016,409,3,blah school,blah street,joe@gmail.com,You are joe,GC
+482253648,29,11,2017,230,1,blah school,blah street,joe@gmail.com,You are joe,GC
+496718749,5,4,2016,270,0,blah school,blah street,joe@gmail.com,You are joe,GC
+113036420,24,3,2016,194,0,blah school,blah street,joe@gmail.com,You are joe,GC
+343276950,28,3,2017,386,2,blah school,blah street,joe@gmail.com,You are joe,GC
+435017914,13,11,2016,512,2,blah school,blah street,joe@gmail.com,You are joe,GC
+677671922,1,10,2016,178,1,blah school,blah street,joe@gmail.com,You are joe,GC
+388607080,19,0,2017,74,2,blah school,blah street,joe@gmail.com,You are joe,GC
+217427083,14,11,2017,418,0,blah school,blah street,joe@gmail.com,You are joe,GC
+265716160,22,10,2017,479,0,blah school,blah street,joe@gmail.com,You are joe,GC
+476143600,20,11,2016,311,1,blah school,blah street,joe@gmail.com,You are joe,GC
+233571355,5,8,2017,582,1,blah school,blah street,joe@gmail.com,You are joe,GC
+727138374,26,4,2017,262,2,blah school,blah street,joe@gmail.com,You are joe,GC
+761052141,3,6,2017,400,1,blah school,blah street,joe@gmail.com,You are joe,GC
+215056101,2,3,2017,162,3,blah school,blah street,joe@gmail.com,You are joe,GC
+967277169,8,8,2017,372,1,blah school,blah street,joe@gmail.com,You are joe,GC
+272885988,2,9,2016,233,3,blah school,blah street,joe@gmail.com,You are joe,GC
+603441614,6,8,2016,420,0,blah school,blah street,joe@gmail.com,You are joe,GC
+270919798,17,5,2016,501,3,blah school,blah street,joe@gmail.com,You are joe,GC
+336156624,6,4,2016,14,0,blah school,blah street,joe@gmail.com,You are joe,GC
+902227937,4,5,2016,273,0,blah school,blah street,joe@gmail.com,You are joe,GC
+308359926,3,10,2016,25,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1062057130,9,2,2017,26,2,blah school,blah street,joe@gmail.com,You are joe,GC
+721622879,5,11,2017,247,2,blah school,blah street,joe@gmail.com,You are joe,GC
+509377517,22,2,2016,29,3,blah school,blah street,joe@gmail.com,You are joe,GC
+15510935,8,4,2016,292,2,blah school,blah street,joe@gmail.com,You are joe,GC
+376080634,18,10,2017,52,0,blah school,blah street,joe@gmail.com,You are joe,GC
+126864345,15,0,2016,575,0,blah school,blah street,joe@gmail.com,You are joe,GC
+145039046,12,6,2016,408,1,blah school,blah street,joe@gmail.com,You are joe,GC
+328589781,1,5,2017,59,3,blah school,blah street,joe@gmail.com,You are joe,GC
+606785561,3,8,2017,552,3,blah school,blah street,joe@gmail.com,You are joe,GC
+914508250,11,0,2017,149,1,blah school,blah street,joe@gmail.com,You are joe,GC
+465742661,29,1,2016,416,1,blah school,blah street,joe@gmail.com,You are joe,GC
+322132577,16,3,2017,594,3,blah school,blah street,joe@gmail.com,You are joe,GC
+639716463,28,10,2016,29,0,blah school,blah street,joe@gmail.com,You are joe,GC
+731733435,19,8,2016,454,1,blah school,blah street,joe@gmail.com,You are joe,GC
+234098057,10,10,2017,341,2,blah school,blah street,joe@gmail.com,You are joe,GC
+946783615,17,8,2016,356,1,blah school,blah street,joe@gmail.com,You are joe,GC
+764881248,1,5,2016,190,2,blah school,blah street,joe@gmail.com,You are joe,GC
+22198169,23,10,2017,347,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1006227479,10,2,2017,401,2,blah school,blah street,joe@gmail.com,You are joe,GC
+989331789,19,8,2016,182,2,blah school,blah street,joe@gmail.com,You are joe,GC
+354434182,22,7,2017,450,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1071901909,23,3,2016,380,2,blah school,blah street,joe@gmail.com,You are joe,GC
+861980340,5,0,2016,280,0,blah school,blah street,joe@gmail.com,You are joe,GC
+273334627,18,10,2017,70,0,blah school,blah street,joe@gmail.com,You are joe,GC
+756768304,18,10,2017,508,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1047959707,10,7,2017,398,1,blah school,blah street,joe@gmail.com,You are joe,GC
+103338147,17,10,2016,189,1,blah school,blah street,joe@gmail.com,You are joe,GC
+799368403,8,10,2016,365,3,blah school,blah street,joe@gmail.com,You are joe,GC
+189360284,16,8,2016,439,2,blah school,blah street,joe@gmail.com,You are joe,GC
+929968494,29,6,2017,26,3,blah school,blah street,joe@gmail.com,You are joe,GC
+686832802,14,5,2016,265,3,blah school,blah street,joe@gmail.com,You are joe,GC
+585812396,9,0,2017,505,0,blah school,blah street,joe@gmail.com,You are joe,GC
+492836776,30,2,2016,256,3,blah school,blah street,joe@gmail.com,You are joe,GC
+229784109,23,2,2017,292,1,blah school,blah street,joe@gmail.com,You are joe,GC
+196499398,30,2,2016,508,3,blah school,blah street,joe@gmail.com,You are joe,GC
+331459579,29,4,2016,156,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1020960035,3,6,2016,83,0,blah school,blah street,joe@gmail.com,You are joe,GC
+971265659,27,3,2016,574,2,blah school,blah street,joe@gmail.com,You are joe,GC
+391362518,12,3,2016,525,2,blah school,blah street,joe@gmail.com,You are joe,GC
+330340500,15,7,2017,154,1,blah school,blah street,joe@gmail.com,You are joe,GC
+836735399,24,6,2017,483,2,blah school,blah street,joe@gmail.com,You are joe,GC
+35749471,1,11,2017,75,0,blah school,blah street,joe@gmail.com,You are joe,GC
+729559954,14,11,2016,201,0,blah school,blah street,joe@gmail.com,You are joe,GC
+274892131,21,6,2016,279,0,blah school,blah street,joe@gmail.com,You are joe,GC
+133765706,17,5,2016,292,0,blah school,blah street,joe@gmail.com,You are joe,GC
+379654403,26,10,2016,80,2,blah school,blah street,joe@gmail.com,You are joe,GC
+548125153,7,11,2016,249,3,blah school,blah street,joe@gmail.com,You are joe,GC
+451117353,14,3,2016,309,3,blah school,blah street,joe@gmail.com,You are joe,GC
+555923087,24,10,2016,360,3,blah school,blah street,joe@gmail.com,You are joe,GC
+699693784,15,9,2017,74,0,blah school,blah street,joe@gmail.com,You are joe,GC
+645327798,3,9,2016,263,0,blah school,blah street,joe@gmail.com,You are joe,GC
+699266682,25,7,2017,378,1,blah school,blah street,joe@gmail.com,You are joe,GC
+659090718,26,5,2016,280,0,blah school,blah street,joe@gmail.com,You are joe,GC
+544527696,20,3,2017,257,1,blah school,blah street,joe@gmail.com,You are joe,GC
+218985347,20,5,2017,581,1,blah school,blah street,joe@gmail.com,You are joe,GC
+546535578,21,6,2017,351,1,blah school,blah street,joe@gmail.com,You are joe,GC
+428800531,18,0,2016,394,3,blah school,blah street,joe@gmail.com,You are joe,GC
+354950049,1,11,2016,397,2,blah school,blah street,joe@gmail.com,You are joe,GC
+909329808,27,4,2016,7,3,blah school,blah street,joe@gmail.com,You are joe,GC
+159122796,15,8,2016,225,3,blah school,blah street,joe@gmail.com,You are joe,GC
+465199555,15,5,2017,197,2,blah school,blah street,joe@gmail.com,You are joe,GC
+713278766,20,10,2017,274,0,blah school,blah street,joe@gmail.com,You are joe,GC
+868306835,1,0,2016,165,0,blah school,blah street,joe@gmail.com,You are joe,GC
+476997980,25,6,2017,584,2,blah school,blah street,joe@gmail.com,You are joe,GC
+281898197,27,11,2016,445,0,blah school,blah street,joe@gmail.com,You are joe,GC
+719484101,8,6,2016,178,3,blah school,blah street,joe@gmail.com,You are joe,GC
+855099697,23,1,2016,26,1,blah school,blah street,joe@gmail.com,You are joe,GC
+924860124,25,7,2016,102,3,blah school,blah street,joe@gmail.com,You are joe,GC
+94778718,25,4,2016,435,1,blah school,blah street,joe@gmail.com,You are joe,GC
+193639383,21,5,2016,331,3,blah school,blah street,joe@gmail.com,You are joe,GC
+777885768,25,2,2016,383,2,blah school,blah street,joe@gmail.com,You are joe,GC
+424731596,19,10,2017,478,3,blah school,blah street,joe@gmail.com,You are joe,GC
+130317827,15,1,2016,269,0,blah school,blah street,joe@gmail.com,You are joe,GC
+339247440,7,0,2016,2,2,blah school,blah street,joe@gmail.com,You are joe,GC
+493380822,26,9,2016,554,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1042386855,25,4,2017,480,2,blah school,blah street,joe@gmail.com,You are joe,GC
+840305448,16,5,2016,387,3,blah school,blah street,joe@gmail.com,You are joe,GC
+539451136,21,9,2016,77,1,blah school,blah street,joe@gmail.com,You are joe,GC
+179932449,19,9,2017,48,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1060429929,8,0,2016,174,3,blah school,blah street,joe@gmail.com,You are joe,GC
+944122871,10,10,2017,359,2,blah school,blah street,joe@gmail.com,You are joe,GC
+212735321,16,4,2016,36,0,blah school,blah street,joe@gmail.com,You are joe,GC
+509619458,3,1,2017,573,3,blah school,blah street,joe@gmail.com,You are joe,GC
+825897822,26,1,2016,259,0,blah school,blah street,joe@gmail.com,You are joe,GC
+823419923,8,1,2016,231,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1053706012,16,1,2017,532,0,blah school,blah street,joe@gmail.com,You are joe,GC
+951224878,2,11,2016,429,0,blah school,blah street,joe@gmail.com,You are joe,GC
+739841752,15,4,2016,543,2,blah school,blah street,joe@gmail.com,You are joe,GC
+201995280,1,5,2017,422,3,blah school,blah street,joe@gmail.com,You are joe,GC
+186705189,31,6,2017,130,3,blah school,blah street,joe@gmail.com,You are joe,GC
+16333970,25,2,2016,56,3,blah school,blah street,joe@gmail.com,You are joe,GC
+630024797,15,3,2016,2,3,blah school,blah street,joe@gmail.com,You are joe,GC
+218033083,1,5,2017,116,1,blah school,blah street,joe@gmail.com,You are joe,GC
+452211626,20,10,2016,30,3,blah school,blah street,joe@gmail.com,You are joe,GC
+239978642,29,8,2017,478,2,blah school,blah street,joe@gmail.com,You are joe,GC
+289728643,17,2,2016,20,2,blah school,blah street,joe@gmail.com,You are joe,GC
+889996713,19,6,2017,132,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1010049781,6,1,2017,186,1,blah school,blah street,joe@gmail.com,You are joe,GC
+68528190,21,9,2017,423,3,blah school,blah street,joe@gmail.com,You are joe,GC
+641584939,27,6,2016,427,3,blah school,blah street,joe@gmail.com,You are joe,GC
+72082575,10,1,2016,227,2,blah school,blah street,joe@gmail.com,You are joe,GC
+595624111,19,8,2016,86,1,blah school,blah street,joe@gmail.com,You are joe,GC
+474358556,4,5,2017,249,3,blah school,blah street,joe@gmail.com,You are joe,GC
+710597616,11,2,2016,330,3,blah school,blah street,joe@gmail.com,You are joe,GC
+987737720,26,3,2017,352,1,blah school,blah street,joe@gmail.com,You are joe,GC
+891763047,11,9,2016,47,3,blah school,blah street,joe@gmail.com,You are joe,GC
+724415655,25,2,2017,480,3,blah school,blah street,joe@gmail.com,You are joe,GC
+74885895,23,10,2017,26,3,blah school,blah street,joe@gmail.com,You are joe,GC
+773424504,22,2,2017,100,2,blah school,blah street,joe@gmail.com,You are joe,GC
+460438238,6,8,2016,240,0,blah school,blah street,joe@gmail.com,You are joe,GC
+314091348,19,4,2016,444,0,blah school,blah street,joe@gmail.com,You are joe,GC
+745258488,9,6,2017,490,1,blah school,blah street,joe@gmail.com,You are joe,GC
+821541502,17,3,2016,37,0,blah school,blah street,joe@gmail.com,You are joe,GC
+60375839,18,9,2016,107,2,blah school,blah street,joe@gmail.com,You are joe,GC
+403649907,11,8,2017,406,3,blah school,blah street,joe@gmail.com,You are joe,GC
+635905430,22,3,2017,444,2,blah school,blah street,joe@gmail.com,You are joe,GC
+745379924,17,4,2017,387,1,blah school,blah street,joe@gmail.com,You are joe,GC
+642593678,24,4,2017,553,3,blah school,blah street,joe@gmail.com,You are joe,GC
+511718466,23,8,2017,20,3,blah school,blah street,joe@gmail.com,You are joe,GC
+917315303,24,2,2017,496,3,blah school,blah street,joe@gmail.com,You are joe,GC
+269794442,26,1,2016,247,1,blah school,blah street,joe@gmail.com,You are joe,GC
+670026501,1,10,2017,261,2,blah school,blah street,joe@gmail.com,You are joe,GC
+947799593,28,6,2016,472,0,blah school,blah street,joe@gmail.com,You are joe,GC
+120789314,5,6,2017,206,0,blah school,blah street,joe@gmail.com,You are joe,GC
+69436527,16,8,2016,491,3,blah school,blah street,joe@gmail.com,You are joe,GC
+151054635,25,1,2016,238,0,blah school,blah street,joe@gmail.com,You are joe,GC
+570866252,16,6,2017,192,1,blah school,blah street,joe@gmail.com,You are joe,GC
+186060454,11,9,2017,422,2,blah school,blah street,joe@gmail.com,You are joe,GC
+532360307,22,2,2016,519,0,blah school,blah street,joe@gmail.com,You are joe,GC
+432742794,4,2,2017,561,0,blah school,blah street,joe@gmail.com,You are joe,GC
+704747980,10,7,2016,323,0,blah school,blah street,joe@gmail.com,You are joe,GC
+682382397,29,5,2016,431,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1057766858,27,5,2016,264,2,blah school,blah street,joe@gmail.com,You are joe,GC
+779613566,2,11,2016,483,1,blah school,blah street,joe@gmail.com,You are joe,GC
+747344180,7,7,2017,66,2,blah school,blah street,joe@gmail.com,You are joe,GC
+990294923,2,3,2017,589,2,blah school,blah street,joe@gmail.com,You are joe,GC
+810435451,24,1,2017,447,1,blah school,blah street,joe@gmail.com,You are joe,GC
+804373986,13,4,2016,586,3,blah school,blah street,joe@gmail.com,You are joe,GC
+652320948,28,9,2017,173,0,blah school,blah street,joe@gmail.com,You are joe,GC
+969072537,17,8,2017,337,1,blah school,blah street,joe@gmail.com,You are joe,GC
+495346459,2,5,2017,373,3,blah school,blah street,joe@gmail.com,You are joe,GC
+738418834,31,7,2016,316,0,blah school,blah street,joe@gmail.com,You are joe,GC
+354140790,21,8,2016,65,0,blah school,blah street,joe@gmail.com,You are joe,GC
+275758376,27,2,2017,338,3,blah school,blah street,joe@gmail.com,You are joe,GC
+406717581,10,2,2016,10,1,blah school,blah street,joe@gmail.com,You are joe,GC
+520180891,3,0,2016,268,3,blah school,blah street,joe@gmail.com,You are joe,GC
+268019439,16,1,2016,94,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1017216637,8,10,2016,34,3,blah school,blah street,joe@gmail.com,You are joe,GC
+181730162,8,10,2017,519,1,blah school,blah street,joe@gmail.com,You are joe,GC
+116215186,20,4,2016,169,2,blah school,blah street,joe@gmail.com,You are joe,GC
+276232170,24,5,2016,223,0,blah school,blah street,joe@gmail.com,You are joe,GC
+421225020,13,3,2016,233,0,blah school,blah street,joe@gmail.com,You are joe,GC
+643338661,1,3,2017,504,0,blah school,blah street,joe@gmail.com,You are joe,GC
+472707774,2,1,2016,454,2,blah school,blah street,joe@gmail.com,You are joe,GC
+267803540,23,4,2017,11,1,blah school,blah street,joe@gmail.com,You are joe,GC
+887621243,3,6,2016,430,0,blah school,blah street,joe@gmail.com,You are joe,GC
+383352051,2,1,2017,185,0,blah school,blah street,joe@gmail.com,You are joe,GC
+746435122,8,6,2016,458,1,blah school,blah street,joe@gmail.com,You are joe,GC
+218047100,8,2,2017,288,1,blah school,blah street,joe@gmail.com,You are joe,GC
+138358350,5,8,2017,334,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1072365781,27,1,2017,394,1,blah school,blah street,joe@gmail.com,You are joe,GC
+998205012,14,11,2017,123,0,blah school,blah street,joe@gmail.com,You are joe,GC
+302674976,28,0,2016,479,2,blah school,blah street,joe@gmail.com,You are joe,GC
+253888124,28,10,2016,102,1,blah school,blah street,joe@gmail.com,You are joe,GC
+22427830,24,2,2016,163,0,blah school,blah street,joe@gmail.com,You are joe,GC
+357446976,24,11,2017,598,0,blah school,blah street,joe@gmail.com,You are joe,GC
+583066217,14,8,2017,288,2,blah school,blah street,joe@gmail.com,You are joe,GC
+501889929,19,8,2017,191,2,blah school,blah street,joe@gmail.com,You are joe,GC
+981986814,4,11,2016,421,1,blah school,blah street,joe@gmail.com,You are joe,GC
+583407181,8,2,2017,320,2,blah school,blah street,joe@gmail.com,You are joe,GC
+856307399,12,11,2017,16,2,blah school,blah street,joe@gmail.com,You are joe,GC
+56670875,16,9,2016,457,0,blah school,blah street,joe@gmail.com,You are joe,GC
+749536819,25,4,2017,540,0,blah school,blah street,joe@gmail.com,You are joe,GC
+43296405,28,6,2016,149,0,blah school,blah street,joe@gmail.com,You are joe,GC
+10764705,24,9,2017,402,1,blah school,blah street,joe@gmail.com,You are joe,GC
+602423579,18,1,2016,552,1,blah school,blah street,joe@gmail.com,You are joe,GC
+882515284,6,8,2017,201,0,blah school,blah street,joe@gmail.com,You are joe,GC
+720060728,22,10,2016,578,1,blah school,blah street,joe@gmail.com,You are joe,GC
+536726857,6,9,2016,135,0,blah school,blah street,joe@gmail.com,You are joe,GC
+931151641,25,3,2017,86,3,blah school,blah street,joe@gmail.com,You are joe,GC
+374535169,13,5,2016,287,3,blah school,blah street,joe@gmail.com,You are joe,GC
+274017772,28,10,2017,198,3,blah school,blah street,joe@gmail.com,You are joe,GC
+783328153,6,3,2017,51,2,blah school,blah street,joe@gmail.com,You are joe,GC
+855143794,29,9,2016,515,3,blah school,blah street,joe@gmail.com,You are joe,GC
+95145010,5,1,2016,379,0,blah school,blah street,joe@gmail.com,You are joe,GC
+782213201,29,10,2016,159,2,blah school,blah street,joe@gmail.com,You are joe,GC
+736401133,19,5,2017,185,2,blah school,blah street,joe@gmail.com,You are joe,GC
+301789647,19,6,2016,8,2,blah school,blah street,joe@gmail.com,You are joe,GC
+34736173,12,7,2017,27,1,blah school,blah street,joe@gmail.com,You are joe,GC
+799293127,11,3,2017,16,0,blah school,blah street,joe@gmail.com,You are joe,GC
+962418280,29,2,2016,409,3,blah school,blah street,joe@gmail.com,You are joe,GC
+500018904,27,1,2017,467,3,blah school,blah street,joe@gmail.com,You are joe,GC
+203451231,6,5,2016,14,0,blah school,blah street,joe@gmail.com,You are joe,GC
+636609592,6,6,2016,564,2,blah school,blah street,joe@gmail.com,You are joe,GC
+760461047,20,1,2017,258,1,blah school,blah street,joe@gmail.com,You are joe,GC
+880621107,1,4,2017,104,1,blah school,blah street,joe@gmail.com,You are joe,GC
+569412079,11,5,2017,364,3,blah school,blah street,joe@gmail.com,You are joe,GC
+466787827,13,9,2016,220,0,blah school,blah street,joe@gmail.com,You are joe,GC
+669236372,22,11,2017,420,1,blah school,blah street,joe@gmail.com,You are joe,GC
+631570625,30,11,2016,177,3,blah school,blah street,joe@gmail.com,You are joe,GC
+349683635,28,8,2017,94,0,blah school,blah street,joe@gmail.com,You are joe,GC
+683695990,20,3,2017,22,2,blah school,blah street,joe@gmail.com,You are joe,GC
+406505652,7,2,2017,462,3,blah school,blah street,joe@gmail.com,You are joe,GC
+407494194,19,9,2017,324,2,blah school,blah street,joe@gmail.com,You are joe,GC
+465618258,30,5,2016,164,3,blah school,blah street,joe@gmail.com,You are joe,GC
+570726768,25,7,2017,69,3,blah school,blah street,joe@gmail.com,You are joe,GC
+365616230,26,9,2016,522,3,blah school,blah street,joe@gmail.com,You are joe,GC
+886521206,26,6,2017,263,1,blah school,blah street,joe@gmail.com,You are joe,GC
+761105315,25,6,2017,93,0,blah school,blah street,joe@gmail.com,You are joe,GC
+374012612,1,3,2016,378,1,blah school,blah street,joe@gmail.com,You are joe,GC
+83160542,24,2,2017,516,2,blah school,blah street,joe@gmail.com,You are joe,GC
+699989748,14,4,2016,429,0,blah school,blah street,joe@gmail.com,You are joe,GC
+274996567,2,0,2016,410,1,blah school,blah street,joe@gmail.com,You are joe,GC
+761993917,4,4,2017,246,3,blah school,blah street,joe@gmail.com,You are joe,GC
+909572895,20,9,2017,480,2,blah school,blah street,joe@gmail.com,You are joe,GC
+796719816,12,11,2017,279,2,blah school,blah street,joe@gmail.com,You are joe,GC
+801570804,16,0,2017,124,1,blah school,blah street,joe@gmail.com,You are joe,GC
+9458799,27,4,2017,228,0,blah school,blah street,joe@gmail.com,You are joe,GC
+439736252,15,2,2016,397,2,blah school,blah street,joe@gmail.com,You are joe,GC
+165940478,21,4,2017,395,1,blah school,blah street,joe@gmail.com,You are joe,GC
+217398817,12,7,2016,151,3,blah school,blah street,joe@gmail.com,You are joe,GC
+653976864,25,6,2016,552,0,blah school,blah street,joe@gmail.com,You are joe,GC
+88079448,1,4,2017,290,3,blah school,blah street,joe@gmail.com,You are joe,GC
+357323395,21,3,2016,15,0,blah school,blah street,joe@gmail.com,You are joe,GC
+764955232,9,11,2016,0,2,blah school,blah street,joe@gmail.com,You are joe,GC
+986875860,9,8,2016,356,0,blah school,blah street,joe@gmail.com,You are joe,GC
+885754676,1,9,2016,270,1,blah school,blah street,joe@gmail.com,You are joe,GC
+393077197,7,2,2016,64,0,blah school,blah street,joe@gmail.com,You are joe,GC
+748065466,27,7,2016,368,2,blah school,blah street,joe@gmail.com,You are joe,GC
+362352859,8,4,2016,466,0,blah school,blah street,joe@gmail.com,You are joe,GC
+683919776,22,1,2016,89,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1010679677,16,11,2017,367,3,blah school,blah street,joe@gmail.com,You are joe,GC
+849643834,2,2,2016,441,0,blah school,blah street,joe@gmail.com,You are joe,GC
+545331526,21,10,2017,65,3,blah school,blah street,joe@gmail.com,You are joe,GC
+454086523,28,7,2016,137,0,blah school,blah street,joe@gmail.com,You are joe,GC
+208224428,15,5,2017,134,3,blah school,blah street,joe@gmail.com,You are joe,GC
+232370506,19,10,2016,450,0,blah school,blah street,joe@gmail.com,You are joe,GC
+713248348,23,8,2016,404,0,blah school,blah street,joe@gmail.com,You are joe,GC
+719553299,24,9,2017,473,0,blah school,blah street,joe@gmail.com,You are joe,GC
+128814645,28,6,2017,546,0,blah school,blah street,joe@gmail.com,You are joe,GC
+348418327,3,1,2017,538,3,blah school,blah street,joe@gmail.com,You are joe,GC
+829491278,7,5,2017,235,1,blah school,blah street,joe@gmail.com,You are joe,GC
+198437372,2,5,2017,539,2,blah school,blah street,joe@gmail.com,You are joe,GC
+171523169,5,3,2017,437,0,blah school,blah street,joe@gmail.com,You are joe,GC
+395116737,13,1,2016,128,1,blah school,blah street,joe@gmail.com,You are joe,GC
+912666543,18,9,2017,594,2,blah school,blah street,joe@gmail.com,You are joe,GC
+430071908,10,5,2016,89,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1021167705,20,1,2017,322,1,blah school,blah street,joe@gmail.com,You are joe,GC
+327834400,20,7,2016,494,2,blah school,blah street,joe@gmail.com,You are joe,GC
+306458696,25,6,2016,272,0,blah school,blah street,joe@gmail.com,You are joe,GC
+796873089,6,7,2017,458,0,blah school,blah street,joe@gmail.com,You are joe,GC
+517089879,16,9,2017,445,3,blah school,blah street,joe@gmail.com,You are joe,GC
+876485034,26,10,2016,207,0,blah school,blah street,joe@gmail.com,You are joe,GC
+318712505,21,11,2017,574,0,blah school,blah street,joe@gmail.com,You are joe,GC
+975311946,15,0,2017,195,3,blah school,blah street,joe@gmail.com,You are joe,GC
+815018377,14,11,2017,451,1,blah school,blah street,joe@gmail.com,You are joe,GC
+751894842,26,7,2017,400,1,blah school,blah street,joe@gmail.com,You are joe,GC
+853655458,14,9,2017,47,0,blah school,blah street,joe@gmail.com,You are joe,GC
+290048053,3,11,2017,363,3,blah school,blah street,joe@gmail.com,You are joe,GC
+459110974,10,7,2017,130,1,blah school,blah street,joe@gmail.com,You are joe,GC
+279990284,4,9,2016,479,3,blah school,blah street,joe@gmail.com,You are joe,GC
+50217456,31,4,2016,291,1,blah school,blah street,joe@gmail.com,You are joe,GC
+849821114,8,7,2016,84,1,blah school,blah street,joe@gmail.com,You are joe,GC
+905654670,23,4,2016,298,2,blah school,blah street,joe@gmail.com,You are joe,GC
+720829993,16,5,2016,178,2,blah school,blah street,joe@gmail.com,You are joe,GC
+306255950,16,9,2016,461,1,blah school,blah street,joe@gmail.com,You are joe,GC
+191650122,21,1,2016,196,2,blah school,blah street,joe@gmail.com,You are joe,GC
+352317930,13,9,2017,390,0,blah school,blah street,joe@gmail.com,You are joe,GC
+45339158,20,3,2016,517,0,blah school,blah street,joe@gmail.com,You are joe,GC
+792321552,26,10,2017,553,2,blah school,blah street,joe@gmail.com,You are joe,GC
+764635284,5,8,2016,258,2,blah school,blah street,joe@gmail.com,You are joe,GC
+859773006,25,3,2017,156,1,blah school,blah street,joe@gmail.com,You are joe,GC
+751339356,8,7,2017,576,0,blah school,blah street,joe@gmail.com,You are joe,GC
+202778950,10,7,2017,30,0,blah school,blah street,joe@gmail.com,You are joe,GC
+303765833,10,1,2016,118,1,blah school,blah street,joe@gmail.com,You are joe,GC
+831793819,17,9,2017,121,2,blah school,blah street,joe@gmail.com,You are joe,GC
+431053561,10,0,2016,325,2,blah school,blah street,joe@gmail.com,You are joe,GC
+452765112,15,11,2016,424,0,blah school,blah street,joe@gmail.com,You are joe,GC
+287489051,6,5,2016,478,3,blah school,blah street,joe@gmail.com,You are joe,GC
+439378205,20,11,2016,214,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1020658918,26,7,2016,305,2,blah school,blah street,joe@gmail.com,You are joe,GC
+792807828,14,4,2017,184,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1060779400,19,11,2016,173,2,blah school,blah street,joe@gmail.com,You are joe,GC
+623344111,22,8,2016,93,2,blah school,blah street,joe@gmail.com,You are joe,GC
+435662567,6,4,2016,378,3,blah school,blah street,joe@gmail.com,You are joe,GC
+606162574,11,2,2017,171,1,blah school,blah street,joe@gmail.com,You are joe,GC
+51128789,2,0,2016,160,3,blah school,blah street,joe@gmail.com,You are joe,GC
+234143356,9,3,2016,561,1,blah school,blah street,joe@gmail.com,You are joe,GC
+173734248,17,8,2016,255,0,blah school,blah street,joe@gmail.com,You are joe,GC
+467214107,17,7,2016,215,0,blah school,blah street,joe@gmail.com,You are joe,GC
+538051797,25,6,2017,325,0,blah school,blah street,joe@gmail.com,You are joe,GC
+421061245,20,1,2017,43,2,blah school,blah street,joe@gmail.com,You are joe,GC
+33758085,16,5,2017,10,1,blah school,blah street,joe@gmail.com,You are joe,GC
+196864057,8,10,2017,82,1,blah school,blah street,joe@gmail.com,You are joe,GC
+367398934,4,9,2017,309,0,blah school,blah street,joe@gmail.com,You are joe,GC
+86847930,16,7,2017,299,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1056974914,31,0,2016,536,3,blah school,blah street,joe@gmail.com,You are joe,GC
+122185712,12,6,2017,133,1,blah school,blah street,joe@gmail.com,You are joe,GC
+608212305,4,7,2017,171,2,blah school,blah street,joe@gmail.com,You are joe,GC
+654944137,20,6,2016,55,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1045702296,24,6,2016,334,3,blah school,blah street,joe@gmail.com,You are joe,GC
+122270022,15,1,2017,505,0,blah school,blah street,joe@gmail.com,You are joe,GC
+94785497,6,4,2017,506,0,blah school,blah street,joe@gmail.com,You are joe,GC
+278076527,11,2,2017,79,3,blah school,blah street,joe@gmail.com,You are joe,GC
+340670945,9,9,2016,566,2,blah school,blah street,joe@gmail.com,You are joe,GC
+845689571,30,7,2017,189,0,blah school,blah street,joe@gmail.com,You are joe,GC
+871389415,11,1,2017,442,0,blah school,blah street,joe@gmail.com,You are joe,GC
+846162710,15,7,2016,338,3,blah school,blah street,joe@gmail.com,You are joe,GC
+407208768,3,3,2017,72,3,blah school,blah street,joe@gmail.com,You are joe,GC
+741817128,15,8,2016,417,2,blah school,blah street,joe@gmail.com,You are joe,GC
+488656172,10,4,2017,214,1,blah school,blah street,joe@gmail.com,You are joe,GC
+711773399,7,1,2017,587,3,blah school,blah street,joe@gmail.com,You are joe,GC
+278882634,18,1,2016,339,1,blah school,blah street,joe@gmail.com,You are joe,GC
+643644303,11,8,2017,26,0,blah school,blah street,joe@gmail.com,You are joe,GC
+639022372,14,11,2017,437,2,blah school,blah street,joe@gmail.com,You are joe,GC
+188159663,9,8,2016,251,1,blah school,blah street,joe@gmail.com,You are joe,GC
+239385955,12,6,2017,114,0,blah school,blah street,joe@gmail.com,You are joe,GC
+503985398,16,9,2016,24,1,blah school,blah street,joe@gmail.com,You are joe,GC
+129920193,28,8,2017,483,3,blah school,blah street,joe@gmail.com,You are joe,GC
+251046627,30,8,2017,293,0,blah school,blah street,joe@gmail.com,You are joe,GC
+949899290,10,9,2016,381,2,blah school,blah street,joe@gmail.com,You are joe,GC
+169907938,5,3,2016,27,3,blah school,blah street,joe@gmail.com,You are joe,GC
+213589126,10,10,2017,212,3,blah school,blah street,joe@gmail.com,You are joe,GC
+820715307,14,3,2016,360,2,blah school,blah street,joe@gmail.com,You are joe,GC
+657969028,5,9,2016,469,0,blah school,blah street,joe@gmail.com,You are joe,GC
+262643432,22,10,2017,122,0,blah school,blah street,joe@gmail.com,You are joe,GC
+479616995,1,6,2017,21,2,blah school,blah street,joe@gmail.com,You are joe,GC
+199922238,29,4,2016,551,2,blah school,blah street,joe@gmail.com,You are joe,GC
+772608536,28,0,2017,218,3,blah school,blah street,joe@gmail.com,You are joe,GC
+205072450,12,4,2017,270,0,blah school,blah street,joe@gmail.com,You are joe,GC
+429588094,1,11,2016,566,0,blah school,blah street,joe@gmail.com,You are joe,GC
+670545135,8,9,2016,486,1,blah school,blah street,joe@gmail.com,You are joe,GC
+911895708,13,0,2016,304,2,blah school,blah street,joe@gmail.com,You are joe,GC
+370366924,7,8,2016,446,0,blah school,blah street,joe@gmail.com,You are joe,GC
+219510182,13,10,2017,95,2,blah school,blah street,joe@gmail.com,You are joe,GC
+378046130,25,10,2016,64,1,blah school,blah street,joe@gmail.com,You are joe,GC
+753022383,28,1,2017,308,0,blah school,blah street,joe@gmail.com,You are joe,GC
+858686231,17,1,2016,561,3,blah school,blah street,joe@gmail.com,You are joe,GC
+550652348,31,7,2017,438,2,blah school,blah street,joe@gmail.com,You are joe,GC
+712501213,13,3,2017,461,2,blah school,blah street,joe@gmail.com,You are joe,GC
+540662204,4,0,2017,381,3,blah school,blah street,joe@gmail.com,You are joe,GC
+973252498,11,11,2017,222,3,blah school,blah street,joe@gmail.com,You are joe,GC
+589171701,18,6,2017,185,0,blah school,blah street,joe@gmail.com,You are joe,GC
+774914058,3,3,2017,565,2,blah school,blah street,joe@gmail.com,You are joe,GC
+199393889,12,10,2016,78,0,blah school,blah street,joe@gmail.com,You are joe,GC
+120731505,25,3,2016,123,1,blah school,blah street,joe@gmail.com,You are joe,GC
+260712992,25,9,2017,89,0,blah school,blah street,joe@gmail.com,You are joe,GC
+101881278,19,5,2017,62,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1010636673,26,5,2016,571,1,blah school,blah street,joe@gmail.com,You are joe,GC
+74191066,16,4,2017,143,3,blah school,blah street,joe@gmail.com,You are joe,GC
+45046659,7,8,2016,308,1,blah school,blah street,joe@gmail.com,You are joe,GC
+487075550,29,6,2017,290,3,blah school,blah street,joe@gmail.com,You are joe,GC
+815501214,31,11,2016,310,0,blah school,blah street,joe@gmail.com,You are joe,GC
+52699784,21,0,2016,158,0,blah school,blah street,joe@gmail.com,You are joe,GC
+244701794,24,5,2016,267,1,blah school,blah street,joe@gmail.com,You are joe,GC
+344407342,6,0,2016,178,0,blah school,blah street,joe@gmail.com,You are joe,GC
+573610241,23,5,2017,365,3,blah school,blah street,joe@gmail.com,You are joe,GC
+832874606,20,9,2017,433,1,blah school,blah street,joe@gmail.com,You are joe,GC
+8531039,14,3,2017,223,1,blah school,blah street,joe@gmail.com,You are joe,GC
+210460592,15,3,2016,232,2,blah school,blah street,joe@gmail.com,You are joe,GC
+337331125,29,5,2016,275,0,blah school,blah street,joe@gmail.com,You are joe,GC
+100971902,21,5,2016,458,2,blah school,blah street,joe@gmail.com,You are joe,GC
+527237628,18,3,2016,190,1,blah school,blah street,joe@gmail.com,You are joe,GC
+62727597,1,3,2016,210,3,blah school,blah street,joe@gmail.com,You are joe,GC
+952546979,12,10,2017,34,3,blah school,blah street,joe@gmail.com,You are joe,GC
+114118767,25,2,2016,141,0,blah school,blah street,joe@gmail.com,You are joe,GC
+979337233,19,10,2017,523,0,blah school,blah street,joe@gmail.com,You are joe,GC
+293621117,22,7,2016,553,2,blah school,blah street,joe@gmail.com,You are joe,GC
+167393324,8,11,2017,148,2,blah school,blah street,joe@gmail.com,You are joe,GC
+805927821,13,11,2016,13,0,blah school,blah street,joe@gmail.com,You are joe,GC
+941633156,3,7,2017,91,1,blah school,blah street,joe@gmail.com,You are joe,GC
+665529981,27,2,2016,491,3,blah school,blah street,joe@gmail.com,You are joe,GC
+448994322,18,10,2016,578,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1017932674,29,8,2017,118,3,blah school,blah street,joe@gmail.com,You are joe,GC
+310101236,29,0,2016,113,1,blah school,blah street,joe@gmail.com,You are joe,GC
+334311290,17,4,2017,159,0,blah school,blah street,joe@gmail.com,You are joe,GC
+594180846,10,9,2016,238,2,blah school,blah street,joe@gmail.com,You are joe,GC
+499011793,6,1,2017,167,3,blah school,blah street,joe@gmail.com,You are joe,GC
+394208708,11,3,2017,475,0,blah school,blah street,joe@gmail.com,You are joe,GC
+655864224,27,10,2017,118,3,blah school,blah street,joe@gmail.com,You are joe,GC
+993614829,9,4,2017,458,1,blah school,blah street,joe@gmail.com,You are joe,GC
+510375089,25,7,2017,184,0,blah school,blah street,joe@gmail.com,You are joe,GC
+197710685,16,11,2017,363,2,blah school,blah street,joe@gmail.com,You are joe,GC
+353117174,5,9,2017,562,1,blah school,blah street,joe@gmail.com,You are joe,GC
+969951327,23,9,2017,99,0,blah school,blah street,joe@gmail.com,You are joe,GC
+292407279,16,8,2016,95,2,blah school,blah street,joe@gmail.com,You are joe,GC
+906564819,3,8,2017,26,2,blah school,blah street,joe@gmail.com,You are joe,GC
+329811935,4,1,2017,161,1,blah school,blah street,joe@gmail.com,You are joe,GC
+913171763,13,8,2017,9,2,blah school,blah street,joe@gmail.com,You are joe,GC
+58274894,3,4,2016,448,2,blah school,blah street,joe@gmail.com,You are joe,GC
+187620990,13,10,2017,367,0,blah school,blah street,joe@gmail.com,You are joe,GC
+272359871,7,11,2017,274,0,blah school,blah street,joe@gmail.com,You are joe,GC
+236155314,1,1,2016,269,2,blah school,blah street,joe@gmail.com,You are joe,GC
+451508867,5,6,2017,18,0,blah school,blah street,joe@gmail.com,You are joe,GC
+338329522,7,5,2017,339,2,blah school,blah street,joe@gmail.com,You are joe,GC
+231538540,8,10,2017,203,2,blah school,blah street,joe@gmail.com,You are joe,GC
+515639225,3,2,2017,273,2,blah school,blah street,joe@gmail.com,You are joe,GC
+898541067,20,1,2017,415,0,blah school,blah street,joe@gmail.com,You are joe,GC
+214553676,31,11,2017,474,2,blah school,blah street,joe@gmail.com,You are joe,GC
+45582376,23,10,2017,89,2,blah school,blah street,joe@gmail.com,You are joe,GC
+607663101,2,6,2016,350,2,blah school,blah street,joe@gmail.com,You are joe,GC
+657347705,6,7,2016,512,0,blah school,blah street,joe@gmail.com,You are joe,GC
+283217196,7,5,2017,137,2,blah school,blah street,joe@gmail.com,You are joe,GC
+841076823,18,9,2017,504,3,blah school,blah street,joe@gmail.com,You are joe,GC
+839545991,5,9,2017,546,3,blah school,blah street,joe@gmail.com,You are joe,GC
+207769181,4,6,2016,488,1,blah school,blah street,joe@gmail.com,You are joe,GC
+408595748,17,11,2017,280,3,blah school,blah street,joe@gmail.com,You are joe,GC
+879611334,3,5,2016,510,1,blah school,blah street,joe@gmail.com,You are joe,GC
+308123108,29,8,2016,585,2,blah school,blah street,joe@gmail.com,You are joe,GC
+247221297,13,1,2017,277,0,blah school,blah street,joe@gmail.com,You are joe,GC
+729147676,21,9,2017,391,2,blah school,blah street,joe@gmail.com,You are joe,GC
+933016508,13,0,2017,52,1,blah school,blah street,joe@gmail.com,You are joe,GC
+120076669,24,3,2017,82,2,blah school,blah street,joe@gmail.com,You are joe,GC
+375750461,23,9,2016,173,0,blah school,blah street,joe@gmail.com,You are joe,GC
+149122969,11,1,2016,176,1,blah school,blah street,joe@gmail.com,You are joe,GC
+325906310,30,6,2017,148,1,blah school,blah street,joe@gmail.com,You are joe,GC
+511258165,19,10,2016,335,2,blah school,blah street,joe@gmail.com,You are joe,GC
+696643945,11,6,2017,125,0,blah school,blah street,joe@gmail.com,You are joe,GC
+20288025,10,1,2016,108,0,blah school,blah street,joe@gmail.com,You are joe,GC
+461462595,30,9,2017,61,0,blah school,blah street,joe@gmail.com,You are joe,GC
+810866207,19,3,2017,340,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1004912384,13,9,2016,426,0,blah school,blah street,joe@gmail.com,You are joe,GC
+561828018,3,8,2017,239,3,blah school,blah street,joe@gmail.com,You are joe,GC
+250589525,24,6,2016,506,1,blah school,blah street,joe@gmail.com,You are joe,GC
+245620884,7,9,2017,247,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1032172235,8,10,2016,145,3,blah school,blah street,joe@gmail.com,You are joe,GC
+208076184,27,10,2016,318,0,blah school,blah street,joe@gmail.com,You are joe,GC
+1020571495,24,7,2016,27,3,blah school,blah street,joe@gmail.com,You are joe,GC
+45964010,30,9,2017,560,1,blah school,blah street,joe@gmail.com,You are joe,GC
+887713635,8,9,2016,87,3,blah school,blah street,joe@gmail.com,You are joe,GC
+261717565,1,4,2017,280,3,blah school,blah street,joe@gmail.com,You are joe,GC
+223729857,23,11,2016,243,1,blah school,blah street,joe@gmail.com,You are joe,GC
+70991973,17,10,2016,15,1,blah school,blah street,joe@gmail.com,You are joe,GC
+259022638,17,0,2016,180,1,blah school,blah street,joe@gmail.com,You are joe,GC
+440152113,16,8,2016,324,1,blah school,blah street,joe@gmail.com,You are joe,GC
+568371392,20,7,2016,588,1,blah school,blah street,joe@gmail.com,You are joe,GC
+203605591,22,2,2016,220,0,blah school,blah street,joe@gmail.com,You are joe,GC
+277214536,11,5,2017,520,2,blah school,blah street,joe@gmail.com,You are joe,GC
+867669188,26,11,2017,597,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1012329295,7,9,2017,85,1,blah school,blah street,joe@gmail.com,You are joe,GC
+704675747,4,2,2016,526,0,blah school,blah street,joe@gmail.com,You are joe,GC
+792172737,3,10,2016,352,3,blah school,blah street,joe@gmail.com,You are joe,GC
+105668189,7,7,2016,40,1,blah school,blah street,joe@gmail.com,You are joe,GC
+459865368,3,5,2017,313,0,blah school,blah street,joe@gmail.com,You are joe,GC
+426063629,8,1,2017,508,0,blah school,blah street,joe@gmail.com,You are joe,GC
+994521173,2,6,2016,531,0,blah school,blah street,joe@gmail.com,You are joe,GC
+581452568,10,11,2017,444,0,blah school,blah street,joe@gmail.com,You are joe,GC
+162084135,16,8,2017,80,0,blah school,blah street,joe@gmail.com,You are joe,GC
+837377210,28,2,2017,430,2,blah school,blah street,joe@gmail.com,You are joe,GC
+442983653,9,4,2016,136,3,blah school,blah street,joe@gmail.com,You are joe,GC
+807566058,6,8,2016,420,0,blah school,blah street,joe@gmail.com,You are joe,GC
+11518439,10,9,2016,575,3,blah school,blah street,joe@gmail.com,You are joe,GC
+438367728,26,8,2016,18,2,blah school,blah street,joe@gmail.com,You are joe,GC
+820637184,3,8,2016,437,2,blah school,blah street,joe@gmail.com,You are joe,GC
+629891941,30,3,2017,244,1,blah school,blah street,joe@gmail.com,You are joe,GC
+385315430,12,7,2016,355,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1052618485,9,1,2017,9,2,blah school,blah street,joe@gmail.com,You are joe,GC
+624396110,7,8,2016,202,0,blah school,blah street,joe@gmail.com,You are joe,GC
+422793531,29,0,2016,327,0,blah school,blah street,joe@gmail.com,You are joe,GC
+553654360,26,6,2017,270,1,blah school,blah street,joe@gmail.com,You are joe,GC
+599158511,23,4,2016,149,1,blah school,blah street,joe@gmail.com,You are joe,GC
+215514960,16,9,2017,265,1,blah school,blah street,joe@gmail.com,You are joe,GC
+506655819,15,8,2016,12,2,blah school,blah street,joe@gmail.com,You are joe,GC
+105011364,8,9,2016,130,1,blah school,blah street,joe@gmail.com,You are joe,GC
+977009680,5,2,2016,521,3,blah school,blah street,joe@gmail.com,You are joe,GC
+946674663,19,0,2017,335,1,blah school,blah street,joe@gmail.com,You are joe,GC
+557244041,20,6,2017,296,2,blah school,blah street,joe@gmail.com,You are joe,GC
+997290982,16,2,2017,415,2,blah school,blah street,joe@gmail.com,You are joe,GC
+147901255,12,7,2016,54,0,blah school,blah street,joe@gmail.com,You are joe,GC
+26211433,11,8,2016,365,0,blah school,blah street,joe@gmail.com,You are joe,GC
+323915719,27,3,2016,445,0,blah school,blah street,joe@gmail.com,You are joe,GC
+523174606,5,3,2016,62,1,blah school,blah street,joe@gmail.com,You are joe,GC
+789753957,27,10,2017,139,1,blah school,blah street,joe@gmail.com,You are joe,GC
+971569898,17,10,2016,366,2,blah school,blah street,joe@gmail.com,You are joe,GC
+867196703,1,5,2017,295,1,blah school,blah street,joe@gmail.com,You are joe,GC
+998261425,11,10,2017,43,1,blah school,blah street,joe@gmail.com,You are joe,GC
+503739988,15,3,2017,482,0,blah school,blah street,joe@gmail.com,You are joe,GC
+315437868,6,7,2016,216,3,blah school,blah street,joe@gmail.com,You are joe,GC
+822641885,29,10,2016,165,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1065267886,28,4,2016,176,1,blah school,blah street,joe@gmail.com,You are joe,GC
+361900968,17,9,2017,320,0,blah school,blah street,joe@gmail.com,You are joe,GC
+301084199,13,4,2016,441,1,blah school,blah street,joe@gmail.com,You are joe,GC
+974864636,26,11,2017,519,3,blah school,blah street,joe@gmail.com,You are joe,GC
+904393088,8,3,2017,214,1,blah school,blah street,joe@gmail.com,You are joe,GC
+220636313,15,5,2016,389,1,blah school,blah street,joe@gmail.com,You are joe,GC
+182904123,6,2,2016,460,1,blah school,blah street,joe@gmail.com,You are joe,GC
+300731928,13,0,2017,357,3,blah school,blah street,joe@gmail.com,You are joe,GC
+202658805,2,5,2017,2,2,blah school,blah street,joe@gmail.com,You are joe,GC
+940512682,14,2,2016,118,2,blah school,blah street,joe@gmail.com,You are joe,GC
+1060762181,21,2,2016,149,2,blah school,blah street,joe@gmail.com,You are joe,GC
+449509067,20,9,2016,555,2,blah school,blah street,joe@gmail.com,You are joe,GC
+920046313,29,4,2016,96,2,blah school,blah street,joe@gmail.com,You are joe,GC
+979241641,17,10,2017,20,0,blah school,blah street,joe@gmail.com,You are joe,GC
+928681089,21,1,2016,503,2,blah school,blah street,joe@gmail.com,You are joe,GC
+415882847,9,5,2016,374,3,blah school,blah street,joe@gmail.com,You are joe,GC
+750719355,14,1,2017,82,0,blah school,blah street,joe@gmail.com,You are joe,GC
+128526155,26,2,2017,226,2,blah school,blah street,joe@gmail.com,You are joe,GC
+142578979,19,2,2016,236,2,blah school,blah street,joe@gmail.com,You are joe,GC
+15757709,17,1,2016,549,1,blah school,blah street,joe@gmail.com,You are joe,GC
+923782968,21,4,2017,446,0,blah school,blah street,joe@gmail.com,You are joe,GC
+936928496,7,3,2016,43,1,blah school,blah street,joe@gmail.com,You are joe,GC
+1067368522,31,4,2017,435,2,blah school,blah street,joe@gmail.com,You are joe,GC
+866879294,28,11,2017,348,1,blah school,blah street,joe@gmail.com,You are joe,GC
+828016170,30,3,2017,336,1,blah school,blah street,joe@gmail.com,You are joe,GC
+940414357,30,9,2016,498,2,blah school,blah street,joe@gmail.com,You are joe,GC
+492626837,18,11,2016,279,0,blah school,blah street,joe@gmail.com,You are joe,GC
+243129275,16,4,2017,347,1,blah school,blah street,joe@gmail.com,You are joe,GC
+479906094,26,9,2016,142,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1032784652,26,1,2017,546,1,blah school,blah street,joe@gmail.com,You are joe,GC
+237610169,21,0,2016,224,3,blah school,blah street,joe@gmail.com,You are joe,GC
+476058613,2,10,2016,468,1,blah school,blah street,joe@gmail.com,You are joe,GC
+905506131,24,1,2017,234,1,blah school,blah street,joe@gmail.com,You are joe,GC
+399595650,29,2,2017,421,3,blah school,blah street,joe@gmail.com,You are joe,GC
+601529190,28,1,2017,493,2,blah school,blah street,joe@gmail.com,You are joe,GC
+757135269,28,10,2017,171,0,blah school,blah street,joe@gmail.com,You are joe,GC
+916669296,20,10,2017,72,3,blah school,blah street,joe@gmail.com,You are joe,GC
+576568534,3,1,2016,158,0,blah school,blah street,joe@gmail.com,You are joe,GC
+158547506,30,6,2016,508,1,blah school,blah street,joe@gmail.com,You are joe,GC
+477248299,1,8,2016,589,3,blah school,blah street,joe@gmail.com,You are joe,GC
+1054057524,27,4,2017,382,0,blah school,blah street,joe@gmail.com,You are joe,GC
+251048280,8,0,2016,199,1,blah school,blah street,joe@gmail.com,You are joe,GC
+195774217,9,1,2017,435,0,blah school,blah street,joe@gmail.com,You are joe,GC
+164852219,31,6,2016,87,2,blah school,blah street,joe@gmail.com,You are joe,GC
+812925940,23,9,2016,136,3,blah school,blah street,joe@gmail.com,You are joe,GC
+339281989,23,7,2017,556,3,blah school,blah street,joe@gmail.com,You are joe,GC

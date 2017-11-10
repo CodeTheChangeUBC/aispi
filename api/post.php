@@ -1,44 +1,45 @@
 <?php
 
-//include '_CSVDB.php';
-require './recaptcha/autoload.php';
+// FIELDS: id,day,month,year,start,length,school,address,email,description,type
 
-$recaptcha = new \ReCaptcha\ReCaptcha($_POST['g-recaptcha-response']);
-$resp = $recaptcha->verify($recaptcha);
-var_dump($resp->isSuccess());
-/*
+// Create the Event's database
+include './_CSVDB.php'
+
+$day = $_POST['day']
+$year = $_POST['year']
+$_POST['']
+
+
 $events = new _CSVDB('../events.csv');
 
+$events::read(function ($row) use ($day, $year, $month, $start) {
+    $date = ($row[1] == $day) &&
+            ($row[2] == $month) &&
+            ($row[3] == $year);
 
-// First check the Google recaptcha
+    if ($date) {
+        $time = false; // TODO: Make a time equivalency thing.
+        if ($time) {
+            return true
+        }
+    }
 
-$url = 'https://www.google.com/recaptcha/api/siteverify';
-$data = array(
-    'secret' => 'YOUR_SECRET',
-    'response' => $_POST["g-recaptcha-response"]
-);
-$options = array(
-    'http' => array (
-        'method' => 'POST',
-        'content' => http_build_query($data)
-    )
-);
+    return false;
+})
 
-$context  = stream_context_create($options);
-$verify = file_get_contents($url, false, $context);
-$captcha_success = json_decode($verify);
+// TODO: Check for start time validity
+// TODO: Check to see description, address, and email lengths
 
-
-if ($captcha_success->success==false) {
-    echo "<p>You are a bot! Go away!</p>";
-} else if ($captcha_success->success==true) {
-    echo "<p>You are not not a bot!</p>";
-}
-
-
-$events::read(function ($row) {
-
-});
-
-
-*/
+// Since everything works, create this.
+$events::create(new Array(
+    'id'          => uuid.v4(), // TODO: implement uuid.
+    'day'         => $day,
+    'month'       => $month,
+    'year'        => $year,
+    'start'       => $start,
+    'length'      => $length,
+    'address'     => $address,
+    'email'       => $email,
+    'description' => $description,
+    'type'        => $type
+))
