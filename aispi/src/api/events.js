@@ -7,15 +7,22 @@ const URL = 'http://127.0.0.1:3000'
 
 export default class Event {
     constructor () {
+
         
     }
     static post (args) {
 
+        var postStr = ""
+        // Create a string for posting.
+        for(var key in args) {
+            postStr += (key + '=' + args[key])
+        }
+        
         return new Promise ((resolve, reject) => {
             var request = new XMLHttpRequest()
             request.open('POST', URL+'/api/post.php', true)
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-            request.send(data)
+            request.send(postStr)
             resolve()
         })
     }

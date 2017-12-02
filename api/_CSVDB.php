@@ -44,7 +44,7 @@ class CSVDB {
             throw new Exception("Incorrect arguments: ".$this->filename);
         }
 
-        $row = []
+        $row = [];
 
         // Oooo, caching for speedups.
         for ($i = 0, $ii = count($fields); $i < $ii; $i++) {

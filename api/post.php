@@ -3,12 +3,31 @@
 // FIELDS: id,day,month,year,start,length,school,address,email,description,type
 
 // Create the Event's database
-include './_CSVDB.php'
+include './_CSVDB.php'; 
 
-$day = $_POST['day']
-$year = $_POST['year']
-$_POST['']
 
+$PARAMS = [
+    "day",
+    "month",
+    "year",
+    "start",
+    "length",
+    "address",
+    "email",
+    "description",
+    "type"
+];
+
+foreach ($PARAMS as $type) {
+
+    $$type = $_POST[$type];
+    if (!isset($_POST[$type])) {
+        echo json_encode([
+            "error" => $type+" not set"
+        ]);
+        exit;
+    }
+}
 
 $events = new _CSVDB('../events.csv');
 
@@ -20,18 +39,18 @@ $events::read(function ($row) use ($day, $year, $month, $start) {
     if ($date) {
         $time = false; // TODO: Make a time equivalency thing.
         if ($time) {
-            return true
+            return true;
         }
     }
 
     return false;
-})
+});
 
 // TODO: Check for start time validity
 // TODO: Check to see description, address, and email lengths
 
 // Since everything works, create this.
-$events::create(new Array(
+$events::create([
     'id'          => uuid.v4(), // TODO: implement uuid.
     'day'         => $day,
     'month'       => $month,
@@ -42,4 +61,4 @@ $events::create(new Array(
     'email'       => $email,
     'description' => $description,
     'type'        => $type
-))
+]);

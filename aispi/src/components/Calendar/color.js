@@ -18,6 +18,5 @@ export default function (id) {
         hash  = ((hash << 5) - hash) + chr;
         hash |= 0; // Convert to 32bit integer
     }
-
-    return COLOURS[hash % COLOURS.length]
+    return COLOURS[Math.abs(hash % COLOURS.length)]
 }

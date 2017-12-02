@@ -6,7 +6,7 @@
                 event(v-for="event in events" v-bind:data="event" v-bind:key="event[0]" v-bind:event="event")
             div.form__holder
                 div.form__header Register an Event
-                form(@submit.prevent="sendEvent")
+                form
                     table.inp__form
                         tr
                             td.inp__label School Name:
@@ -33,11 +33,12 @@
                         tr
                             td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
                                 vue-recaptcha(sitekey="6LdxTi4UAAAAALdEW9pPOkXtQSg0jlfXqAM2tcSI" ref="recaptcha" @verify="onVerify")
-                    input(type="submit" value="Register Event")#submit__button
+                    input(type="submit" @click="sendEvent" value="Register Event")#submit__button
 </template>
 
 <script>
     /* eslint-disable */
+    import EventAPI from '@/api/events'
     import Event from '@/components/Calendar/Event'
     import VueRecaptcha from 'vue-recaptcha'
 
@@ -71,8 +72,8 @@
                 this.$emit('close')
             },
             sendEvent: function () {
-                console.log(arguments)
-                console.log(this.form)
+                console.log('HERE!',Event)
+                EventAPI.post(this.form)
             },  
             onVerify: function (response) {
                 console.log('Verify: ' + response)
@@ -82,11 +83,15 @@
             return {
                 TIMES,
                 form: {
-                    name: '',
-                    start: '',
-                    email: '',
-                    address: '',
-                    info: ''
+                    day:          "",
+                    month:        "",
+                    year:         "",
+                    start:        "",
+                    length:       "",
+                    address:      "",
+                    email:        "",
+                    description:  "",
+                    type:         ""
                 }
             }
         }
