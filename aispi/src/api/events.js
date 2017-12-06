@@ -15,7 +15,7 @@ export default class Event {
         var postStr = ""
         // Create a string for posting.
         for(var key in args) {
-            postStr += (key + '=' + args[key])
+            postStr += (key + '=' + args[key]) + '&'
         }
         
         return new Promise ((resolve, reject) => {

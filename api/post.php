@@ -4,6 +4,7 @@
 
 // Create the Event's database
 include './_CSVDB.php'; 
+header("Access-Control-Allow-Origin: *");
 
 
 $PARAMS = [
@@ -18,18 +19,19 @@ $PARAMS = [
     "type"
 ];
 
-foreach ($PARAMS as $type) {
-
+for ($i = 0, $ii = count($PARAMS); $i < $ii; $i++) {
+    $type = $PARAMS[$i];
     $$type = $_POST[$type];
+    var_dump($type);
     if (!isset($_POST[$type])) {
         echo json_encode([
-            "error" => $type+" not set"
+            "error" => $type." not set"
         ]);
         exit;
     }
 }
 
-$events = new _CSVDB('../events.csv');
+$events = new CSVDB('../events.csv');
 
 $events::read(function ($row) use ($day, $year, $month, $start) {
     $date = ($row[1] == $day) &&
@@ -62,3 +64,4 @@ $events::create([
     'description' => $description,
     'type'        => $type
 ]);
+exit;

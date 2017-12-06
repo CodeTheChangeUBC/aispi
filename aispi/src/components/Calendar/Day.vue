@@ -21,7 +21,7 @@
         methods: {
             open (events) {
                 console.log('open')
-                this.$emit('open', this.events)
+                this.$emit('open', this.events, this.number.number)
             }
         }
     }

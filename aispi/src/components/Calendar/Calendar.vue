@@ -18,7 +18,7 @@
 
             div#calendar__body
                 day(v-for="day in days" v-bind:data="day" v-bind:key="day.number" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
-        PopUp(v-bind:viewable='viewable' v-bind:events="events" @close="(viewable=false)")
+        PopUp(v-bind:viewable='viewable' v-bind:events="events" @close="(viewable=false)" v-bind:date="current")
 </template>
 
 <script>
@@ -50,7 +50,7 @@
         },
         data () {
             var date = new Date()
-            var current = {month: date.getMonth() + 1, year: date.getYear() + 1900}
+            var current = {day: 0,month: date.getMonth() + 1, year: date.getYear() + 1900}
             setTimeout(() => {
                 this._writeDays(current.month, current.year)
                 this._fetch()
@@ -88,10 +88,10 @@
                 this._writeDays(this.current.month, this.current.year)
                 this._fetch()
             },
-            open (evs) {
-                this.viewable = true
+            open (evs,day) {
+                this.current.day = day
                 this.events = evs
-                console.log(evs)
+                this.viewable = true
             },
             _writeDays (month, year) {
                 var days = []

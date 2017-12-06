@@ -2,7 +2,10 @@
     div.event__cover
         div(v-if="type=='label'")
             div.label__container(v-bind:style="{backgroundColor}")
-                | {{time}} #[em]
+                div(style="float: left;font-weight:600;margin-left: 5px;margin-right: 6px;") {{e_type}}
+                div(style="height: 5px;width: 5px;float: left;margin-top: 4px;background-color: #663399;border-radius:3px;")
+                div(style="float: left;margin-left: 6px")
+                    {{e_desc}}
         div(v-else)
             div.block__container(v-bind:style="{backgroundColor}")
                 span.block__event {{event[6]}} Guest Event
@@ -24,11 +27,16 @@
             var backgroundColor = randomColor((this.event && this.event[0]) || "")
             var time = this._start(+this.event[4], +this.event[5])
             var full = time + ' - ' + this._end(+this.event[4], +this.event[5])
+            var e_type = this.event[10]
+            var e_desc = this.event[6]
 
+            console.log(this.event)
             return {
                 backgroundColor,
                 time,
-                full
+                full,
+                e_type,
+                e_desc
             }
         },
         methods: {
@@ -57,6 +65,10 @@
     padding: 5px 0px
     color: #FFF
     font-size: 10px
+    border-radius: 3px;
+    margin-top: 1px;
+    float: left;
+    width: 100%;
 
 
 .event

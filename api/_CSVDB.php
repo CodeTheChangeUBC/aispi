@@ -1,7 +1,5 @@
 <?php
 
-
-
 class CSVDB {
     public $filename;
     public $file;

@@ -6,7 +6,7 @@
                 event(v-for="event in events" v-bind:data="event" v-bind:key="event[0]" v-bind:event="event")
             div.form__holder
                 div.form__header Register an Event
-                form
+                div
                     table.inp__form
                         tr
                             td.inp__label School Name:
@@ -62,7 +62,7 @@
 
     export default {
         name: 'PopUp',
-        props: ['viewable','events'],
+        props: ['viewable','events','date'],
         components: {
             Event,
             VueRecaptcha
@@ -72,7 +72,6 @@
                 this.$emit('close')
             },
             sendEvent: function () {
-                console.log('HERE!',Event)
                 EventAPI.post(this.form)
             },  
             onVerify: function (response) {
@@ -83,9 +82,9 @@
             return {
                 TIMES,
                 form: {
-                    day:          "",
-                    month:        "",
-                    year:         "",
+                    day:          this.date.day,
+                    month:        this.date.month,
+                    year:         this.date.year,
                     start:        "",
                     length:       "",
                     address:      "",
