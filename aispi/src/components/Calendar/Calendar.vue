@@ -4,7 +4,9 @@
             div#calendar__head
                 div.calendar__inner
                     //img(src="../../assets/ASPI.K.png" height="50px")#calendar__logo
-                    span.logo__text Event Planner
+                    span.logo__text
+                        img(src="../../assets/ASPI.RGB.png" style="margin-bottom: -20px;margin-right: 20px;" height="50px")
+                        |Event Planner
                     #date__text
                         .date__text--month {{MONTHS[current.month - 1]}}
                         .date__text--year {{current.year}}
@@ -95,6 +97,13 @@
             },
             _writeDays (month, year) {
                 var days = []
+
+                for (var i = 0; i < this._first(month, year); i++) {
+                    days.push({
+                        disabled:true
+                    })
+                }
+
                 for (var i = 0; i < this._days(month, year); i++) {
                     days.push({
                         number: i + 1,
@@ -116,6 +125,9 @@
                 Events
                 .fetch(this.current.month, this.current.year)
                 .then(this._handleEvents)
+            },
+            _first (month, year) {
+                return new Date(year, month - 1, 1).getDay()
             },
             _days (month, year) {
                 return new Date(year, month, 0).getDate();

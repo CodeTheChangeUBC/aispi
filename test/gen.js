@@ -34,7 +34,7 @@ for (var i = DATE_START.getTime(); i <= DATE_END.getTime(); i+= DAY_LEN) {
             start,
             length,
             school,
-            "324 Somewhere st",
+            casual.address1,
             casual.email,
             casual.description.replace(/[^\w\s]/g, '')
             ,type].join(','))

@@ -41,6 +41,7 @@
     import EventAPI from '@/api/events'
     import Event from '@/components/Calendar/Event'
     import VueRecaptcha from 'vue-recaptcha'
+    import Datetime from 'vue-datetime'
 
     var TIMES = [ 
         '7:00 am', 
@@ -65,7 +66,8 @@
         props: ['viewable','events','date'],
         components: {
             Event,
-            VueRecaptcha
+            VueRecaptcha,
+            Datetime
         },
         methods: {
             close: function () {
@@ -105,7 +107,7 @@
     font-family: Arial
     height: 100%
     width: 100%
-    position: absolute
+    position: fixed
     top: 0px
     left: 0px
     background-color: rgba(0, 0, 0, 0.8)

@@ -1,8 +1,9 @@
 <template lang="jade">
-    div.day(v-bind:class="{'day--disabled': !number.current}" @click="open()")
+    div.day(v-if="!number.disabled" @click="open()")
         div.day__number {{number.number}}
         div.event__wrap
             event(v-for="event in events"  v-bind:data="event" v-bind:key="event[0]" v-bind:event="event" type="label")
+    div.day.day--disabled(v-else)
 </template>
 
 <script>
@@ -45,7 +46,9 @@
         overflow-y: hidden;
     }
         .day--disabled {
-            background-color: #EEE;
+            background-color: rgba(255,255,255,0.2);
+            border-color: transparent;
+            box-shadow: none;
             color: #999;
         }
         .day__number {
