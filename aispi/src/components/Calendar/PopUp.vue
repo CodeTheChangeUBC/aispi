@@ -32,7 +32,7 @@
                                 textarea(type="text" placeholder="" v-model="form.info").inp__full
                         tr
                             td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
-                                vue-recaptcha(sitekey="6LdxTi4UAAAAALdEW9pPOkXtQSg0jlfXqAM2tcSI" ref="recaptcha" @verify="onVerify")
+                                //vue-recaptcha(sitekey="6LdxTi4UAAAAALdEW9pPOkXtQSg0jlfXqAM2tcSI" ref="recaptcha" @verify="onVerify")
                     input(type="submit" @click="sendEvent" value="Register Event")#submit__button
 </template>
 
@@ -74,6 +74,7 @@
                 this.$emit('close')
             },
             sendEvent: function () {
+                console.log(this.form)
                 EventAPI.post(this.form)
             },  
             onVerify: function (response) {
@@ -114,14 +115,12 @@
     z-index: 1000
     transition: opacity 1s
 
+    
+
 .container
-    position: absolute
-    top: 50%
-    left: 50%
+    margin: 100px auto
     height: 586px
     width: 800px
-    margin-top: -300px
-    margin-left: -400px
     background-color: #FFF
     border-radius: 5px
     box-shadow: 0px 1px 1px #222222
