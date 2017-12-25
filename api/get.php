@@ -18,6 +18,8 @@ if (isset($_GET['type']) && $_GET['type'] == 'closest') {
     // Make sure we're not over fetching.
     $n = int($_GET['n']);
     assert(MAX_GET > $n);
+
+    
     
 } else {
     // Ensure that the GET variables are properly set.

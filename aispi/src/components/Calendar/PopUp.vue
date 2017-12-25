@@ -13,6 +13,15 @@
                             td
                                 input(type="text" placeholder="" v-model="form.name").inp__full
                         tr
+                            td.inp__label Event Type
+                            td
+                                div(style="margin-top: 10px;display: inline-block;")
+                                    div(style="cursor: pointer;height: 30px;width: 30px;border: 3px solid #EEE;border-radius: 20px;margin: 0 30px")
+                                    label(style="font-family: Montserrat;font-size: 12px;") Pro-D Day
+                                div(style="margin-top: 10px;display: inline-block;")
+                                    div(style="cursor: pointer;height: 30px;width: 30px;border: 3px solid #EEE;border-radius: 20px;margin: 0 30px")
+                                    label(style="font-family: Montserrat;font-size: 12px;") Guest Class
+                        tr
                             td.inp__label Start Time:
                             td
                                 input(type="text" placeholder="" v-model="form.start").inp__full.inp__full--half
@@ -109,6 +118,7 @@
     height: 100%
     width: 100%
     position: fixed
+    overflow-y: scroll
     top: 0px
     left: 0px
     background-color: rgba(0, 0, 0, 0.8)

@@ -17,8 +17,15 @@
                             img(height="20px" src="../../assets/left.png")
                         div.calendar__controlBtn(@click="next()")
                             img(height="20px" src="../../assets/right.png")
-
             div#calendar__body
+                div#calendar__week
+                    div.calendar__weekPart SUN
+                    div.calendar__weekPart MON
+                    div.calendar__weekPart TUE
+                    div.calendar__weekPart WED
+                    div.calendar__weekPart THU
+                    div.calendar__weekPart FRI
+                    div.calendar__weekPart SAT
                 day(v-for="day in days" v-bind:data="day" v-bind:key="day.number" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
         PopUp(v-bind:viewable='viewable' v-bind:events="events" @close="(viewable=false)" v-bind:date="current")
 </template>
@@ -100,7 +107,7 @@
 
                 for (var i = 0; i < this._first(month, year); i++) {
                     days.push({
-                        disabled:true
+                        disabled: true
                     })
                 }
 
@@ -112,6 +119,11 @@
                     })
                 }
                 
+                while (days.length % 7) {
+                    days.push({
+                        disabled: true
+                    })
+                }
                 this.days = days
             },
             _handleEvents (data) {
@@ -217,5 +229,10 @@
         margin-top: 200px;
         width: 910px;
     
-
+    .calendar__weekPart
+        display: inline-block
+        width: 130px
+        color: #FFF
+        font-size: 12px
+        
 </style>
