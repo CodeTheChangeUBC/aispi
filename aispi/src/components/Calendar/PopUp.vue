@@ -15,17 +15,17 @@
                         tr
                             td.inp__label Event Type
                             td
-                                div(style="margin-top: 10px;display: inline-block;")
-                                    div(style="cursor: pointer;height: 30px;width: 30px;border: 3px solid #EEE;border-radius: 20px;margin: 0 30px")
-                                    label(style="font-family: Montserrat;font-size: 12px;") Pro-D Day
-                                div(style="margin-top: 10px;display: inline-block;")
-                                    div(style="cursor: pointer;height: 30px;width: 30px;border: 3px solid #EEE;border-radius: 20px;margin: 0 30px")
-                                    label(style="font-family: Montserrat;font-size: 12px;") Guest Class
+                                div.event__wrap
+                                    div.event__button(:class="{'event__button--active': eventType == 'PD'}" @click="toggleEvent('PD')")
+                                    label.event__label Pro-D Day
+                                div.event__wrap
+                                    div.event__button(:class="{'event__button--active': eventType == 'GC'}" @click="toggleEvent('GC')")
+                                    label.event__label Guest Class
                         tr
-                            td.inp__label Start Time:
+                            td.inp__label Appt Time:
                             td
-                                input(type="text" placeholder="" v-model="form.start").inp__full.inp__full--half
-                                div.time__label 8:00 PM
+                                input(type="time" placeholder="" value="12:00" v-model="form.start").inp__full.inp__full--half
+                                div.time__label 16:00 PM - 18:00 PM
 
                         tr
                             td.inp__label Email:
@@ -84,15 +84,43 @@
             },
             sendEvent: function () {
                 console.log(this.form)
-                EventAPI.post(this.form)
+                if (this.validate()) {
+                    EventAPI.post(this.form)
+                }
             },  
             onVerify: function (response) {
                 console.log('Verify: ' + response)
             },
+            toggleEvent: function (type) {
+                this.eventType = type
+            },
+            validate: function () {
+                // Make sure we selected an event
+                if (!this.eventType) {
+                    this.$swal('Please select an event!')
+                    return false
+                }
+                // Make sure this is a valid email
+                if (!this.form.email || !this.form.email.match(/@/g)) {
+                    this.$swal('Please Enter a Valid Email!')
+                    return false
+                }
+                var timeGex = /[0-9]{2}:[0-9]{2}/g
+
+                // Make sure this is a valid time
+                if (!timeGex.test(this.form.start)) {
+                    this.$swal('Please enter a valid time!')
+                    return false
+                }
+                // Make sure this doesn't conflict with any existing events.
+
+                return true
+            }
         },
         data () {
             return {
                 TIMES,
+                eventType: "",
                 form: {
                     day:          this.date.day,
                     month:        this.date.month,
@@ -112,6 +140,28 @@
 <style lang="sass" scoped>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500')
 @import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+
+.event__wrap
+    margin-top: 10px;
+    display: inline-block;
+
+.event__button
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border: 3px solid #EEE;
+    border-radius: 20px;
+    margin: 0 30px
+.event__button--active
+    background-color: #446CB3
+    border-color: #FFF
+
+.event__label
+    font-family: Montserrat
+    font-size: 11px
+    font-weight: 600
+    text-transform: uppercase
 
 .view__popup
     font-family: Arial
@@ -138,7 +188,6 @@
 
 .event__holder
     width: 400px
-    background-color: #FFF
     display: inline-block
     float: left
     background-color: #F9f9f9
@@ -147,6 +196,7 @@
     box-sizing: border-box
 
 .event__container
+    background-color: #F9f9f9
     display: inline-block
     position: relative
     text-align: center
@@ -205,7 +255,8 @@
         transition: border-color .5s
 
 .inp__full--half
-    width: 20%
+    width: 40%
+    margin-right: 10px
 
 textarea.inp__full
     min-height: 80px
@@ -220,11 +271,12 @@ textarea.inp__full
 
 .form__header
     color: #000
-    font-weight: 400
+    font-weight: 600
+    font-size: 13px
     font-family: Montserrat
     text-transform: uppercase
     letter-spacing: 1px
-    margin: 20px 0
+    margin: 10px 0
 
 .time__label
     font-family: Montserrat

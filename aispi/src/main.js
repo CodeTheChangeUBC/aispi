@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueSweetAlert from 'vue-sweetalert'
 
 Vue.config.productionTip = false
+Vue.use(VueSweetAlert)
 
 /* eslint-disable no-new */
 new Vue({

@@ -67,6 +67,7 @@
             return {
                 MONTHS,
                 current,
+                offset: 0,
                 viewable: false,
                 events: [],
                 days: []
@@ -97,20 +98,24 @@
                 this._writeDays(this.current.month, this.current.year)
                 this._fetch()
             },
-            open (evs,day) {
+            open (evs, day) {
                 this.current.day = day
-                this.events = evs
-                this.viewable = true
+                
+                setTimeout(() => {
+                    this.events = evs
+                    this.viewable = true
+                },100)
             },
             _writeDays (month, year) {
                 var days = []
 
-                for (var i = 0; i < this._first(month, year); i++) {
+                this.offset = this._first(month, year)
+
+                for (var i = this.offset; i--;) {
                     days.push({
                         disabled: true
                     })
                 }
-
                 for (var i = 0; i < this._days(month, year); i++) {
                     days.push({
                         number: i + 1,
@@ -127,10 +132,9 @@
                 this.days = days
             },
             _handleEvents (data) {
-                var self = this // Preserve context in forEach
 
                 data.forEach((event) => {
-                    self.days[event[1] - 1].events.push(event)
+                    this.days[event[1] - 1 + this.offset].events.push(event)
                 })
             },
             _fetch () {                
@@ -230,6 +234,7 @@
         width: 910px;
     
     .calendar__weekPart
+        margin-bottom: 10px;
         display: inline-block
         width: 130px
         color: #FFF

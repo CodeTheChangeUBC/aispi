@@ -1,45 +1,61 @@
-var casual = require('casual')
-var fs = require('fs')
+
+const json2csv = require('json2csv')
+const casual   = require('casual')
+const uuid     = require('uuid')
+const fs       = require('fs')
+
+
+const DAY_LEN = 1000 * 60 * 60 * 24
+const YEAR    = DAY_LEN * 7 * 52
 
 const SCHOOLS = ["Allen East High School","Bath High School","Bluffton High School","Elida High School","Jefferson High School","Lima Central Catholic High School","Lima Senior High School","Perry High School","St. John's High School","Shawnee High School","Spencerville High School","Temple Christian School"]
+const FIELDS  = ['id','day','month','year','start','length','school','address','email','description','type']
+const TYPES   = ['GC','PD']
 
-const DAY_LEN = 1000 * 60 * 60 * 24 // 1 day in ms 
+const NOW = new Date()
+NOW.setHours(0)
+NOW.setMinutes(0)
+NOW.setSeconds(0)
+NOW.setMilliseconds(0)
 
-const FREQUENCY_BY_INDEX = ('0'.repeat(50) + '1'.repeat(35) + '2'.repeat(10) + '3'.repeat(5))
-.split('').map(i => +i)
+const DATE_START = NOW.getTime() - YEAR
+const DATE_END   = NOW.getTime() + YEAR
 
-const DATE_START = new Date(process.argv[2])
-const DATE_END = new Date(process.argv[3])
-const TYPES = ['GC','PD']
-
-var id = 0
 var events = []
+var id = 0
 
-for (var i = DATE_START.getTime(); i <= DATE_END.getTime(); i+= DAY_LEN) {
-    console.log(DATE_START.getTime(),DATE_END.getTime(),i)
-    var date = new Date(i)
-    var day = date.getDate()
-    var month = date.getMonth()
-    var year = date.getYear() + 1900
-    for (var n = FREQUENCY_BY_INDEX[~~(Math.random() * 100)];n--;) {
-        var type = TYPES[~~(Math.random()*2)]
-        var school = SCHOOLS[~~(Math.random() * SCHOOLS.length)]
-        var start = 480
-        var length = 0
-        //id,day,month,year,start,length,school,address,email,description,type
-        events.push([id++,
+for (var i = DATE_START; i <= DATE_END; i+= DAY_LEN) {
+    var n = ~~(Math.random() * 10)
+
+    // Select the number of events for this day based on this distribution.
+    // | 0 1 2 3 4 5 | 6 7 8 | 9 |
+    if (n < 6) { n = 1 }
+    else if (n < 9) { n = 0 }
+    else { n = 2}
+
+    var today = new Date(i)
+    var day = today.getDate()
+    var month = today.getMonth() + 1
+    var year = today.getYear() + 1900
+    var school = SCHOOLS[~~(SCHOOLS * Math.random())]
+    // Iterate n times
+    for (n; n--;) {
+        events.push({
+            id:          uuid.v1(),
             day,
             month,
             year,
-            start,
-            length,
             school,
-            casual.address1,
-            casual.email,
-            casual.description.replace(/[^\w\s]/g, '')
-            ,type].join(','))
+            start:       ~~(Math.random() * (24 * 60)),
+            length:      60,
+            address:     casual.address,
+            email:       casual.email,
+            description: casual.sentences(n),
+            type:        TYPES[~~(TYPES.length * Math.random())]
+        })
+
     }
 }
 
 
-fs.writeFileSync('../events.csv', events.join('\n'))
+fs.writeFileSync('events.csv', json2csv({data: events, fields: FIELDS}))

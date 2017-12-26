@@ -7,10 +7,10 @@
                 div(style="float: left;margin-left: 6px")
                     {{e_desc}}
         div(v-else)
-            div.block__container(v-bind:style="{backgroundColor}")
-                span.block__event {{event[6]}} Guest Event
-                span.block__time {{~~(event[4]/60)+':'+event[4]%60}}
-                div.block__description {{event[9]}}
+            .event__container
+                .event__title {{event[6]}} Guest Event
+                .event__time {{~~(event[4]/60)+':'+event[4]%60}}
+                .event__address {{event[9]}}
 </template>
 
 <script>
@@ -61,6 +61,40 @@
 </script>
 
 <style scoped lang="sass">
+
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+
+.event__container
+    padding: 15px
+    float: left
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.4)
+    border-radius: 3px
+    background-color: #FFF
+.event__title
+    font-family: Montserrat
+    font-size: 12px
+    font-weight: 800
+    width: 100%
+    text-align: center
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    float: left
+.event__time
+    width: 100%
+    text-align: center
+    font-size: 12px
+    font-weight: 300
+    font-family: Montserrat
+    margin-top: 12px
+    float: left
+.event__address 
+    font-size: 12px
+    text-align: center
+    font-family: Source Serif Pro
+    margin-top: 10px
+    float: left
+    width: 100%
+
 .label__container
     padding: 5px 0px
     color: #FFF

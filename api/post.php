@@ -39,13 +39,14 @@ for ($i = 0, $ii = count($PARAMS); $i < $ii; $i++) {
     $$type = $_POST[$type];
 
     // If there is something that isn't 
-    if (sizeof($_POST[$type]) < MAX_FIELD_SIZE) {
+    if (strlen($_POST[$type]) > MAX_FIELD_SIZE) {
         echo json_encode([
             "error" => $type." too large"
         ]);
         exit;
     }
 }
+
 
 // Make sure the date is valid.
 if (!checkdate($month, $day, $year)) {

@@ -11,7 +11,7 @@ define('MAX_GET', 100);
 
 if (isset($_GET['type']) && $_GET['type'] == 'closest') {
     if (!isset($_GET['n'])) {
-        echo json_encode(['error' => 'Please enter a number of events as n'])
+        echo json_encode(['error' => 'Please enter a number of events as n']);
         exit;
     }
 
