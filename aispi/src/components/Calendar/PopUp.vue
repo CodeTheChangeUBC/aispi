@@ -24,8 +24,8 @@
                         tr
                             td.inp__label Appt Time:
                             td
-                                input(type="time" placeholder="" value="12:00" v-model="form.start").inp__full.inp__full--half
-                                div.time__label 16:00 PM - 18:00 PM
+                                input(type="time" @change="adjustTime" placeholder="" value="12:00" v-model="form.start").inp__full.inp__full--half
+                                div.time__label {{range}}
 
                         tr
                             td.inp__label Email:
@@ -70,6 +70,7 @@
         '9:00 pm'
     ]
 
+    const HOUR = 60 * 60 * 1000
     export default {
         name: 'PopUp',
         props: ['viewable','events','date'],
@@ -79,11 +80,26 @@
             Datetime
         },
         methods: {
+            adjustTime: function () {
+                var time = this.form.start
+                var [h,m] = time.split(':')
+
+                var date = new Date(0,0,0,h,m)
+                this.range = time
+                if (this.eventType) {
+                    this.range += ' - '
+                    var end = date.getTime()
+                    end += (HOUR * this.form.length)
+
+                    var endD = new Date(end)
+                    this.range += endD.getHours() + ':' + endD.getMinutes()
+                }
+                console.log(this.range)
+            },
             close: function () {
                 this.$emit('close')
             },
             sendEvent: function () {
-                console.log(this.form)
                 if (this.validate()) {
                     EventAPI.post(this.form)
                 }
@@ -93,6 +109,11 @@
             },
             toggleEvent: function (type) {
                 this.eventType = type
+                this.length = 3
+
+                if (this.form.start) {
+                    this.adjustTime()
+                }
             },
             validate: function () {
                 // Make sure we selected an event
@@ -118,15 +139,17 @@
             }
         },
         data () {
+
             return {
                 TIMES,
                 eventType: "",
+                range: "",
                 form: {
                     day:          this.date.day,
                     month:        this.date.month,
                     year:         this.date.year,
                     start:        "",
-                    length:       "",
+                    length:       0,
                     address:      "",
                     email:        "",
                     description:  "",
@@ -190,7 +213,8 @@
     width: 400px
     display: inline-block
     float: left
-    background-color: #F9f9f9
+    height: 100%
+    background-color: #4DAF7C
     border-left: 0
     border-bottom: 0
     box-sizing: border-box

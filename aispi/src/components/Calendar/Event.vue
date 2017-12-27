@@ -8,8 +8,8 @@
                     {{e_desc}}
         div(v-else)
             .event__container
-                .event__title {{event[6]}} Guest Event
-                .event__time {{~~(event[4]/60)+':'+event[4]%60}}
+                .event__title {{event[6]}} :: {{e_type}}
+                .event__time {{full}}
                 .event__address {{event[9]}}
 </template>
 
@@ -30,7 +30,12 @@
             var e_type = this.event[10]
             var e_desc = this.event[6]
 
-            console.log(this.event)
+            if (e_type == "PD") {
+                e_type = "Pro-D Day"
+            } else {
+                e_type = "Guest Class"
+            }
+
             return {
                 backgroundColor,
                 time,
@@ -66,10 +71,12 @@
 
 .event__container
     padding: 15px
-    float: left
+    display: inline-block
     box-shadow: 0px 1px 2px rgba(0,0,0,0.4)
     border-radius: 3px
     background-color: #FFF
+    width: 90%
+    margin: auto
 .event__title
     font-family: Montserrat
     font-size: 12px
@@ -83,7 +90,7 @@
     width: 100%
     text-align: center
     font-size: 12px
-    font-weight: 300
+    font-weight: 400
     font-family: Montserrat
     margin-top: 12px
     float: left
