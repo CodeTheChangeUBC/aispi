@@ -6,10 +6,27 @@ const URL = 'http://127.0.0.1:3000'
 // Abstractions for events on the API
 
 export default class Event {
-    constructor () {
+    static collides (events, start, length) {
+        // Convert "start" to minutes
+        var [h,m] = start.split(':')
+        var start = h*60 + (~~m)
+        var end = start + (length * 60)
 
-        
+        console.log()
+        for (var i = events.length; i--;) {
+            // Fetch the range of the start and end/
+            var start2 = +events[i][4]
+            var end2 = start2 + (+events[i][5])
+            // Look for a collision
+            // Taken from my scheduling algo
+            if((((start2>=start)&&(start2<end))||((end2>start)&&(end2<end)))||(((start>=start2)&&(start<end2))||((end>start2)&&(end<end2)))) {
+                return true
+            }
+        }
+
+        return false
     }
+
     static post (args) {
 
         var postStr = ""

@@ -95,8 +95,6 @@
 
                 var endT = start.getTime() + (HOUR * this.form.length)
                 var end = new Date(endT)
-                console.log(start, this.form.length)
-                console.log(start.getTime(), endT)
 
                 var endH = end.getHours().toString()
                 var endM = end.getMinutes().toString()
@@ -113,9 +111,6 @@
                 if (this.validate()) {
                     EventAPI.post(this.form)
                 }
-            },  
-            onVerify: function (response) {
-                console.log('Verify: ' + response)
             },
             toggleEvent: function (type) {
                 this.eventType = type
@@ -146,7 +141,13 @@
                     this.$swal('Please enter a valid time!')
                     return false
                 }
-                // Make sure this doesn't conflict with any existing events.
+                // TODO: Make sure this doesn't conflict with any existing events.
+                var collides = EventAPI.collides(this.events, this.form.start, this.form.length)
+
+                if (collides) {
+                    this.$swal('This timeslot conflicts with another appointment')
+                    return false
+                }
 
                 // Make sure the token is set
                 if (!this.form.token) {
