@@ -2,7 +2,7 @@
     div.view__popup(v-show="viewable" @click.self="close($event)")
         div.container
             div.event__holder
-                div.form__header Scheduled EVENTS
+                div.form__header(style="color: #FFF") Scheduled EVENTS
                 event(v-for="event in events" v-bind:data="event" v-bind:key="event[0]" v-bind:event="event")
             div.form__holder
                 div.form__header Register an Event
@@ -41,19 +41,18 @@
                                 textarea(type="text" placeholder="" v-model="form.info").inp__full
                         tr
                             td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
-                                //vue-recaptcha(sitekey="6LdxTi4UAAAAALdEW9pPOkXtQSg0jlfXqAM2tcSI" ref="recaptcha" @verify="onVerify")
+                                div.coinhive-captcha(data-hashes="512" data-key="tjS9sJDGK60sMolaxhmzxzN0ts4e7nir"
+                                data-callback="verified")
                     input(type="submit" @click="sendEvent" value="Register Event")#submit__button
 </template>
-
 <script>
     /* eslint-disable */
     import EventAPI from '@/api/events'
     import Event from '@/components/Calendar/Event'
     import VueRecaptcha from 'vue-recaptcha'
     import Datetime from 'vue-datetime'
-
     var TIMES = [ 
-        '7:00 am', 
+        '7:00 am',
         '8:00 am',
         '9:00 am',
         '10:00 am',
@@ -84,17 +83,26 @@
                 var time = this.form.start
                 var [h,m] = time.split(':')
 
-                var date = new Date(0,0,0,h,m)
+                var start = new Date()
+                start.setHours(h)
+                start.setMinutes(m)
                 this.range = time
-                if (this.eventType) {
-                    this.range += ' - '
-                    var end = date.getTime()
-                    end += (HOUR * this.form.length)
-
-                    var endD = new Date(end)
-                    this.range += endD.getHours() + ':' + endD.getMinutes()
+                
+                // If there isn't an event type set, we're done.
+                if (!this.eventType) {
+                    return
                 }
-                console.log(this.range)
+
+                var endT = start.getTime() + (HOUR * this.form.length)
+                var end = new Date(endT)
+
+                var endH = end.getHours().toString()
+                var endM = end.getMinutes().toString()
+
+                endM = (endM.length == 1 ? "0" : "") + endM
+
+                this.range += (' - ' + endH + ':' + endM)
+
             },
             close: function () {
                 this.$emit('close')
@@ -103,17 +111,17 @@
                 if (this.validate()) {
                     EventAPI.post(this.form)
                 }
-            },  
-            onVerify: function (response) {
-                console.log('Verify: ' + response)
             },
             toggleEvent: function (type) {
                 this.eventType = type
-                this.length = 3
+                this.form.length = 3
 
                 if (this.form.start) {
                     this.adjustTime()
                 }
+            },
+            verified: function (token) {
+                this.form.token = token
             },
             validate: function () {
                 // Make sure we selected an event
@@ -133,10 +141,24 @@
                     this.$swal('Please enter a valid time!')
                     return false
                 }
-                // Make sure this doesn't conflict with any existing events.
+                // TODO: Make sure this doesn't conflict with any existing events.
+                var collides = EventAPI.collides(this.events, this.form.start, this.form.length)
 
+                if (collides) {
+                    this.$swal('This timeslot conflicts with another appointment')
+                    return false
+                }
+
+                // Make sure the token is set
+                if (!this.form.token) {
+                    this.$swal('Please click the verification button')
+                    return false
+                }
                 return true
             }
+        },
+        mounted () {
+            window.verified = this.verified
         },
         data () {
 
@@ -148,6 +170,7 @@
                     day:          this.date.day,
                     month:        this.date.month,
                     year:         this.date.year,
+                    token:        "",
                     start:        "",
                     length:       0,
                     address:      "",
@@ -202,7 +225,7 @@
 
 .container
     margin: 100px auto
-    height: 586px
+    height: 610px
     width: 800px
     background-color: #FFF
     border-radius: 5px
@@ -214,7 +237,7 @@
     display: inline-block
     float: left
     height: 100%
-    background-color: #4DAF7C
+    background-color: #446CB3
     border-left: 0
     border-bottom: 0
     box-sizing: border-box

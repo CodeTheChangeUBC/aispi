@@ -25,8 +25,8 @@
         props: ['event','type'],
         data () {
             var backgroundColor = randomColor((this.event && this.event[0]) || "")
-            var time = this._start(+this.event[4], +this.event[5])
-            var full = time + ' - ' + this._end(+this.event[4], +this.event[5])
+            var time = this._format(+this.event[4])
+            var full = time + ' - ' + this._format((+this.event[4])+(+this.event[5]))
             var e_type = this.event[10]
             var e_desc = this.event[6]
 
@@ -45,21 +45,12 @@
             }
         },
         methods: {
-            _start (start, length) {
-                var s_hr = ~~(start / 60) + 6
+            _format (start) {
+                var s_hr = ~~(start / 60)
                 var s_mn = (start % 60) + ""
                 s_mn ='00'.substr(s_mn.length) + s_mn
 
                 return s_hr + ':' + s_mn 
-            },
-            _end (start, length) {
-                var end = start + length
-
-                var e_hr = ~~(end / 60) + 6
-                var e_mn = (end % 60) + ""
-                e_mn ='00'.substr(e_mn.length) + e_mn
-
-                return e_hr + ':'
             }
         }
     } 
