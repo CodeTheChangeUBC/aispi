@@ -104,6 +104,11 @@
                 this.range += (' - ' + endH + ':' + endM)
 
             },
+            open:  function (current, evs) {
+                this.form.day = current.day
+                this.form.year = current.year
+                this.form.month = current.month
+            },
             close: function () {
                 this.$emit('close')
             },
