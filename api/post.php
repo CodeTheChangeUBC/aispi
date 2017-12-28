@@ -5,6 +5,8 @@ header("Access-Control-Allow-Origin: *");
 
 // Create the Event's database
 include './_CSVDB.php'; 
+include './_globals.php';
+
 $events = new CSVDB('../events.csv');
 
 // Intitialize constants
@@ -18,9 +20,13 @@ $PARAMS = [
     "length",
     "address",
     "email",
+    "school",
     "description",
     "type"
 ];
+
+
+
 
 
 // Go through all the preset params
@@ -86,7 +92,7 @@ if (!$EVENT_TYPES[$type] && $EVENT_TYPES[$type] == $length) {
 
 
 // Make sure there aren't collisions
-$events::read(function ($row) use ($day, $year, $month, $start, $length) {
+$events->read(function ($row) use ($day, $year, $month, $start, $length) {
     $date = ($row[1] == $day) &&
             ($row[2] == $month) &&
             ($row[3] == $year);
@@ -98,7 +104,7 @@ $events::read(function ($row) use ($day, $year, $month, $start, $length) {
         $end2 = $start + intval($row[5]);
         
         if(((($start2>=$start)&&($start2<$end))||(($end2>$start)&&($end2<$end)))||((($start>=$start2)&&($start<$end2))||(($end>$start2)&&($end<$end2)))) {
-            json_encode([
+            echo json_encode([
                 "error" => "Conflicts with another appointment"
             ]);
             exit;
@@ -108,40 +114,32 @@ $events::read(function ($row) use ($day, $year, $month, $start, $length) {
     return false;
 });
 
-// Since everything works, create this.
-$events::create([
-    'id'          => uuid.v4(), // TODO: implement uuid.
-    'day'         => $day,
-    'month'       => $month,
-    'year'        => $year,
-    'start'       => $start,
-    'length'      => $length,
-    'address'     => $address,
-    'email'       => $email,
-    'description' => $description,
-    'type'        => $type
-]);
 
-echo "HERE";
-exit;
-$post_data = [
-    'secret' => "x1rPAUmbRcttrFuPMGea5S0oaVt88Cqv", // <- Your secret key
+// Create the coinhive token params
+$token_params = [
+    'secret' => "x1rPAUmbRcttrFuPMGea5S0oaVt88Cqv",
     'token' => $token,
     'hashes' => 256
 ];
 
-$post_context = stream_context_create([
-    'http' => [
-        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-        'method'  => 'POST',
-        'content' => http_build_query($post_data)
-    ]
-]);
-
 $url = 'https://api.coinhive.com/token/verify';
-$response = json_decode(file_get_contents($url, false, $post_context));
+$response = json_decode(HTTPPost($url, $token_params));
 
 if ($response && $response->success) {
+    // Since everything works, create the row!
+    $events->create([
+        'id'          => uuid(),
+        'day'         => $day,
+        'month'       => $month,
+        'year'        => $year,
+        'start'       => $start,
+        'school'      => $school,
+        'length'      => $length,
+        'address'     => $address,
+        'email'       => $email,
+        'description' => $description,
+        'type'        => $type
+    ]);
     echo json_encode([
         "good" => "everything worked!"
     ]);

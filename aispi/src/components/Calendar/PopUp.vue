@@ -11,15 +11,15 @@
                         tr
                             td.inp__label School Name:
                             td
-                                input(type="text" placeholder="" v-model="form.name").inp__full
+                                input(type="text" placeholder="" v-model="form.school").inp__full
                         tr
                             td.inp__label Event Type
                             td
                                 div.event__wrap
-                                    div.event__button(:class="{'event__button--active': eventType == 'PD'}" @click="toggleEvent('PD')")
+                                    div.event__button(:class="{'event__button--active': form.type == 'PD'}" @click="toggleEvent('PD')")
                                     label.event__label Pro-D Day
                                 div.event__wrap
-                                    div.event__button(:class="{'event__button--active': eventType == 'GC'}" @click="toggleEvent('GC')")
+                                    div.event__button(:class="{'event__button--active': form.type == 'GC'}" @click="toggleEvent('GC')")
                                     label.event__label Guest Class
                         tr
                             td.inp__label Appt Time:
@@ -89,7 +89,7 @@
                 this.range = time
                 
                 // If there isn't an event type set, we're done.
-                if (!this.eventType) {
+                if (!this.form.type) {
                     return
                 }
 
@@ -118,7 +118,7 @@
                 }
             },
             toggleEvent: function (type) {
-                this.eventType = type
+                this.form.type = type
                 this.form.length = 3
 
                 if (this.form.start) {
@@ -130,7 +130,7 @@
             },
             validate: function () {
                 // Make sure we selected an event
-                if (!this.eventType) {
+                if (!this.form.type) {
                     this.$swal('Please select an event!')
                     return false
                 }
@@ -169,13 +169,14 @@
 
             return {
                 TIMES,
-                eventType: "",
                 range: "",
                 form: {
                     day:          this.date.day,
                     month:        this.date.month,
                     year:         this.date.year,
+                    type:         "",
                     token:        "",
+                    school:       "",
                     start:        "",
                     length:       0,
                     address:      "",

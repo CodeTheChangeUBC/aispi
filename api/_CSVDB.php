@@ -39,7 +39,7 @@ class CSVDB {
 
         // Make sure this is a legit argument.
         if (count($args) != count($fields)) {
-            throw new Exception("Incorrect arguments: ".$this->filename);
+            throw new Exception("Incorrect argument count: ".$this->filename);
         }
 
         $row = [];
