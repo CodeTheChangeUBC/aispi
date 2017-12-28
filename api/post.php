@@ -47,28 +47,58 @@ for ($i = 0, $ii = count($PARAMS); $i < $ii; $i++) {
     }
 }
 
+// Try to convert start and length to integers
+$start = int($start);
+$length = int($length);
 
 // Make sure the date is valid.
 if (!checkdate($month, $day, $year)) {
     echo json_encode([
-        "error" => "invalid date"
+        "error" => "Invalid date"
     ]);
     exit;
 }
 
+// Make sure the start time is a valid time
+if ($start < 0 || $start > 60 * 24) {
+    echo json_encode([
+        "echo" => "Invalid start time"
+    ])
+    exit;
+}
+
+// Make sure the email is valid.
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo json_encode([
+        "error" => "Invalid email address"
+    ]);
+    exit;
+}
+
+// Make sure it's a valid type and it's a legit length
+if (!$EVENT_TYPES[$type] && $EVENT_TYPES[$type] == $length) {
+    echo json_encode([
+        "error" => "Invalid event type or length"
+    ]);
+    exit;
+}
+
+// Convert start and length
 
 
 
-
-
-
-
-$events::read(function ($row) use ($day, $year, $month, $start) {
+// Make sure there aren't collisions
+$events::read(function ($row) use ($day, $year, $month, $start, $length) {
     $date = ($row[1] == $day) &&
             ($row[2] == $month) &&
             ($row[3] == $year);
 
     if ($date) {
+        $end = $start + $length;
+
+        $start_2 = int($row[4]);
+        $end_2 = $start + int($row[5]);
+
         if ($time) {
             return true;
         }
@@ -76,9 +106,6 @@ $events::read(function ($row) use ($day, $year, $month, $start) {
 
     return false;
 });
-
-// TODO: Check for start time validity
-// TODO: Check to see description, address, and email lengths
 
 // Since everything works, create this.
 $events::create([
