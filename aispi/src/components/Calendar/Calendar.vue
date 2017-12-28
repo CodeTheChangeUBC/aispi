@@ -27,7 +27,7 @@
                     div.calendar__weekPart FRI
                     div.calendar__weekPart SAT
                 day(v-for="day in days" v-bind:data="day" v-bind:key="day.number" v-bind:number="day" v-bind:events="day.events" v-bind:blocks="day.blocks" @open="open")
-        PopUp(v-bind:viewable='viewable' v-bind:events="events" @close="(viewable=false)" v-bind:date="current")
+        PopUp(v-bind:viewable='viewable' ref="popup" v-bind:events="events" @close="(viewable=false)" v-bind:date="current")
 </template>
 
 <script>
@@ -100,11 +100,9 @@
             },
             open (evs, day) {
                 this.current.day = day
-                
-                setTimeout(() => {
-                    this.events = evs
-                    this.viewable = true
-                },100)
+                this.events = evs
+                this.$refs.popup.open(this.current, this.events)
+                this.viewable = true
             },
             _writeDays (month, year) {
                 var days = []
