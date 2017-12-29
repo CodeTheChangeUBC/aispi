@@ -120,7 +120,7 @@ $events->read(function ($row) use ($day, $year, $month, $start, $length) {
 $token_params = [
     'secret' => "x1rPAUmbRcttrFuPMGea5S0oaVt88Cqv",
     'token' => $token,
-    'hashes' => 256
+    'hashes' => 512
 ];
 
 $post_context = stream_context_create([
