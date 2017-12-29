@@ -23,7 +23,8 @@ $PARAMS = [
     "email",
     "school",
     "description",
-    "type"
+    "type",
+    "token"
 ];
 
 
