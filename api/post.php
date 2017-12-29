@@ -135,8 +135,6 @@ $post_context = stream_context_create([
 $url = 'https://api.coinhive.com/token/verify';
 $response = json_decode(file_get_contents($url, false, $post_context));
 
-
-var_dump($response);
 if ($response && $response->success) {
     // Since everything works, create the row!
     $events->create([
