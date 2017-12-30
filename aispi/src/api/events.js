@@ -1,7 +1,7 @@
 /*eslint-disable */
 
 
-const URL = ''
+const URL = 'http://127.0.0.1:3000'
 
 // Abstractions for events on the API
 
@@ -39,8 +39,17 @@ export default class Event {
             var request = new XMLHttpRequest()
             request.open('POST', URL+'/api/post.php', true)
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+
+            request.onload = function() {
+                if (request.status >= 200 && request.status < 400) {
+                    var data = JSON.parse(request.responseText)
+                    resolve(data.event)
+                } else {
+                    reject()
+                }
+            }
+
             request.send(postStr)
-            resolve()
         })
     }
 

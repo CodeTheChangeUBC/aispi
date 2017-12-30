@@ -136,8 +136,7 @@ $url = 'https://api.coinhive.com/token/verify';
 $response = json_decode(file_get_contents($url, false, $post_context));
 
 if ($response && $response->success) {
-    // Since everything works, create the row!
-    $events->create([
+    $ev = [
         'id'          => uuid(),
         'day'         => $day,
         'month'       => $month,
@@ -149,9 +148,24 @@ if ($response && $response->success) {
         'email'       => $email,
         'description' => $description,
         'type'        => $type
-    ]);
+    ];
+    // Since everything works, create the row!
+    $events->create($ev);
     echo json_encode([
-        "good" => "everything worked!"
+        "good"  => "everything worked!",
+        "event" => [
+            $ev['id'],
+            $ev['day'],
+            $ev['month'],
+            $ev['year'],
+            $ev['start'],
+            $ev['school'],
+            $ev['length'],
+            $ev['address'],
+            $ev['email'],
+            $ev['description'],
+            $ev['type']
+        ]
     ]);
 } else {
     echo json_encode([

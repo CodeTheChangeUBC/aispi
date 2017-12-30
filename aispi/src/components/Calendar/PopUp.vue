@@ -114,7 +114,9 @@
             },
             sendEvent: function () {
                 if (this.validate()) {
-                    EventAPI.post(this.form)
+                    EventAPI.post(this.form).then((event) => {
+                        this.events.push(event)
+                    })
                 }
             },
             toggleEvent: function (type) {
