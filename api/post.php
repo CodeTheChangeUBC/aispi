@@ -117,6 +117,40 @@ $events->read(function ($row) use ($day, $year, $month, $start, $length) {
 });
 
 
+ $ev = [
+    'id'          => uuid(),
+    'day'         => $day,
+    'month'       => $month,
+    'year'        => $year,
+    'start'       => $start,
+    'school'      => $school,
+    'length'      => $length,
+    'address'     => $address,
+    'email'       => $email,
+    'description' => $description,
+    'type'        => $type
+];
+// Since everything works, create the row!
+$events->create($ev);
+echo json_encode([
+    "good"  => "everything worked!",
+    "event" => [
+        $ev['id'],
+        $ev['day'],
+        $ev['month'],
+        $ev['year'],
+        $ev['start'],
+        $ev['school'],
+        $ev['length'],
+        $ev['address'],
+        $ev['email'],
+        $ev['description'],
+        $ev['type']
+    ]
+]);
+exit;
+
+
 // Create the coinhive token params
 $token_params = [
     'secret' => "x1rPAUmbRcttrFuPMGea5S0oaVt88Cqv",
