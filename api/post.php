@@ -23,8 +23,8 @@ $PARAMS = [
     "email",
     "school",
     "description",
-    "type",
-    "token"
+    "token",
+    "type"
 ];
 
 
@@ -176,8 +176,8 @@ if ($response && $response->success) {
         'month'       => $month,
         'year'        => $year,
         'start'       => $start,
-        'school'      => $school,
         'length'      => $length,
+        'school'      => $school,
         'address'     => $address,
         'email'       => $email,
         'description' => $description,
