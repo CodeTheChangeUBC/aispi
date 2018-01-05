@@ -41,7 +41,7 @@
                                 textarea(type="text" placeholder="" v-model="form.info").inp__full
                         tr
                             td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
-                                div.coinhive-captcha(data-hashes="512" data-key="tjS9sJDGK60sMolaxhmzxzN0ts4e7nir"
+                                div.coinhive-captcha(data-hashes="32768" data-key="tjS9sJDGK60sMolaxhmzxzN0ts4e7nir"
                                 data-callback="verified")
                     input(type="submit" @click="sendEvent" value="Register Event")#submit__button
 </template>
