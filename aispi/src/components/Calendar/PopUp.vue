@@ -114,9 +114,28 @@
             },
             sendEvent: function () {
                 if (this.validate()) {
-                    EventAPI.post(this.form).then((event) => {
-                        this.events.push(event)
-                    })
+                    EventAPI.post(this.form)
+                        .then(resp => {
+                            // We're all good, so everything is good.
+                            this.events.push(resp.event)
+                        })
+                        .catch(resp => {
+                            // This is when the server catches an error.
+                            if (resp && resp.error) {
+                                this.$swal(
+                                    'Error with the form...',
+                                    resp.error,
+                                    'error'
+                                    )
+                                return
+                            }
+                            // This is when we can't even reach the server
+                            this.$swal(
+                                'Could not connect to server :(',
+                                ' Please check your internet connection',
+                                'error'
+                           )
+                        })
                 }
             },
             toggleEvent: function (type) {
@@ -133,38 +152,39 @@
             validate: function () {
                 // Make sure we selected an event
                 if (!this.form.type) {
-                    this.$swal('Please select an event!')
+                    this.$swal('Please select an event!','','warning')
                     return false
                 }
                 // Make sure this is a valid email
                 if (!this.form.email || !this.form.email.match(/@/g)) {
-                    this.$swal('Please Enter a Valid Email!')
+                    this.$swal('Please Enter a Valid Email!','','warning')
                     return false
                 }
                 var timeGex = /[0-9]{2}:[0-9]{2}/g
 
                 // Make sure this is a valid time
                 if (!timeGex.test(this.form.start)) {
-                    this.$swal('Please enter a valid time!')
+                    this.$swal('Please enter a valid time!','','warning')
                     return false
                 }
                 // TODO: Make sure this doesn't conflict with any existing events.
                 var collides = EventAPI.collides(this.events, this.form.start, this.form.length)
 
                 if (collides) {
-                    this.$swal('This timeslot conflicts with another appointment')
+                    this.$swal('This timeslot conflicts with another appointment','','warning')
                     return false
                 }
 
                 // Make sure the token is set
                 if (!this.form.token) {
-                    this.$swal('Please click the verification button')
+                    this.$swal('Please click the verification button','','warning')
                     return false
                 }
                 return true
             }
         },
         mounted () {
+            // Mount verification function for the auth callback
             window.verified = this.verified
         },
         data () {

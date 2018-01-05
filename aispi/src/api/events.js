@@ -43,7 +43,12 @@ export default class Event {
             request.onload = function() {
                 if (request.status >= 200 && request.status < 400) {
                     var data = JSON.parse(request.responseText)
-                    resolve(data.event)
+                    if (data.error) {
+                        reject(data)
+                    } else {
+                        resolve(data)
+                    }
+
                 } else {
                     reject()
                 }

@@ -160,8 +160,8 @@
         min-height: 100%
         text-align: center
         background: #7474BF
-        background: -webkit-linear-gradient(to top, #348AC7, #7474BF)
-        background: linear-gradient(to top, #348AC7, #7474BF)
+        background: -webkit-linear-gradient(to bottom, #DDD, #7474BF)
+        background: linear-gradient(to bottom, #DDD, #7474BF)
     
     .calendar__inner
         width: 800px
@@ -185,9 +185,9 @@
         box-sizing: border-box
 
     .logo__text
-        color: #FFF
+        color: #000
         font-family: Montserrat
-        font-weight: 100
+        font-weight: 400
         font-size: 20px
         letter-spacing: 1px
         margin-left: 20px
@@ -198,7 +198,7 @@
         font-weight: 300
         font-size: 50px
         float: left
-        color: #FFF
+        color: #000
     .date__text--month
         display: inline-block
     .date__text--year
@@ -235,7 +235,7 @@
         margin-bottom: 10px;
         display: inline-block
         width: 130px
-        color: #FFF
+        color: #000
         font-size: 12px
         
 </style>

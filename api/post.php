@@ -70,7 +70,7 @@ if (!checkdate($month, $day, $year)) {
 // Make sure the start time is a valid time
 if ($start < 0 || $start > 60 * 24) {
     echo json_encode([
-        "echo" => "Invalid start time"
+        "error" => "Invalid start time"
     ]);
     exit;
 }
