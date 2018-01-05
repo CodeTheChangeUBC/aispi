@@ -12,6 +12,8 @@ $events = new CSVDB('../events.csv');
 
 // Intitialize constants
 define('MAX_FIELD_SIZE', 2048);
+define('TESTING', true);
+
 
 $PARAMS = [
     "day",
@@ -26,9 +28,6 @@ $PARAMS = [
     "token",
     "type"
 ];
-
-
-
 
 
 // Go through all the preset params
@@ -103,7 +102,7 @@ $events->read(function ($row) use ($day, $year, $month, $start, $length) {
         $end = $start + $length;
 
         $start2 = intval($row[4]);
-        $end2 = $start + intval($row[5]);
+        $end2 = $start2 + intval($row[5]);
         
         if(((($start2>=$start)&&($start2<$end))||(($end2>$start)&&($end2<$end)))||((($start>=$start2)&&($start<$end2))||(($end>$start2)&&($end<$end2)))) {
             echo json_encode([
@@ -116,8 +115,8 @@ $events->read(function ($row) use ($day, $year, $month, $start, $length) {
     return false;
 });
 
-
- $ev = [
+// Make the event associative array
+$ev = [
     'id'          => uuid(),
     'day'         => $day,
     'month'       => $month,
@@ -130,39 +129,28 @@ $events->read(function ($row) use ($day, $year, $month, $start, $length) {
     'description' => $description,
     'type'        => $type
 ];
-// Since everything works, create the row!
-$events->create($ev);
-echo json_encode([
-    "good"  => "everything worked!",
-    "event" => [
-        $ev['id'],
-        $ev['day'],
-        $ev['month'],
-        $ev['year'],
-        $ev['start'],
-        $ev['school'],
-        $ev['length'],
-        $ev['address'],
-        $ev['email'],
-        $ev['description'],
-        $ev['type']
-    ]
-]);
-exit;
 
+// If we're just testing things out, we can skip the token thing.
+if (TESTING) {
+    // Since everything works, create the row!
+    $events->create($ev);
+    echo json_encode([
+        "good"  => "everything worked!",
+        "event" => array_values($ev)
+    ]);
+    exit;
+}
 
-// Create the coinhive token params
-$token_params = [
-    'secret' => "x1rPAUmbRcttrFuPMGea5S0oaVt88Cqv",
-    'token' => $token,
-    'hashes' => 512
-];
-
+// Create the post request and fetch it.
 $post_context = stream_context_create([
     'http' => [
         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
         'method'  => 'POST',
-        'content' => http_build_query($token_params)
+        'content' => http_build_query([
+            'secret' => "x1rPAUmbRcttrFuPMGea5S0oaVt88Cqv",
+            'token'  => $token,
+            'hashes' => 512
+        ])
     ]
 ]);
 
@@ -170,36 +158,11 @@ $url = 'https://api.coinhive.com/token/verify';
 $response = json_decode(file_get_contents($url, false, $post_context));
 
 if ($response && $response->success) {
-    $ev = [
-        'id'          => uuid(),
-        'day'         => $day,
-        'month'       => $month,
-        'year'        => $year,
-        'start'       => $start,
-        'length'      => $length,
-        'school'      => $school,
-        'address'     => $address,
-        'email'       => $email,
-        'description' => $description,
-        'type'        => $type
-    ];
     // Since everything works, create the row!
     $events->create($ev);
     echo json_encode([
         "good"  => "everything worked!",
-        "event" => [
-            $ev['id'],
-            $ev['day'],
-            $ev['month'],
-            $ev['year'],
-            $ev['start'],
-            $ev['length'],
-            $ev['school'],
-            $ev['address'],
-            $ev['email'],
-            $ev['description'],
-            $ev['type']
-        ]
+        "event" => array_values($ev)
     ]);
 } else {
     echo json_encode([
