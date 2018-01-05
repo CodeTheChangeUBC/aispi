@@ -43,7 +43,8 @@
                             td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
                                 div.coinhive-captcha(data-hashes="512" data-key="tjS9sJDGK60sMolaxhmzxzN0ts4e7nir"
                                 data-callback="verified")
-                    input(type="submit" @click="sendEvent" value="Register Event")#submit__button
+                    button(type="submit" @click="sendEvent" value="")#submit__button {{waiting?'':'Register Event'}}
+                        img(v-if="waiting" src="../../assets/loading.gif" style="margin-top: -10px" height="50px")
 </template>
 <script>
     /* eslint-disable */
@@ -113,13 +114,16 @@
                 this.$emit('close')
             },
             sendEvent: function () {
-                if (this.validate()) {
+                if (!this.waiting && this.validate()) {
+                    this.waiting = true
                     EventAPI.post(this.form)
                         .then(resp => {
                             // We're all good, so everything is good.
                             this.events.push(resp.event)
+                            this.waiting = false
                         })
                         .catch(resp => {
+                            this.waiting = false
                             // This is when the server catches an error.
                             if (resp && resp.error) {
                                 this.$swal(
@@ -191,6 +195,7 @@
 
             return {
                 TIMES,
+                waiting: false,
                 range: "",
                 form: {
                     day:          this.date.day,
@@ -364,7 +369,8 @@ textarea.inp__full
 #submit__button
     width: 140px;
     padding: 10px 15px;
-    border: 1px solid #446CB3;
+    max-height: 50px;
+    border: 1px solid #DDD;
     background-color: #FFF;
     color: #446CB3;
     border-radius: 5px;
@@ -376,9 +382,9 @@ textarea.inp__full
     outline: 0
     transform: background-color .5s;
     &:hover
-        background-color: #446CB3
+        box-shadow: 0px 0px 10px #446CB3
         color: #FFF
-        transform: background-color .5s;
+        transform: box-shadow .5s;
         box-shadow: 0px 0px 3px #444
     &:active
         box-shadow: 0px 0px 10px #444 inset
