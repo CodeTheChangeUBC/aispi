@@ -383,11 +383,10 @@ textarea.inp__full
     cursor: pointer
     margin-top: 10px
     outline: 0
-    transform: background-color .5s;
+    transform: box-shadow 1s;
     &:hover
         box-shadow: 0px 0px 10px #446CB3
-        color: #FFF
-        transform: box-shadow .5s;
+        transform: box-shadow 1s;
         box-shadow: 0px 0px 3px #444
     &:active
         box-shadow: 0px 0px 10px #444 inset
