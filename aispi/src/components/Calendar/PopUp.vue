@@ -38,7 +38,7 @@
                         tr
                             td.inp__label Additional Info:
                             td
-                                textarea(type="text" placeholder="" v-model="form.info").inp__full
+                                textarea(type="text" placeholder="" v-model="form.description").inp__full
                         tr
                             td(colspan="2" style="text-align: center;padding-top:10px;transform: scale(0.8)")
                                 div.coinhive-captcha(data-hashes="512" data-key="tjS9sJDGK60sMolaxhmzxzN0ts4e7nir"
