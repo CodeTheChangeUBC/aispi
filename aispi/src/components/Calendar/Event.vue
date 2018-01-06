@@ -16,7 +16,6 @@
 <script>
 /* eslint-disable */
 
-    import randomColor from './color'
     // 1 hour block is 35px high
     const MINUTE_HEIGHT = 35 / 60
 
@@ -24,7 +23,7 @@
         name: 'event',
         props: ['event','type'],
         data () {
-            var backgroundColor = randomColor((this.event && this.event[0]) || "")
+            var backgroundColor = '#AAAAAA'
             var time = this._format(+this.event[4])
             var full = time + ' - ' + this._format((+this.event[4])+(+this.event[5]))
             var e_type = this.event[10]

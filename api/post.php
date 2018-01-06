@@ -56,7 +56,7 @@ for ($i = 0, $ii = count($PARAMS); $i < $ii; $i++) {
 
 // Try to convert start and length to integers
 $start = strtotime('1970-01-01 '.$start.':00') / 60;
-$length = intval($length);
+$length = intval($length) * 60;
 
 // Make sure the date is valid.
 if (!checkdate($month, $day, $year)) {
@@ -122,8 +122,8 @@ $ev = [
     'month'       => $month,
     'year'        => $year,
     'start'       => $start,
-    'school'      => $school,
     'length'      => $length,
+    'school'      => $school,
     'address'     => $address,
     'email'       => $email,
     'description' => $description,
