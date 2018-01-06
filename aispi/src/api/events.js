@@ -6,27 +6,6 @@ const URL = 'http://127.0.0.1:3000'
 // Abstractions for events on the API
 
 export default class Event {
-    static collides (events, start, length) {
-        // Convert "start" to minutes
-        var [h,m] = start.split(':')
-        var start = h*60 + (~~m)
-        var end = start + (length * 60)
-
-        console.log()
-        for (var i = events.length; i--;) {
-            // Fetch the range of the start and end/
-            var start2 = +events[i][4]
-            var end2 = start2 + (+events[i][5])
-            // Look for a collision
-            // Taken from my scheduling algo
-            if((((start2>=start)&&(start2<end))||((end2>start)&&(end2<end)))||(((start>=start2)&&(start<end2))||((end>start2)&&(end<end2)))) {
-                return true
-            }
-        }
-
-        return false
-    }
-
     static post (args) {
 
         var postStr = ""
@@ -68,12 +47,66 @@ export default class Event {
         })
     }
 
-    static fetch (month, year) {
+    static fetch () {
+        // If argument[1] isn't set, this is NBest, else it's a month thing
+        if (arguments[1]) {
+            return _fetchByMonth(arguments[0], arguments[1])
+        } else {
+            return _fetchNBest(arguments[0])
+        }
+    }
+    
+    static _fetchNBest (n) {
+        var cache = this.cache
+        var cacheKey = 'best-' + n
+
+        return new Promise((reolve, reject) => {
+
+            // If we already have this, return it, else AJAX this.
+            if (cache[cacheKey]) {
+                return resolve(cache[cacheKey])
+            }
+
+            // Bare Bones AJAXing XMLHttpRequest masterrace..
+            var request = new XMLHttpRequest()
+            request.open('GET', URL+`/api/get.php?month=${month}&year=${year}`, true)
+            request.onload = function() {
+                var data
+                try {
+                    data = JSON.parse(request.responseText)
+                } catch (e) {
+                    reject({
+                        error: 'Could not parse server data...'
+                    })
+                    return
+                }
+                if (request.status >= 200 && request.status < 400) {
+                    cache[cacheKey] = data
+                    // Update the holder
+                    resolve(data)
+                } else {
+                    reject({
+                        error: data.message
+                    })
+                }
+            }
+
+            request.onerror = function() {
+                reject({
+                    error: 'Error: Could not connect to server..'
+                })
+            }
+
+            request.send()
+
+        })
+    }
+
+    static _fetchByMonth (month, year) {
 
         var cache = this.cache
         var cacheKey = month + '.' + year
 
-        // Ew, what a mess..
         return new Promise((resolve, reject) => {
 
             // If we already have this, return it, else AJAX this.
