@@ -48,7 +48,7 @@
 </template>
 <script>
     /* eslint-disable */
-    import EventAPI from '@/api/events'
+    import EventObj from '@/api/events'
     import Event from '@/components/Calendar/Event'
     import VueRecaptcha from 'vue-recaptcha'
     import Datetime from 'vue-datetime'
@@ -136,9 +136,11 @@
                 this.$emit('close')
             },
             sendEvent () {
-                if (!this.waiting && (TESTING || this.validate())) {
+                if (this.waiting || (TESTING && this.validate())) {
+                    return
+                }
                     this.waiting = true
-                    EventAPI.post(this.form)
+                    this.event.save()
                         .then(resp => {
                             // We're all good, so everything is good.
                             this.events.push(resp.event)
@@ -162,7 +164,6 @@
                                 'error'
                            )
                         })
-                }
             },
             toggleEvent (type) {
                 this.form.type = type
@@ -212,11 +213,27 @@
         mounted () {
             // Mount verification function for the auth callback
             window.verified = this.verified
+            window.event = this.event
         },
         data () {
+            var event = new EventObj({
+                day:         this.date.day,
+                month:       this.date.month,
+                year:        this.date.year,
+                type:        '',
+                token:       '',
+                school:      '',
+                start:       '',
+                length:      '',
+                address:     '',
+                email:       '',
+                description: '',
+                type:        ''
+            })
 
             return {
                 TIMES,
+                event,
                 waiting: false,
                 range: "",
                 form: {
@@ -234,7 +251,21 @@
                     type:         ""
                 }
             }
-        }
+        },
+        watch: {
+            'form.day'         (data) {this.event.update('day',data)},
+            'form.month'       (data) {this.event.update('month',data)},
+            'form.year'        (data) {this.event.update('year',data)},
+            'form.type'        (data) {this.event.update('type',data)},
+            'form.token'       (data) {this.event.update('token',data)},
+            'form.school'      (data) {this.event.update('school',data)},
+            'form.start'       (data) {this.event.update('start',data)},
+            'form.length'      (data) {this.event.update('length', data)},
+            'form.address'     (data) {this.event.update('address', data)},
+            'form.email'       (data) {this.event.update('email',data)},
+            'form.description' (data) {this.event.update('description',data)},
+            'form.type'        (data) {this.event.update('type',data)},
+        },
     }
 </script>
 

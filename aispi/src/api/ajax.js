@@ -1,11 +1,13 @@
+/*eslint-disable */
 
-
-export default function AJAX (url) {
+export default function AJAX (type, url, data) {
     return new Promise((resolve, reject) => {
         var request = new XMLHttpRequest()
         
-        request.open('GET', url, true)
-
+        request.open(type, url, true)
+        if (type == 'POST') {
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+        }
         request.onload = () => {
 
             // Reject if the server outputs an error
@@ -33,6 +35,6 @@ export default function AJAX (url) {
             reject({error: 'could not connect to server...'})
         }
 
-        request.send()
+        request.send(data)
     })
 }

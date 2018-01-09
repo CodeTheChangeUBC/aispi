@@ -1,8 +1,68 @@
 /*eslint-disable */
 
-// Abstraction for blocks on the API
+import AJAX from '@/api/ajax'
 
+// Abstraction for blocks on the API
 export default class Block {
+    
+}
+
+Block.Holder = {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * 
     constructor (id) {
 
     }
@@ -52,6 +112,4 @@ export default class Block {
             request.send()
         })
     }
-}
-
-Block.Holder = {}
+ */

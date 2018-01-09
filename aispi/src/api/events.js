@@ -1,151 +1,74 @@
 /*eslint-disable */
 
+import AJAX from '@/api/ajax'
 
-const URL = 'http://127.0.0.1:3000'
+const ROOT_URL  = 'http://127.0.0.1:3000'
+const POST_URL  = ROOT_URL + '/api/post.php?'
+const GET_URL   = ROOT_URL + '/api/get.php?'
 
 // Abstractions for events on the API
-
 export default class Event {
-    static post (args) {
+    constructor (form) {
+        this._set = []
 
-        var postStr = ""
-        // Create a string for posting.
-        for(var key in args) {
-            postStr += (key + '=' + args[key]) + '&'
+        for (var key in form) {
+            this.update(key, form[key])
         }
-        
-        return new Promise ((resolve, reject) => {
-            var request = new XMLHttpRequest()
-            request.open('POST', URL+'/api/post.php', true)
-            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+    }
 
-            request.onload = function() {
+    update (key, value) {
+        this._set[key] = value 
+        console.log(key)
+    }
+    
+    collides (time, length, events) {
 
-                var data
-                try {
-                    data = JSON.parse(request.responseText)
-                } catch (e) {
-                    reject({
-                        error: 'Could not parse server data...'
-                    })
-                    return
-                }
-                
-                if (request.status >= 200 && request.status < 400) {
-                    if (data.error) {
-                        reject(data)
-                    } else {
-                        resolve(data)
-                    }
+        // Convert the time to minutes, and get the start/end 
+        var s_ = (time.split(':')[0] * 60) + time.split(':')[1]
+        var e_ = (length * 60) + s_
 
-                } else {
-                    reject()
-                }
+        // Make sure we're not colliding with any of the provided events.
+        for (var i = events.length; i--;) {
+            var t = events[i].start.split(':')
+            var s = (t[0] * 60) + t[1]
+            var e = s + (events[i].length * 60)
+
+            // Checks collision, stolen from the scheduling app.
+            if((((s_>=s)&&(s_<e))||((e_>s)&&(e_<e)))||(((s>=s_)&&(s<e_))||((e>s_)&&(e<e_)))) {
+                return true
             }
+        }
 
-            request.send(postStr)
-        })
+        return false
+    }
+
+    save () {
+        let data = ''
+
+        // Serialize our set keys.
+        for (var keys in this._set) {   
+            data += `${keys}=${this._set[keys]}&`
+        }
+
+        // 'length' attribute is ignored by JS but is used in our program. 
+        data += `length=${this._set.length}`
+
+        // Return our AJAX Promise
+        return AJAX('POST', POST_URL, data)
     }
 
     static fetch () {
-        // If argument[1] isn't set, this is NBest, else it's a month thing
+        var url = GET_URL
+
+        // If argument[1] isn't set, this is n-Best, else it's a month thing
         if (arguments[1]) {
-            return _fetchByMonth(arguments[0], arguments[1])
+            url += `month=${arguments[0]}&year=${arguments[1]}`
         } else {
-            return _fetchNBest(arguments[0])
+            url += `type=best&n=${arguments[0]}`
         }
-    }
-    
-    static _fetchNBest (n) {
-        var cache = this.cache
-        var cacheKey = 'best-' + n
 
-        return new Promise((reolve, reject) => {
-
-            // If we already have this, return it, else AJAX this.
-            if (cache[cacheKey]) {
-                return resolve(cache[cacheKey])
-            }
-
-            // Bare Bones AJAXing XMLHttpRequest masterrace..
-            var request = new XMLHttpRequest()
-            request.open('GET', URL+`/api/get.php?month=${month}&year=${year}`, true)
-            request.onload = function() {
-                var data
-                try {
-                    data = JSON.parse(request.responseText)
-                } catch (e) {
-                    reject({
-                        error: 'Could not parse server data...'
-                    })
-                    return
-                }
-                if (request.status >= 200 && request.status < 400) {
-                    cache[cacheKey] = data
-                    // Update the holder
-                    resolve(data)
-                } else {
-                    reject({
-                        error: data.message
-                    })
-                }
-            }
-
-            request.onerror = function() {
-                reject({
-                    error: 'Error: Could not connect to server..'
-                })
-            }
-
-            request.send()
-
-        })
-    }
-
-    static _fetchByMonth (month, year) {
-
-        var cache = this.cache
-        var cacheKey = month + '.' + year
-
-        return new Promise((resolve, reject) => {
-
-            // If we already have this, return it, else AJAX this.
-            if (cache[cacheKey]) {
-                return resolve(cache[cacheKey])
-            }
-
-            // Bare Bones AJAXing XMLHttpRequest masterrace..
-            var request = new XMLHttpRequest()
-            request.open('GET', URL+`/api/get.php?month=${month}&year=${year}`, true)
-            request.onload = function() {
-                var data
-                try {
-                    data = JSON.parse(request.responseText)
-                } catch (e) {
-                    reject({
-                        error: 'Could not parse server data...'
-                    })
-                    return
-                }
-                if (request.status >= 200 && request.status < 400) {
-                    cache[cacheKey] = data
-                    // Update the holder
-                    resolve(data)
-                } else {
-                    reject({
-                        error: data.message
-                    })
-                }
-            }
-
-            request.onerror = function() {
-                reject({
-                    error: 'Error: Could not connect to server..'
-                })
-            }
-
-            request.send()
-        })
+        // Return the AJAX promise for the events.
+        return AJAX('GET', url)
     }
 }
 
